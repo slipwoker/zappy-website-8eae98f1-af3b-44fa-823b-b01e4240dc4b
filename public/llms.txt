@@ -22,7 +22,7 @@ https://example.com/contact
 
 ### Products
 https://example.com/products
-המוצרים שלנו - ארטאורי דיזאין
+המוצרים שלנו - ארטאורי דיזיין
 
 ### Cart
 https://example.com/cart
@@ -46,11 +46,11 @@ https://example.com/order-success
 
 ### Product Detail
 https://example.com/product/:slug
-פרטי המוצר - ארטאורי דיזאין
+פרטי המוצר - ארטאורי דיזיין
 
 ### Category
 https://example.com/category/:slug
-מוצרים - ארטאורי דיזאין
+מוצרים - ארטאורי דיזיין
 
 ## Legal & Policy
 
