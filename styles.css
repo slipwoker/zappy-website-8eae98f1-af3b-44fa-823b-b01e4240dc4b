@@ -9695,6 +9695,30 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+/* ═══════════════════════════════════════════════════════════════════════════
+   Footer Contrast Fix (Applied: 2026-03-17T07:31:07.076Z)
+   Overrides dark-on-dark text in footer caused by var(--accent) being dark
+   ═══════════════════════════════════════════════════════════════════════════ */
+.site-footer .contact-list a,
+.site-footer .contact-list li,
+.site-footer .contact-list span,
+.site-footer .footer-legal a,
+.site-footer .copyright p,
+.site-footer .footer-description,
+.site-footer .footer-bottom a,
+.site-footer .footer-bottom p,
+.site-footer .footer-bottom span:not(.separator) {
+  color: #5A5F6A !important;
+}
+.site-footer .contact-list a:hover,
+.site-footer .footer-legal a:hover,
+.site-footer .footer-bottom a:hover {
+  color: #FFFFFF !important;
+}
+.site-footer .footer-legal .separator {
+  color: #777777 !important;
+}
+
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
