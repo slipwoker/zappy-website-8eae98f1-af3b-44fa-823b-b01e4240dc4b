@@ -9738,6 +9738,22 @@ main,
   min-height: 400px;
 }
 
+#category-header .category-banner {
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#category-header .category-banner {
+  background-size: 120%;
+  background-position: center center;
+}
+
+#category-header .category-banner {
+  background-size: 160%;
+  background-position: center center;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
