@@ -9764,6 +9764,18 @@ main,
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 
+footer.site-footer p,
+footer.site-footer a,
+footer.site-footer span,
+footer.site-footer h2,
+footer.site-footer h3,
+footer.site-footer h4,
+footer.site-footer li,
+footer.site-footer div,
+footer.site-footer small {
+  color: var(--background-color);
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
