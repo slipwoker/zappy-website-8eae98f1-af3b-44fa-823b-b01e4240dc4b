@@ -9835,6 +9835,10 @@ footer.site-footer small {
   color: var(--background-color);
 }
 
+.site-footer, .site-footer p, .site-footer span, .site-footer li, .site-footer a, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer label, .site-footer small, .site-footer div {
+  color: var(--background-color) !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
