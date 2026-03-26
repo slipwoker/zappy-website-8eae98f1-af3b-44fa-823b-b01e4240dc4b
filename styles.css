@@ -9812,29 +9812,6 @@ footer.site-footer small {
   opacity: 0.75;
 }
 
-.site-footer, .site-footer p, .site-footer span, .site-footer a, .site-footer li, .site-footer h3, .site-footer h4, .site-footer label, .site-footer .footer-column {
-  color: var(--text-light);
-}
-
-.site-footer a:hover {
-  color: var(--nav-text-hover);
-}
-
-.site-footer font {
-  color: var(--background-color);
-}
-
-.site-footer * {
-  color: var(--background-color);
-}
-
-.site-footer .contact-list li,
-.site-footer .contact-list li a,
-.site-footer .contact-list li i,
-.site-footer .footer-description {
-  color: var(--background-color);
-}
-
 .site-footer, .site-footer p, .site-footer span, .site-footer li, .site-footer a, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer label, .site-footer small, .site-footer div {
   color: var(--background-color) !important;
 }
