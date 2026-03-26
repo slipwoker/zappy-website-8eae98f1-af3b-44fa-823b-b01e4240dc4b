@@ -9812,7 +9812,47 @@ footer.site-footer small {
   opacity: 0.75;
 }
 
-.site-footer, .site-footer p, .site-footer span, .site-footer li, .site-footer a, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer label, .site-footer small, .site-footer div {
+.site-footer, .site-footer p, .site-footer span, .site-footer a, .site-footer li, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer label, .site-footer small, .site-footer div {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list li {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list span {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .copyright p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-description {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal .separator {
   color: var(--background-color) !important;
 }
 
