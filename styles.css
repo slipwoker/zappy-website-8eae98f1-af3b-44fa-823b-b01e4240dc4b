@@ -10011,6 +10011,11 @@ main,
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 
+.craft-story-faq-section .craft-story-faq-section__list .craft-story-faq-section__item:first-child {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
