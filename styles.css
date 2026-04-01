@@ -10056,6 +10056,29 @@ main,
   height: 100% !important;
 }
 
+.craft-story-banner-section .craft-story-banner-image-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+.craft-story-banner-section .craft-story-banner-image-wrapper > div {
+  width: 100% !important;
+  height: 450px !important;
+  max-width: 100% !important;
+}
+
+.craft-story-banner-section .craft-story-banner-container {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.craft-story-maker-profile-section .craft-story-maker-profile-backplate {
+  display: none !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
