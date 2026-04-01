@@ -10022,6 +10022,22 @@ main,
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 
+.collections-collection-grid-section .collections-grid-function {
+  align-items: stretch;
+}
+
+.collections-collection-grid-section .collections-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collections-collection-grid-section .collections-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
