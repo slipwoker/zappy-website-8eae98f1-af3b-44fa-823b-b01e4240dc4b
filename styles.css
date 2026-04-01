@@ -10038,6 +10038,24 @@ main,
   justify-content: flex-start;
 }
 
+.craft-story-banner-section .craft-story-banner-image-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.craft-story-banner-section .craft-story-banner-image-wrapper > div {
+  width: 100% !important;
+  height: 500px !important;
+}
+
+.craft-story-banner-section .craft-story-banner-image-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
