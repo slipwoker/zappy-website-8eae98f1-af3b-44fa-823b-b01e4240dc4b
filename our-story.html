@@ -425,7 +425,7 @@
       <p>כל מוצר שאנחנו יוצרים מגיע מתוך מחויבות עמוקה לשלושה עקרונות מרכזיים: בהירות תפקודית שהופכת כל פריט לנוח ופרקטי לשימוש יומיומי, סיפור מסגרת שמביא אופי, ענין וחיוך למרחב המחיה שלכם, ועמידות לטווח ארוך שמבטיחה שהמוצרים שלנו ישמשו אתכם שנים רבות.</p>
     </div>
 
-    <div class="craft-story-values-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 378.65625px 378.671875px 378.671875px; display: grid; grid-template-columns: 378.65625px 378.671875px 378.671875px;" id="zappy-auto-grid-1773848610614-r6hx4t" data-zappy-auto-grid="true" data-original-item-width="379" data-original-gap="32px 32px"><article class="craft-story-value-card">
+    <div class="craft-story-values-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 378.65625px 378.671875px 378.671875px; display: grid; grid-template-columns: 378.65625px 378.671875px 378.671875px;" id="zappy-auto-grid-1773848610614-r6hx4t" data-zappy-auto-grid="true" data-original-item-width="379" data-original-gap="32px 32px" data-zappy-explicit-columns="true"><article class="craft-story-value-card">
         <div class="craft-story-value-border"></div>
         <div class="craft-story-value-content">
           <h3 class="">בהירות תפקודית</h3>
@@ -455,7 +455,7 @@
 
 <section class="craft-story-maker-profile-section" data-layout-spec="מלאכה וסיפור-maker-profile" id="zappy-section-2">
   <div class="craft-story-maker-profile-container">
-    <div class="craft-story-maker-profile-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 559.992px 560.016px; display: grid; grid-template-columns: 559.992px 560.016px;" id="zappy-auto-grid-1773847089011-rzifo0" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="560" data-original-gap="80px 80px"><div class="craft-story-maker-profile-image-column">
+    <div class="craft-story-maker-profile-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 559.992px 560.016px; display: grid; grid-template-columns: 559.992px 560.016px;" id="zappy-auto-grid-1773847089011-rzifo0" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="560" data-original-gap="80px 80px" data-zappy-explicit-columns="true"><div class="craft-story-maker-profile-image-column">
         <div class="craft-story-maker-profile-image-wrapper">
           <div class="craft-story-maker-profile-backplate"></div>
           <img data-placeholder="craft-story-maker-profile-image-1" data-context="A warm, intimate portrait-style photo showing skilled hands carefully crafting a handmade home decor item in a workshop setting. The artisan is working on a wooden bookend or decorative piece with visible tools, wood shavings, and attention to detail. Natural lighting from a window illuminates the workspace. The photo should convey craftsmanship, dedication, and the human touch behind handcrafted designer home products. Workshop environment with organized tools in the background. Warm, inviting atmosphere that tells the story of a maker who cares about quality and finishing details." width="600" height="800" src="/assets/site-craft-story-maker-profile-image-1-1774445996262-tpojz7.webp?v=1774445998673" alt="אומן יוצר מוצרי בית בעבודת יד במלאכה" class="craft-story-maker-profile-main-image zappy-editable-image" data-element-type="image" data-element-id="img-1773847088972-jy8rhzex6" data-zappy-zoom="1" style="object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; margin-top: 20px; margin-right: auto !important; margin-bottom: 20px; margin-left: auto !important;">
@@ -656,16 +656,59 @@
 
     <script>
     (function(){
-      if(window.innerWidth>768)return;
-      function fixZW(){
+      var _applied=false;
+      function fixDesktopWrappers(){
+        if(window.innerWidth<=768)return;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          var mode=w.getAttribute('data-zappy-zoom-wrapper-width-mode');
+          if(mode==='full'||mode==='grid-responsive')return;
+          var storedW=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-width'));
+          if(!storedW||!isFinite(storedW))return;
+          var parent=w.parentElement;
+          if(!parent)return;
+          var parentW=parent.getBoundingClientRect().width;
+          if(parentW>0&&storedW<parentW*0.6&&storedW<=400){
+            var ratio=storedW/parseFloat(w.getAttribute('data-zappy-zoom-wrapper-height')||'1');
+            var newW=Math.round(Math.min(parentW,800));
+            var newH=Math.round(newW/ratio);
+            w.style.setProperty('width',newW+'px','important');
+            w.style.setProperty('height',newH+'px','important');
+          }
+        });
+      }
+      function applyMobile(){
+        if(_applied)return;_applied=true;
         document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
           var cw=w.style.getPropertyValue('width');
           if(!cw||cw==='100%')return;
+          if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
+          var img=w.querySelector('img');
+          if(!img)return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
           w.style.setProperty('width','100%','important');
           w.style.setProperty('max-width','100%','important');
-          w.style.setProperty('height','auto','important');
-          var img=w.querySelector('img');
-          if(img){
+          if(mobileSrc)img.src=mobileSrc;
+          var pos=mobilePos||img.style.getPropertyValue('object-position')||'50% 50%';
+          if(mobileZoom>1){
+            var wH=w.getAttribute('data-zappy-zoom-wrapper-height');
+            w.style.setProperty('height',wH||'200px','important');
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('min-height','100%','important');
+            img.style.setProperty('max-width','none','important');
+            img.style.setProperty('max-height','none','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+            img.style.setProperty('object-position',pos,'important');
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',pos,'important');
+          }else{
+            w.style.setProperty('height','auto','important');
             img.style.setProperty('position','relative','important');
             img.style.setProperty('width','100%','important');
             img.style.setProperty('height','auto','important');
@@ -674,11 +717,56 @@
             img.style.setProperty('object-fit','cover','important');
             img.style.setProperty('left','0','important');
             img.style.setProperty('top','0','important');
+            img.style.setProperty('transform','none','important');
+            if(mobilePos)img.style.setProperty('object-position',pos,'important');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          if(img.closest('[data-zappy-zoom-wrapper="true"]'))return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          if(mobileSrc)img.src=mobileSrc;
+          if(mobilePos)img.style.setProperty('object-position',mobilePos,'important');
+          if(mobileZoom>1){
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',mobilePos||'50% 50%','important');
+            var p=img.parentElement;
+            if(p)p.style.setProperty('overflow','hidden','important');
           }
         });
       }
-      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixZW);
-      else setTimeout(fixZW,50);
+      function revertDesktop(){
+        if(!_applied)return;_applied=false;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(w._zappyDesktop&&w._zappyDesktop.wStyle!=null){w.setAttribute('style',w._zappyDesktop.wStyle);}
+          var img=w.querySelector('img');
+          if(img&&img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          if(img.closest('[data-zappy-zoom-wrapper="true"]'))return;
+          if(img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        fixDesktopWrappers();
+      }
+      function init(){
+        var mq=window.matchMedia('(max-width:768px)');
+        function onChange(e){if(e.matches)applyMobile();else revertDesktop();}
+        if(mq.matches)applyMobile();
+        else fixDesktopWrappers();
+        try{mq.addEventListener('change',onChange);}catch(e){mq.addListener(onChange);}
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+      else setTimeout(init,50);
     })();
     </script>
 </body>
