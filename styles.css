@@ -10094,6 +10094,21 @@ main,
   display: none !important;
 }
 
+.index-hero-section {
+  min-height: auto !important;
+}
+
+.index-hero-section {
+  min-height: 31.25vw !important;
+  padding-bottom: 0 !important;
+}
+
+.index-hero-section {
+  min-height: 600px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
