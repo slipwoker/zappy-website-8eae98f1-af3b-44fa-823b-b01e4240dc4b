@@ -10113,22 +10113,9 @@ main,
   height: 675px !important;
 }
 
-#layout-1774375845356 .zappy-grid-item-media-only[data-grid-item-index="7"] {
-  overflow: hidden !important;
-  max-height: 258px !important;
-}
-
-#layout-1774375845356 .zappy-grid-item-media-only[data-grid-item-index="7"] [data-zappy-zoom-wrapper="true"] {
-  overflow: hidden !important;
-  max-height: 228px !important;
-}
-
-#layout-1774375845356 .zappy-grid-item-media-only[data-grid-item-index="7"] img {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+#layout-1774375845356 .zappy-grid-item-media-only [data-zappy-zoom-wrapper="true"] {
+  border-radius: 8px !important;
+  box-shadow: 0 0 0 1px var(--border-light) !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
