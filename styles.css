@@ -10113,9 +10113,8 @@ main,
   height: 675px !important;
 }
 
-#layout-1774375845356 .zappy-grid-item-media-only [data-zappy-zoom-wrapper="true"] {
-  border-radius: 8px !important;
-  box-shadow: 0 0 0 1px var(--border-light) !important;
+#layout-1774375845356 .zappy-grid-item-media-only {
+  overflow: visible !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
