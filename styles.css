@@ -10113,8 +10113,14 @@ main,
   height: 675px !important;
 }
 
-/* Added Component Styles */
-.deleted-placeholder-section { display: none; }
+#layout-1774375845356 .zappy-grid-item-media-only {
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden !important;
+  height: auto !important;
+  min-height: 258px;
+}
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
