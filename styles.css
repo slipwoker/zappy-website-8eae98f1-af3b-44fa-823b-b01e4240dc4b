@@ -10113,27 +10113,27 @@ main,
   height: 675px !important;
 }
 
-.collections-collection-grid-section .collections-card-image [data-zappy-zoom-wrapper] {
-  width: 100% !important;
-  height: 100% !important;
+#zappy-auto-grid-1774375845797-dchf8c .zappy-grid-item-media-only {
+  height: 260px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-.collections-collection-grid-section .collections-card-image [data-zappy-zoom-wrapper] img {
+#zappy-auto-grid-1774375845797-dchf8c .zappy-grid-item-media-only [data-zappy-zoom-wrapper] {
+  width: 100% !important;
+  height: 220px !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+
+#zappy-auto-grid-1774375845797-dchf8c .zappy-grid-item-media-only [data-zappy-zoom-wrapper] img {
   width: 100% !important;
   height: 100% !important;
   position: absolute !important;
   left: 0 !important;
   top: 0 !important;
-}
-
-.collections-collection-grid-section .collections-card-image {
-  overflow: hidden !important;
-  position: relative !important;
-  height: auto !important;
-}
-
-.collections-collection-grid-section .collections-card {
-  height: auto !important;
+  max-width: none !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
