@@ -1,92 +1,79 @@
-# ארטאורי דיזיין — Generative Engine Optimization Map
-
-> A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### בית
-https://arturi-design.zappy5.app
+https://artori.co.il
 גלו מוצרים מעוצבים בעבודת יד לעיצוב הבית: תומכי ספרים, מעמדים לטלפון, אחסון נייר טואלט ועוד. כל פריט מספר סיפור ומביא אישיות לבית שלכם.
 
 ### קולקציות
-https://arturi-design.zappy5.app/collections
+https://artori.co.il/collections
 חקרו את הקולקציות המיוחדות שלנו: גיבורי על, חתולים ומוצרים פונקציונליים מעוצבים. מצאו את הפריט המושלם שמשלב עיצוב עם התשוקות שלכם.
 
 ### הסיפור שלנו
-https://arturi-design.zappy5.app/our-story
+https://artori.co.il/our-story
 גלו את תהליך היצירה בעבודת יד מאחורי כל מוצר. כל פריט נוצר באהבה ומספר סיפור ייחודי שמעניק משמעות לעיצוב הבית שלכם.
 
 ### צור קשר
-https://arturi-design.zappy5.app/contact
+https://artori.co.il/contact
 יש לכם שאלה או רעיון מיוחד? צרו קשר ונעזור לכם למצוא את המוצר המושלם או להזמין פריט מותאם אישית לבית שלכם. כאן כדי לעזור!
 
 ### Products
-https://arturi-design.zappy5.app/products
+https://artori.co.il/products
 המוצרים שלנו - ארטאורי דיזיין
 
 ### Cart
-https://arturi-design.zappy5.app/cart
+https://artori.co.il/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://arturi-design.zappy5.app/checkout
+https://artori.co.il/checkout
 תשלום
 
 ### Login
-https://arturi-design.zappy5.app/login
+https://artori.co.il/login
 התחברות לקוחות
 
 ### Account
-https://arturi-design.zappy5.app/account
+https://artori.co.il/account
 החשבון שלי
 
 ### Order Success
-https://arturi-design.zappy5.app/order-success
+https://artori.co.il/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://arturi-design.zappy5.app/product/:slug
+https://artori.co.il/product/:slug
 פרטי המוצר - ארטאורי דיזיין
 
 ### Category
-https://arturi-design.zappy5.app/category/:slug
+https://artori.co.il/category/:slug
 מוצרים - ארטאורי דיזיין
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://arturi-design.zappy5.app/privacy
+https://artori.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://arturi-design.zappy5.app/terms
+https://artori.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://arturi-design.zappy5.app/accessibility
+https://artori.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About ארטאורי דיזיין
-A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.
-
-## Target Audience
-- חובבי עיצוב צעירים
-- בעלי בתים עירוניים
-- מעצבי פנים
-- בעלי בתים ראשונים
-
-## Industry
-עיצוב ומוצרי בית
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://arturi-design.zappy5.app/sitemap.xml
-- **Robots.txt**: https://arturi-design.zappy5.app/robots.txt
+- **Sitemap**: https://artori.co.il/sitemap.xml
+- **Robots.txt**: https://artori.co.il/robots.txt

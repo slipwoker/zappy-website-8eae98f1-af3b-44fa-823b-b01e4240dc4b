@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arturi-design.zappy5.app/sitemap.xml
+Sitemap: https://artori.co.il/sitemap.xml
