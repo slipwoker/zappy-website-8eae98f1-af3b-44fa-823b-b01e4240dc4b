@@ -6202,6 +6202,12 @@ footer.site-footer small {
 
 
 
+
+
+
+
+
+
 /* ==ZAPPY V2 E-COMMERCE THEME CSS== */
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /* V2 E-COMMERCE CSS - Clean V2 Variables Only                                  */
@@ -9208,7 +9214,8 @@ body.zappy-focused-page .zappy-announcement-bar {
 .catalog-menu-parent:hover .catalog-menu-chevron {
   transform: rotate(180deg);
 }
-.catalog-menu-parent > .sub-menu {
+/* Use .zappy-catalog-menu ancestor for specificity 0-3-0+ to beat githubService injected rules */
+.zappy-catalog-menu .catalog-menu-parent > .sub-menu {
   position: absolute !important;
   top: 100% !important;
   right: 0 !important;
@@ -9236,8 +9243,9 @@ body.zappy-focused-page .zappy-announcement-bar {
   right: 0 !important;
   height: 8px !important;
 }
-.catalog-menu-parent:hover > .sub-menu,
-.catalog-menu-parent:focus-within > .sub-menu {
+.zappy-catalog-menu .catalog-menu-parent:hover > .sub-menu,
+.zappy-catalog-menu .catalog-menu-parent:focus-within > .sub-menu {
+  display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
@@ -13210,6 +13218,8 @@ body.zappy-focused-page .zappy-announcement-bar {
   top: 100% !important;
   right: 0 !important;
   min-width: 200px !important;
+  max-height: calc(100vh - 200px) !important;
+  overflow-y: auto !important;
   background: var(--bg-light, #fff) !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
@@ -13635,7 +13645,8 @@ main,
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
-    max-height: 500px !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
   }
 
   /* Mobile sub-menu: displayed inline inside dark nav panel, NOT as a floating dropdown.
