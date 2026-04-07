@@ -6104,7 +6104,7 @@ footer.site-footer small {
 
 .craft-story-faq-section .craft-story-faq-section__list .craft-story-faq-section__item:first-child {
   padding: 0 !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid var(--border-light) !important;
 }
 
 
