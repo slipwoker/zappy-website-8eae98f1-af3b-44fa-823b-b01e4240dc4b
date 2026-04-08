@@ -515,6 +515,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -5939,12 +5941,50 @@ function renderCategoryPage(container, category, t) {
   const productGrid = document.getElementById('zappy-category-products');
   const isRTL = document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
   
+  // Build breadcrumb
+  var productsLabel = (typeof additionalJsProductsMenuLabel === 'string' && additionalJsProductsMenuLabel) ? additionalJsProductsMenuLabel : t.products;
+  var breadcrumbHtml = '<nav class="product-breadcrumb">';
+  breadcrumbHtml += '<a href="/">' + t.home + '</a>';
+  breadcrumbHtml += '<span class="breadcrumb-separator">›</span>';
+  breadcrumbHtml += '<a href="/products">' + productsLabel + '</a>';
+  if (category.parentCategory) {
+    breadcrumbHtml += '<span class="breadcrumb-separator">›</span>';
+    var parentUrl = '/category/' + (category.parentCategory.slug || category.parentCategory.id);
+    breadcrumbHtml += '<a href="' + parentUrl + '">' + category.parentCategory.name + '</a>';
+  }
+  breadcrumbHtml += '<span class="breadcrumb-separator">›</span>';
+  breadcrumbHtml += '<span class="breadcrumb-current">' + category.name + '</span>';
+  breadcrumbHtml += '</nav>';
+
   // Render category header
   if (headerContainer) {
     const categoryImage = category.image ? '<div class="category-banner" style="background-image: url(\'' + resolveProductImageUrl(category.image) + '\')"></div>' : '';
-    headerContainer.innerHTML = categoryImage + '<div class="category-info"><h1>' + category.name + '</h1>' + 
+    var subcatHtml = '';
+    if (category.subcategories && category.subcategories.length > 0) {
+      var allLabel = t.all || (isRTL ? 'הכל' : 'All');
+      var catSlug = category.slug || category.id;
+      subcatHtml = '<div class="subcategory-nav">';
+      var parentImg = category.image ? resolveProductImageUrl(category.image) : '';
+      function subcatBg(imgUrl) {
+        return imgUrl ? '<div class="subcategory-card-bg" style="background-image: url(\''+imgUrl+'\')"></div>' : '<div class="subcategory-card-bg subcategory-card-bg-empty"></div>';
+      }
+      subcatHtml += '<a href="/category/' + catSlug + '" class="subcategory-card active">' +
+        subcatBg(parentImg) +
+        '<div class="subcategory-card-overlay"></div>' +
+        '<span class="subcategory-card-name">' + allLabel + '</span></a>';
+      category.subcategories.forEach(function(sub) {
+        var subSlug = sub.slug || sub.id;
+        var subImg = sub.image ? resolveProductImageUrl(sub.image) : '';
+        subcatHtml += '<a href="/category/' + subSlug + '" class="subcategory-card">' +
+          subcatBg(subImg) +
+          '<div class="subcategory-card-overlay"></div>' +
+          '<span class="subcategory-card-name">' + sub.name + '</span></a>';
+      });
+      subcatHtml += '</div>';
+    }
+    headerContainer.innerHTML = breadcrumbHtml + categoryImage + '<div class="category-info"><h1>' + category.name + '</h1>' + 
       (category.description ? '<p class="category-description">' + category.description + '</p>' : '') + 
-      '</div>';
+      '</div>' + subcatHtml;
   }
   
   // Store category products for filtering

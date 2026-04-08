@@ -234,41 +234,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<style>
-/* Announcement Bar Styles */
-.zappy-announcement-bar {
-  background-color: #000000;
-  color: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  box-sizing: border-box;
-  z-index: 1001;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.zappy-announcement-bar .zappy-announcement-message {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  width: 100%;
-  left: 0;
-  right: 0;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-.zappy-announcement-bar .zappy-announcement-message.active {
-  opacity: 1;
-}</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -325,7 +290,7 @@
 </head>
 <body>
 
-<div class="zappy-announcement-bar"><span class="zappy-announcement-message active">Use code פסח20 for a discount!</span><span class="zappy-announcement-message">Use code פסח20 for a discount!</span></div>
+
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
@@ -613,18 +578,7 @@
   
   <div data-integration="accessibility:toolbar"></div>
 
-<script>
-(function() {
-  var messages = document.querySelectorAll('.zappy-announcement-message');
-  if (messages.length <= 1) return;
-  var current = 0;
-  setInterval(function() {
-    messages[current].classList.remove('active');
-    current = (current + 1) % messages.length;
-    messages[current].classList.add('active');
-  }, 4000);
-})();
-</script>
+
 
     <script src="/script.js"></script>
 
