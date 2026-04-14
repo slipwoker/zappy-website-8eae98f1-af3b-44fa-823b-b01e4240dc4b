@@ -14382,6 +14382,20 @@ main,
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 
+/* ========== EMPTY SUBMENU HIDING (Auto-added by Zappy) ========== */
+.sub-menu:empty,
+.dropdown-menu:empty,
+.sub-menu.zappy-empty-submenu,
+.dropdown-menu.zappy-empty-submenu,
+.nav-menu .sub-menu.zappy-empty-submenu,
+nav .sub-menu.zappy-empty-submenu,
+.navbar .sub-menu.zappy-empty-submenu,
+#navMenu .sub-menu.zappy-empty-submenu,
+#navMenu .dropdown-menu.zappy-empty-submenu {
+  display: none !important;
+}
+
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
@@ -14507,6 +14521,27 @@ main,
 }
 
 /* ========== END HERO IMAGE GRADIENT FIX ========== */
+
+
+/* ========== FULLSCREEN HERO OVERFLOW FIX (fullscreen-hero-overflow-fix) ========== */
+/* On mobile (especially iOS Safari where 100vh includes the address bar),
+   the hero card content + padding can exceed the section height.
+   Use 100svh + height:auto so the section grows with its content.
+   Restore padding-bottom for the SVG divider area. */
+
+@media (max-width: 768px) {
+  section[data-hero-type*="fullscreen"] {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 0 0 90px 0 !important;
+  }
+  section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]) {
+    padding-bottom: 100px !important;
+    min-height: auto !important;
+  }
+}
+
+/* ========== END FULLSCREEN HERO OVERFLOW FIX ========== */
 
 
 /* ========== PRODUCT ICON STYLES (product-icon-styles) ========== */
@@ -14678,7 +14713,8 @@ main,
   }
   
   /* Fix zoom wrapper images on mobile - make responsive */
-  [data-zappy-zoom-wrapper="true"] img {
+  /* Exclude images with mobile overrides — those are handled by JS to honor user settings */
+  [data-zappy-zoom-wrapper="true"] img:not([data-zappy-mobile-object-position]):not([data-zappy-mobile-zoom]) {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
@@ -14871,6 +14907,21 @@ main,
   [data-zappy-zoom-wrapper] {
     max-width: 100% !important;
   }
+
+  /* ========== FULLSCREEN HERO OVERFLOW FIX ========== */
+  /* On mobile (especially iOS Safari where 100vh includes the address bar),
+     the hero card content + padding can exceed the section height.
+     Use min-height instead of height so the section grows with its content.
+     The container also needs padding-bottom to clear the SVG divider area. */
+  section[data-hero-type*="fullscreen"] {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 0 0 90px 0 !important;
+  }
+  section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]) {
+    padding-bottom: 100px !important;
+    min-height: auto !important;
+  }
 }
 
 /* ========== HERO SECTION WIDTH CONSTRAINT (ALL VIEWPORTS) ========== */
@@ -15002,6 +15053,12 @@ section[data-hero-type] {
 form.contact-form, .contact-form { flex-direction: column !important; align-items: stretch !important; }
 form.contact-form > .contact-form-field, .contact-form > .contact-form-field { width: 100% !important; align-self: stretch !important; }
 form.contact-form .contact-input, form.contact-form .contact-textarea { width: 100% !important; box-sizing: border-box !important; }
+
+
+/* ZAPPY_NAVBAR_CTA_ALIGNMENT_FIX */
+.nav-cta-container .zappy-search-container,
+.zappy-search-container { align-self: center; }
+.nav-cta-container p { margin: 0 !important; }
 
 
 /* ZAPPY_SECTION_BG_TYPE_FIX */
