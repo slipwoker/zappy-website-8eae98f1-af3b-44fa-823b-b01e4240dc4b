@@ -14392,6 +14392,11 @@ main,
     max-height: none !important;
     overflow-y: visible !important;
   }
+  .menu-item-has-children,
+  .zappy-products-dropdown,
+  .nav-menu > li.menu-item-has-children {
+    flex-shrink: 0 !important;
+  }
   .sub-menu a,
   .navbar .sub-menu a,
   .navbar .sub-menu li a,
