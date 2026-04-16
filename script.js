@@ -234,7 +234,7 @@ function withConsent(category, callback) {
       "he": {
         "consentModal": {
           "title": "אנחנו משתמשים בעוגיות 🍪",
-          "description": "ארטאורי דיזאין משתמש בעוגיות כדי לשפר את החוויה שלך, לנתח שימוש באתר ולסייע במאמצי השיווק שלנו.",
+          "description": "ארטאורי דיזיין משתמש בעוגיות כדי לשפר את החוויה שלך, לנתח שימוש באתר ולסייע במאמצי השיווק שלנו.",
           "acceptAllBtn": "אשר הכל",
           "acceptNecessaryBtn": "רק הכרחי",
           "showPreferencesBtn": "נהל העדפות",
