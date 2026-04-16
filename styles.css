@@ -14380,11 +14380,8 @@ main,
   border: none !important; 
 }
 
-/* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
-
 .featured-categories-section .category-block-overlay {
-  opacity: 0 !important;
-  background: none !important;
+
 }
 
 .featured-categories-section .category-block-overlay,
