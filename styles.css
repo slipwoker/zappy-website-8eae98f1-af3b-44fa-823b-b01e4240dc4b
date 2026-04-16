@@ -14380,32 +14380,7 @@ main,
   border: none !important; 
 }
 
-.featured-categories-section .category-block-overlay {
-
-}
-
-.featured-categories-section .category-block-overlay,
-.featured-categories-section .category-block:hover .category-block-overlay,
-#featured-categories .category-block-overlay {
-  background: transparent !important;
-  opacity: 0 !important;
-  display: none !important;
-}
-
-.featured-categories-section .category-block-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%) !important;
-  opacity: 1 !important;
-  display: block !important;
-}
-
-#featured-categories .category-block-overlay {
-  position: absolute !important;
-  inset: 0 !important;
-  background: rgba(0,0,0,0.45) !important;
-  opacity: 1 !important;
-  display: block !important;
-  z-index: 1 !important;
-}
+/* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -15118,6 +15093,24 @@ section[data-hero-type] {
 .variant-option.out-of-stock { opacity: 0.6; position: relative; }
 .variant-option.out-of-stock:not(.color-swatch)::after { content: ""; position: absolute; top: 50%; left: 4px; right: 4px; height: 1px; background: currentColor; transform: rotate(-12deg); pointer-events: none; }
 .variant-option.color-swatch.out-of-stock::before { content: ""; position: absolute; top: 50%; left: 2px; right: 2px; height: 1.5px; background: currentColor; transform: rotate(-45deg); pointer-events: none; z-index: 1; }
+
+
+/* ZAPPY_QUANTITY_SELECTOR_FIX */
+.product-info .quantity-selector input,
+.product-add-row .quantity-selector input {
+  padding: 0 !important;
+  -moz-appearance: textfield !important;
+  -webkit-appearance: textfield !important;
+  appearance: textfield !important;
+}
+.product-info .quantity-selector input::-webkit-inner-spin-button,
+.product-info .quantity-selector input::-webkit-outer-spin-button,
+.product-add-row .quantity-selector input::-webkit-inner-spin-button,
+.product-add-row .quantity-selector input::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  display: none !important;
+}
 
 
 /* ZAPPY_CONTACT_FORM_LAYOUT_FIX */
