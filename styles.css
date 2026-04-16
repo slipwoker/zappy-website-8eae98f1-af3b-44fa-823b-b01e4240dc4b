@@ -14381,6 +14381,19 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+
+.featured-categories-section .category-block-overlay {
+  opacity: 0 !important;
+  background: none !important;
+}
+
+.featured-categories-section .category-block-overlay,
+.featured-categories-section .category-block:hover .category-block-overlay,
+#featured-categories .category-block-overlay {
+  background: transparent !important;
+  opacity: 0 !important;
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
