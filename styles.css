@@ -14406,15 +14406,6 @@ main,
   display: block !important;
   z-index: 1 !important;
 }
-
-#featured-categories .category-block-overlay {
-  z-index: 1 !important;
-}
-
-#featured-categories .category-block-content {
-  z-index: 2 !important;
-  position: relative !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
