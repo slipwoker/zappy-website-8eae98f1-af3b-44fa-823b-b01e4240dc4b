@@ -525,6 +525,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -686,7 +688,13 @@ window.onload = function() {
 
   function buildStorefrontPath(path) {
     if (!path) return path;
-    if (/^https?:///i.test(path) || path.indexOf('/api/website/preview') === 0) return path;
+    // NOTE: every \ in regex literals here is intentional. This whole function
+    // lives inside a JS template literal that bakes script.js — a bare
+    // backslash (\/, \?, \d, \s, ...) is a non-recognised string escape
+    // and the JS parser silently drops it, producing broken regex in the
+    // generated source. See server/tests/ecommerceJsTemplateRegexEscapes.test.js
+    // which guards this whole template against regex-escape regressions.
+    if (/^https?:\/\//i.test(path) || path.indexOf('/api/website/preview') === 0) return path;
     var normalized = path.charAt(0) === '/' ? path : '/' + path;
     var currentPath = window.location ? window.location.pathname : '';
     if (currentPath.indexOf('/preview') !== -1 || currentPath.indexOf('/preview-fullscreen') !== -1) {
@@ -695,8 +703,8 @@ window.onload = function() {
     var lang = String(getCurrentEcomLanguage() || '').split('-')[0].toLowerCase();
     var defaultLang = (typeof zappyEcomDefaultLanguage === 'string' && zappyEcomDefaultLanguage) ? zappyEcomDefaultLanguage.split('-')[0].toLowerCase() : 'he';
     if (!lang || lang === defaultLang) return normalized;
-    var withoutLang = normalized.replace(/^/[a-z]{2}(?=/)/i, '');
-    if (/^/(product|category)(?:/|?|#|$)/i.test(withoutLang)) {
+    var withoutLang = normalized.replace(/^\/[a-z]{2}(?=\/)/i, '');
+    if (/^\/(product|category)(?:\/|\?|#|$)/i.test(withoutLang)) {
       var parts = withoutLang.split('#');
       var hash = parts.length > 1 ? '#' + parts.slice(1).join('#') : '';
       var pathAndQuery = parts[0].split('?');
@@ -970,7 +978,7 @@ function stripHtmlToText(html) {
     if (value === null || value === undefined || value === '') return NaN;
     if (typeof value === 'number') return Number.isFinite(value) ? value : NaN;
     var normalized = String(value)
-      .replace(/[^d.,-]/g, '')
+      .replace(/[^\d.,-]/g, '')
       .replace(/,/g, '');
     var parsed = parseFloat(normalized);
     return Number.isFinite(parsed) ? parsed : NaN;
@@ -1719,10 +1727,10 @@ function stripHtmlToText(html) {
         return String(key).toLowerCase() === String(attrKey || '').toLowerCase();
       });
       var swatchesForKey = swatchKey && compactSwatches[swatchKey];
-      var normalizedCompactValue = String(colorValue).trim().replace(/s+/g, ' ').toLowerCase();
+      var normalizedCompactValue = String(colorValue).trim().replace(/\s+/g, ' ').toLowerCase();
       if (swatchesForKey && typeof swatchesForKey === 'object') {
         var valueKey = Object.keys(swatchesForKey).find(function(key) {
-          return String(key).trim().replace(/s+/g, ' ').toLowerCase() === normalizedCompactValue;
+          return String(key).trim().replace(/\s+/g, ' ').toLowerCase() === normalizedCompactValue;
         });
         if (valueKey && swatchesForKey[valueKey]) return swatchesForKey[valueKey];
       }
@@ -1742,10 +1750,10 @@ function stripHtmlToText(html) {
       var values = selectionKey && Array.isArray(selections[selectionKey] && selections[selectionKey].values)
         ? selections[selectionKey].values
         : [];
-      var normalizedValue = String(colorValue).trim().replace(/s+/g, ' ').toLowerCase();
+      var normalizedValue = String(colorValue).trim().replace(/\s+/g, ' ').toLowerCase();
       var match = values.find(function(value) {
         var label = typeof value === 'string' ? value : value && value.label;
-        return label && String(label).trim().replace(/s+/g, ' ').toLowerCase() === normalizedValue && value && value.hex;
+        return label && String(label).trim().replace(/\s+/g, ' ').toLowerCase() === normalizedValue && value && value.hex;
       });
       if (match && match.hex) return match.hex;
     }
@@ -5174,7 +5182,9 @@ function buildApiUrlWithLang(path) {
 
 function buildStorefrontPath(path) {
   if (!path) return path;
-  if (/^https?:///i.test(path) || path.indexOf('/api/website/preview') === 0) return path;
+  // NOTE: every \ in regex literals here is intentional — see the matching
+  // copy of this function in the ecommerceJs template above for the why.
+  if (/^https?:\/\//i.test(path) || path.indexOf('/api/website/preview') === 0) return path;
   var normalized = path.charAt(0) === '/' ? path : '/' + path;
   var currentPath = window.location ? window.location.pathname : '';
   if (currentPath.indexOf('/preview') !== -1 || currentPath.indexOf('/preview-fullscreen') !== -1) {
@@ -5183,8 +5193,8 @@ function buildStorefrontPath(path) {
   var lang = String(getCurrentLanguage() || '').split('-')[0].toLowerCase();
   var defaultLang = (typeof zappyAdditionalDefaultLanguage === 'string' && zappyAdditionalDefaultLanguage) ? zappyAdditionalDefaultLanguage.split('-')[0].toLowerCase() : 'he';
   if (!lang || lang === defaultLang) return normalized;
-  var withoutLang = normalized.replace(/^/[a-z]{2}(?=/)/i, '');
-  if (/^/(product|category)(?:/|?|#|$)/i.test(withoutLang)) {
+  var withoutLang = normalized.replace(/^\/[a-z]{2}(?=\/)/i, '');
+  if (/^\/(product|category)(?:\/|\?|#|$)/i.test(withoutLang)) {
     var parts = withoutLang.split('#');
     var hash = parts.length > 1 ? '#' + parts.slice(1).join('#') : '';
     var pathAndQuery = parts[0].split('?');
