@@ -1001,11 +1001,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="checkout-accordion-body">
                   <div class="checkout-login-prompt" id="checkout-login-prompt">
-                    <span>כבר יש לך חשבון?</span>&nbsp;<a href="/login" class="checkout-login-link" id="checkout-login-link">התחבר כאן</a>
+                    <span id="checkout-already-have-account">כבר יש לך חשבון?</span>&nbsp;<a href="/login" class="checkout-login-link" id="checkout-login-link">התחבר כאן</a>
                   </div>
                   <div class="checkout-logged-in" id="checkout-logged-in" style="display: none;">
                     <div class="checkout-logged-in-text">
-                      <span>מחובר כ:</span>
+                      <span id="checkout-logged-in-label">מחובר כ:</span>
                       <strong id="checkout-logged-in-name"></strong>
                       <span id="checkout-logged-in-email"></span>
                     </div>
@@ -1390,7 +1390,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_cancel": "ביטול",
       "ecom_capacity": "קיבולת",
       "ecom_cart": "עגלת קניות",
-      "ecom_cartEmpty": "העגלה ריקה",
       "ecom_category": "קטגוריה",
       "ecom_checkout": "תשלום",
       "ecom_city": "עיר",
@@ -3352,7 +3351,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_cancel": "Cancel",
       "ecom_capacity": "Capacity",
       "ecom_cart": "Cart",
-      "ecom_cartEmpty": "Your cart is empty",
       "ecom_category": "Category",
       "ecom_checkout": "Checkout",
       "ecom_city": "City",
