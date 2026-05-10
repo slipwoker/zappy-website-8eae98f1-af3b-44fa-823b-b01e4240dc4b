@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-10T13:12:37.381Z",
+  "generated_at": "2026-05-10T13:13:41.005Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 117,
   "products": [
     {
       "id": "5d4958df-e718-45e0-b8ce-1d6ec377ca62",
-      "slug": "bnnh-byts-mtlh-lbnnvt-dimt7i",
+      "slug": "bnnh-byts-mtlh-lbnnvt-4to0xl",
       "name": "בננה ביץ׳ - מתלה לבננות",
       "name_translations": {
         "en": "Banana Beach - Banana Hanger",
@@ -30,11 +30,11 @@
       ],
       "in_stock": false,
       "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-dimt7i",
+      "url": "https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-4to0xl",
       "categories": [
         "חדש!"
       ],
-      "updated_at": "2026-05-10T13:12:05.387Z"
+      "updated_at": "2026-05-10T13:13:09.117Z"
     },
     {
       "id": "5b5c7853-c985-4569-82d1-8492bcdc2e91",
