@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://artori.co.il</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il" />
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il" />
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/collections</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/collections" />
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/collections</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/collections" />
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/our-story</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/our-story" />
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/our-story</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/our-story" />
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/contact</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/contact" />
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/contact</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/contact" />
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/products</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/products" />
@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/products</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/products" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/cart</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/cart" />
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/cart</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/cart" />
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/checkout</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/checkout" />
@@ -120,7 +120,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/checkout</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/checkout" />
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/login</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/login" />
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/login</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/login" />
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/account</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/account" />
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/account</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/account" />
@@ -165,7 +165,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/order-success</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/order-success" />
@@ -174,7 +174,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/order-success</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/order-success" />
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/product/:slug</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/product/:slug" />
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/product/:slug</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/product/:slug" />
@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/category/:slug</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/category/:slug" />
@@ -210,7 +210,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/category/:slug</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/category/:slug" />
@@ -219,7 +219,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/privacy</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/privacy" />
@@ -228,7 +228,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/privacy</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/privacy" />
@@ -237,7 +237,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/terms</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/terms" />
@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/terms</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/terms" />
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://artori.co.il/accessibility</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/accessibility" />
@@ -264,11 +264,713 @@
   </url>
   <url>
     <loc>https://artori.co.il/en/accessibility</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://artori.co.il/accessibility" />
     <xhtml:link rel="alternate" hreflang="en" href="https://artori.co.il/en/accessibility" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://artori.co.il/accessibility" />
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-dimt7i</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-rujc8c</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-3vy1pg</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-v58ep7</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-aqtzr9</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-fq0hic</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-80ve8s</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/kvby-vnysym-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ktn-sazm1f</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-6hmbsk</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-10u8lp</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-kkriah</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-ihy5eu</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-5p838p</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-7d9okg</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-ywpfc2</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-dql5q8</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-ragj3b</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-su8xd2</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ljpus0</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-rxy0sy</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-awv7b9</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-75w96t</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-dlleld</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-0jfftl</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6xhjm1</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-e1qxfe</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-kew8dr</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-x4zmqg</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-yratzl</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-9vmjmw</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-6y42b8</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-veg6z9</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-kdpddz</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-scvhma</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-zlunok</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vntyk-art-shval-psl-mdp-vntyk-4a03g7</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-wctmq5</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/syzypvs-mdp-mavtsb-ntvy-lachsvn-glyly-nyyr-tvalt-shchvrapvr-fcxld8</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/dyvh-vprynss-zvg-pslvny-chtvlym-lmdp-5n1007</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-a72jbb</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-upuuln</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/prynss-vshrlvk-zvg-pslvny-chtvlym-lmdp-nnx9cv</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/dyvh-vtsrtsyl-zvg-pslvny-chtvlym-lkyshvt-mdp-5qm69a</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tchtyvt-lkvsvt-mavtsbvt-kshtychvny-rkb-v9xase</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-0r3lw0</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-gn98x2</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-xn8tks</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mrvbat-19e261</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-85l6ob</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-f0fbfv</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tlvy-albrt-mtlh-mbvss-shyvvy-mshkl-1bm4rh</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/pslvny-chtvlym-st-shl-chmyshh-chtvlym-dkvrtybyym-lhtsbh-al-mdp-2gzpl3</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avlh-mtlh-mgbt-c1dgg7</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avskr-pslvn-chtvl-lhamdh-al-mdp-j31liu</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/prynss-pslvn-chtvl-lmdp-zr2u7f</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shrlvk-pslvn-chtvl-lmdp-tffj66</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/avskr-pslvn-chtvl-lmdp-5gjlbn</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/dyvh-vprynss-zvg-pslvny-chtvlym-lmdp-cl0s64</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tlvy-lvay-mtlh-mbvss-shyvvy-mshkl-wrfb9x</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tsrtsyl-pslvn-chtvl-lhamdh-al-mdp-diwubh</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/svprgl-tvmkt-sprym-gybvrt-al-lmdp-sprym-av-lshvlchn-habvdh-bmshrd-av-bchdr-hyldym-7m1r67</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tlvy-prshs-mtlh-mbvss-shyvvy-mshkl-baytsvb-shl-chtvl-hjcc1s</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-zdn9le</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-rxlx7w</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-poros7</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/akstrym-pslvn-mdp-t5tgtd</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-e80hn5</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shchkny-mtkvt-pslvny-mdp-mtschykym-vdkvrtybyym-r3bn0x</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mtlh-kvlb-93wzar</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/snay-mptsch-agvzym-xp7h9x</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/zvg-tvmky-sprym-lspry-byshvl-op89ln</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/klb-tvb-mtkn-lkysmym-1eoh9u</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-xmszko</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-ni4xmd</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-72hrgb</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-ye5ktb</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-a0c73u</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-83pka3</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-qozfiy</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-4r2tq0</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tchtyt-kyryym-mtkt-xq9jtf</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tchtyt-kyryym-sylykvn-v0ulnu</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/btypvl-kysvy-lkvpst-tyshv-mrvbat-9kd9n5</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/plnktvn-msnnt-psth-av-msnnt-kllyt-lmtbch-advm-odjwod</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mtsyvn-pyrmydh-mtkn-lmtsvt-lchg-hpsch-mavtsb-kpyrmydh-mtsryt-tsba-ksp-mtzpyy</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/mtsyvn-pyrmydh-mtkn-lmtsvt-lchg-hpsch-mavtsb-kpyrmydh-mtsryt-tsba-zhb-0qbdr3</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/hchtvl-vhklb-mamd-lnyyr-svpg-shchvr-e29dzp</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/hchtvl-vhavrb-mamd-lnyyr-svpg-shchvr-yiqyc8</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/btypvl-kysvy-lkvpst-tyshv-mlbnyt-85qkaa</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tvmk-sprym-mavtsb-mtgvnn-falling-bookend-laytsvb-vkyshvt-mdp-hsprym-76sat9</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-qjxdx3</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/tvmk-sprym-gybvr-al-mamd-dkvrtyby-lsprym-lmdp-lspryh-av-lshvlchn-habvdh-snqu3f</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-qfllsq</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/shvr-vmtdvr-mpyvn-lmpyvt-advmvt-4x4gtp</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artori.co.il/product/pvtchn-lbkbvk-byrh-btsvrt-skyn-gylvch-shl-pam-kb7j7p</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

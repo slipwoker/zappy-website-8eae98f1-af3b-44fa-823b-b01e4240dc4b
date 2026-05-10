@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# ארטאורי דיזיין — Generative Engine Optimization Map
+
+> A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.
 
 ---
 
@@ -68,12 +70,1080 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+**Total active products: 117**
+
+### בננה ביץ׳ - מתלה לבננות
+https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-dimt7i
+- Price: 169.90 ILS
+- Availability: Out of stock
+- Category: חדש!
+- SKU: AD355
+- Description: הדרך היפה לשמור על הבננות טריות
+- Image: https://artori.co.il/assets/product-1778418461929-i0iixh4.webp
+
+### ביזי חיילים - בן - מעמד לטלפון נייד
+https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתנות לחייל/ת
+- SKU: AD333
+- Description: מתנה מושלמת לחייל
+- Image: https://artori.co.il/assets/product-1777395937779-hxiw2.webp
+
+### ביזי חיילים - טום - מעמד לטלפון נייד
+https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתנות לחייל/ת
+- SKU: AD332
+- Description: מתנה מושלמת לחייל
+- Image: https://artori.co.il/assets/product-1777396051359-2no8fe.webp
+
+### ביזי חיילים - מאיה - מעמד לטלפון נייד
+https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתנות לחייל/ת
+- SKU: AD331
+- Description: מתנה מושלמת לחיילת
+- Image: https://artori.co.il/assets/product-1777396368497-rynz0m.webp
+
+### ביזי חיילים - דנה - מעמד לטלפון נייד
+https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתנות לחייל/ת
+- SKU: AD330
+- Description: מתנה מושלמת לחיילת
+- Image: https://artori.co.il/assets/product-1777396213443-x7dwam.webp
+
+### וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD385
+- Brand: Artori Design
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1775494226661-pq18vd.webp
+
+### וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-rujc8c
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD384
+- Brand: Artori Design
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1775494091254-0vsp8.webp
+
+### וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD383
+- Brand: Artori Design
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1775493839293-sn7iwv.webp
+
+### וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD382
+- Brand: Artori Design
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1775493563694-g8dot.webp
+
+### וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD381
+- Brand: Artori Design
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1775492924520-2i6yrd.webp
+
+### ביזי יוגה - סטנד לסמארטפון - זואי
+https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD137
+- Description: עוגן שקט לטלפון העסוק שלך
+- Image: https://artori.co.il/assets/product-1773749850672-2edxej.webp
+
+### ביזי יוגה - סטנד לסמארטפון - סנגיטה
+https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD138
+- Description: עוגן שקט לטלפון העסוק שלך
+- Image: https://artori.co.il/assets/product-1773749851297-86p2ia.webp
+
+### ביזי יוגה - סטנד לסמארטפון - לונה
+https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD136
+- Description: עוגן שקט לטלפון העסוק שלך
+- Image: https://artori.co.il/assets/product-1773749850461-e04rmz.webp
+
+### מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט
+https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-3vy1pg
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מדפים לגלילי נייר טואלט
+- SKU: AD406
+- Description: מדף אלכסוני מיוחד לעיצוב חדר השירותים או האמבטיה
+- Image: https://artori.co.il/assets/product-1773749840364-6or2h.webp
+
+### אופליין - מדף מפתחות לכניסה לבית
+https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx
+- Price: 110.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD265
+- Brand: ארטאורי דיזיין
+- Description: הנח את הטלפון שלך פה \n \n You are Offline
+- Image: https://artori.co.il/assets/product-1773749840970-dnp3vw.webp
+
+### דלי צבע - מעמד מעוצב לנייר סופג
+https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-v58ep7
+- Price: 159.90 ILS
+- Availability: In stock
+- Category: מתקנים לנייר סופג
+- SKU: AD208
+- Description: הכניסו צבע למטבח. שחור זה גם צבע. \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749841649-6gaslb.webp
+
+### אוסקר, צ׳רצ׳יל, שרלוק - שלישיית פסלוני חתולים למדף
+https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg
+- Price: 145.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192COS
+- Description: קישוט דקורטיבי למדף
+- Image: https://artori.co.il/assets/product-1773749841354-4w4std.webp
+
+### סט מדפי ספרים גיבורי על - סופרשלף ווונדרשלף
+https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-aqtzr9
+- Price: 185.00 ILS
+- Availability: In stock
+- Category: מדפי ספרים
+- SKU: AD102+AD104
+- Description: טובים השניים מן האחד! סט מדפי ספרים לו ולה במחיר משתלם
+- Image: https://artori.co.il/assets/product-1773749841345-x1423b.webp
+
+### סט תומכי ספרים גיבורי על - סופרגל ובוק אנד הירו
+https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o
+- Price: 185.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD101+AD103
+- Description: טובים השניים מן האחד! סט תומכי ספרים לו ולה במחיר משתלם
+- Image: https://artori.co.il/assets/product-1773749841353-o0y2ac.webp
+
+### ביזי יוגה - סטנד לסמארטפון - גאיה
+https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-fq0hic
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD134
+- Description: עוגן שקט לטלפון העסוק שלך
+- Image: https://artori.co.il/assets/product-1773749841835-rkde5c.webp
+
+### עוף גוזל - מתלה בצורת חתול
+https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm
+- Price: 69.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD266
+- Description: מתלה בצורת חתול, לאוהבי עיצוב וחתולים
+- Image: https://artori.co.il/assets/product-1773749840973-h6niv2s.webp
+
+### בקיצור פיל - מדף אלכסוני לאחסון גלילי נייר טואלט - שחור
+https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-80ve8s
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מדפים לגלילי נייר טואלט
+- SKU: AD409
+- Description: מדף מתכת מיוחד לעיצוב חדר האמבטיה והשירותים. \n \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749828549-ida1lc.webp
+
+### ביזי - סטנד לסמארטפון - דוקטורית
+https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD139
+- Description: סטנד מעוצב לסמארטפון - דוקטור
+- Image: https://artori.co.il/assets/product-1773749828355-qfy4qi.webp
+
+### ביזי - סטנד לסמארטפון - דוקטור
+https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40
+- Price: 55.00 ILS
+- Availability: Out of stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD142
+- Description: סטנד מעוצב לסמארטפון - דוקטור
+- Image: https://artori.co.il/assets/product-1773749827950-424f2p.webp
+
+### קובי וניסים שחקני מטקות - פסלון מדף דקורטיבי - קטן
+https://artori.co.il/product/kvby-vnysym-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ktn-sazm1f
+- Price: 60.00 ILS (sale, was 120.00 ILS)
+- Availability: Out of stock
+- Category: שחקני מטקות
+- SKU: ma510-1
+- Description: פסלונים של שחקני מטקות ישראלים
+- Image: https://artori.co.il/assets/product-1773749828567-w3mbh.webp
+
+### פאזל 1000 חלקים - טיימס סקוור ניו יורק
+https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-6hmbsk
+- Price: 79.00 ILS (sale, was 99.00 ILS)
+- Availability: In stock
+- Category: פאזלים
+- SKU: AD501
+- Description: פאזל מקסים ומאתגר, לאוהבי הפאזלים
+- Image: https://artori.co.il/assets/product-1773749816166-9a2h1.webp
+
+### תומך ספרים קליף הנגר (Cliffhanger)
+https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-10u8lp
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD112
+- Description: סוף טוב הכל טוב?
+- Image: https://artori.co.il/assets/product-1773749816167-a51y7p.webp
+
+### פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי
+https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-kkriah
+- Price: 39.00 ILS (sale, was 55.00 ILS)
+- Availability: In stock
+- Category: מתלים
+- SKU: AD288
+- Description: לשירותכם תמיד, פייר
+- Image: https://artori.co.il/assets/product-1773749815799-pfl3oe.webp
+
+### ארטאורי בעיר - פאזל 1000 חלקים
+https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-ihy5eu
+- Price: 79.00 ILS (sale, was 99.00 ILS)
+- Availability: In stock
+- Category: פאזלים
+- SKU: AD500
+- Description: לאוהבי הפאזלים שאוהבים גם אותנו
+- Image: https://artori.co.il/assets/product-1773749815793-xonsx.webp
+
+### תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות
+https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-5p838p
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD877
+- Description: מתלה קוף דקורטיבי
+- Image: https://artori.co.il/assets/product-1773749815586-jkqthg.webp
+
+### תומך ספרים בורחים - Runaway Bookend
+https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-7d9okg
+- Price: 99.00 ILS
+- Availability: Out of stock
+- Category: תומכי ספרים
+- SKU: AD105
+- Description: דרמה על מדף הספרים
+- Image: https://artori.co.il/assets/product-1773749815780-06tdmp.webp
+
+### פסל של טווס - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים
+https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-ywpfc2
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- SKU: WA106
+- Description: ונטיק ארט - רישומים שהפכו לפסלי מתכת
+- Image: https://artori.co.il/assets/product-1773749814777-js59sa.webp
+
+### Greetings - מדף מפתחות אינטראקטיבי לכניסה לבית, עשוי מתכת
+https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-dql5q8
+- Price: 120.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- Description: המדף המפתיע שיברך אותך בהלוך ובחזור
+- Image: https://artori.co.il/assets/product-1773749789213-o0k003.webp
+
+### פסל של אווז - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים
+https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-ragj3b
+- Price: 0.00 ILS
+- Availability: Out of stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: ונטיק ארט - רישומים שהפכו לפסלי מתכת
+- Image: https://artori.co.il/assets/product-1773749789017-1uxrjf.webp
+
+### ביזי - סטנד לסמארטפון - צ'אטי פאטי
+https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-su8xd2
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD145
+- Description: פאטי חופרת אבל עדיין שומרת
+- Image: https://artori.co.il/assets/product-1773749789405-v2hdqo.webp
+
+### מפולת - מדף מעוצב לאחסון גלילי נייר טואלט
+https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ljpus0
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מדפים לגלילי נייר טואלט
+- SKU: AD196
+- Description: דרמה בחדר האמבטיה
+- Image: https://artori.co.il/assets/product-1773749789432-qqqit.webp
+
+### מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט
+https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-rxy0sy
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מדפים לגלילי נייר טואלט
+- SKU: AD197
+- Description: קסם בחדר האמבטיה \n \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749789198-k2fmue.webp
+
+### הירושלף - מדף למפתחות וחפצים קטנים
+https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe
+- Price: 129.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD106
+- Description: איפה אתם שמים את החפצים הקטנים שלכם כשאתם נכנסים הביתה? \nכמה זמן לוקח לכם לאתר אותם לפני שאתם יוצאים? \nאם אתם אוהבים סדר, אסתטיקה וגם חובבים גיבורי על, זה המוצר האידיאלי עבורכם. \n"הירושלף" הוא מדף מתכת מעוצב בדמות גיבור על. הוא חזק, בטוח בעצמו ויכול לשאת בשקט ובנוחות כל דבר שיש לכם בכיסים, \nבין אם זה מפתחות, ארנק, טלפון סלולרי, כסף קטן, משקפיים, שעון או כל חפץ אחר. \nהתקינו אותו ליד דלת הכניסה לבית (הברגים מצורפים) ותהנו מפיתרון אידיאלי, מעוצב ומרשים
+- Image: https://artori.co.il/assets/product-1773749778594-35kv4k.webp
+
+### ביזי - סטנד לסמארטפון - סלפי סטפי
+https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD144
+- Description: סטפי עסוקה בסלפי אבל עדיין תומכת
+- Image: https://artori.co.il/assets/product-1773749778797-f2u6kr.webp
+
+### "יצירת אמנות" - מסגרת לתמונה - זוג וספסל
+https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-awv7b9
+- Price: 149.00 ILS
+- Availability: In stock
+- Category: מסגרות
+- SKU: AD255
+- Description: למסגר כמו במוזיאון
+- Image: https://artori.co.il/assets/product-1773749779037-1u8uha.webp
+
+### "יצירת אמנות" - מסגרת לתמונה - זוג וצלמת - שחור
+https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-75w96t
+- Price: 149.00 ILS
+- Availability: Out of stock
+- Category: מסגרות
+- SKU: AD254
+- Description: למסגר כמו במוזיאון
+- Image: https://artori.co.il/assets/product-1773749779036-iqjlti.webp
+
+### ביזי - סטנד לסמארטפון - טוויט פיט
+https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-dlleld
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD148
+- Description: פיט מצייץ "טוויט טוויט" אבל את חובתו לא משמיט
+- Image: https://artori.co.il/assets/product-1773749779036-mc4k5.webp
+
+### ביזי - סטנד לסמארטפון - לייק מייק
+https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: סטנדים לטלפון נייד
+- SKU: AD143
+- Description: מייק בדיוק עושה לייק אבל זה לא מפריע לו לתמוך
+- Image: https://artori.co.il/assets/product-1773749778781-vth4da.webp
+
+### מטוסי נייר - סט מתלים מעוצבים לקיר
+https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-0jfftl
+- Price: 149.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD262
+- Description: נוסטלגיה משולבת באסתטיקה והומור
+- Image: https://artori.co.il/assets/product-1773749769959-m5vh3r.webp
+
+### ונטיק ארט - ברווז- פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu
+- Price: 490.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- SKU: WA101
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749769286-udbxh.webp
+
+### פסל של לביאה - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים
+https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6xhjm1
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- SKU: WA112
+- Description: ונטיק ארט - רישומים שהפכו לפסלי מתכת
+- Image: https://artori.co.il/assets/product-1773749769276-dae2j.webp
+
+### ונטיק ארט - תרנגול - פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-e1qxfe
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749769276-5lgc38c.webp
+
+### ונטיק ארט - תרנגול - פסל מדף
+https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-kew8dr
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749769678-6wmhc.webp
+
+### פסל של עגור מכותר - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים
+https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-x4zmqg
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- SKU: WA107
+- Description: ונטיק ארט - רישומים שהפכו לפסלי מתכת
+- Image: https://artori.co.il/assets/product-1773749769737-428ce6.webp
+
+### בלקוני - מדף מפתחות דקורטיבי - דגם A His
+https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-yratzl
+- Price: 169.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD126
+- Description: מקום מקסים לחפצים
+- Image: https://artori.co.il/assets/product-1773749759337-aj6d8u.webp
+
+### בלקוני - מדף מפתחות דקורטיבי - דגם B His
+https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-9vmjmw
+- Price: 169.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD127
+- Description: מקום מקסים לחפצים
+- Image: https://artori.co.il/assets/product-1773749758410-cq8a2b.webp
+
+### ונטיק ארט - עגור חן - פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-6y42b8
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749759336-35si9y.webp
+
+### בלקוני - מדף מפתחות דקורטיבי - דגם B Hers
+https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-veg6z9
+- Price: 169.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD125
+- Description: מקום מקסים לחפצים
+- Image: https://artori.co.il/assets/product-1773749759336-q4w93s.webp
+
+### תרנגול - פסל לקישוט מדף או קיר - עיצוב מודרני לבית - שלושה גדלים
+https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-kdpddz
+- Price: 400.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- SKU: WA103
+- Description: ונטיק ארט - רישומים שהפכו לפסלי מתכת
+- Image: https://artori.co.il/assets/product-1773749759835-ta60fm.webp
+
+### ונטיק ארט - חסידה- פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-scvhma
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749758997-exzy08.webp
+
+### ונטיק ארט - ג'ירף - פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-zlunok
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749758988-a5kwfp.webp
+
+### ונטיק ארט - קוף גונון - פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: בעלי חיים
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749761638-41asq7.webp
+
+### ונטיק ארט - שועל - פסל מדף - ונטיק
+https://artori.co.il/product/vntyk-art-shval-psl-mdp-vntyk-4a03g7
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: ונטיק ארט - פסלי חיות
+- Description: רישומים הופכים לפסלים
+- Image: https://artori.co.il/assets/product-1773749759000-zuxbgp.webp
+
+### הנסיכה במגדל - מעמד מעוצב לנייר מגבת
+https://artori.co.il/product/hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-wctmq5
+- Price: 159.90 ILS
+- Availability: In stock
+- Category: מתקנים לנייר סופג
+- SKU: AD195
+- Description: למטבח מהאגדות \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749759034-jjcrp9.webp
+
+### סיזיפוס - מדף מעוצב נטוי, לאחסון גלילי נייר טואלט - שחור/אפור
+https://artori.co.il/product/syzypvs-mdp-mavtsb-ntvy-lachsvn-glyly-nyyr-tvalt-shchvrapvr-fcxld8
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מדפים לגלילי נייר טואלט
+- SKU: AD198_9
+- Description: לעיצוב חמוד ומקורי של חדר השירותים / האמבטיה
+- Image: https://artori.co.il/assets/product-1773749741733-udqcvc.webp
+
+### דיוה ופרינסס - זוג פסלוני חתולים למדף
+https://artori.co.il/product/dyvh-vprynss-zvg-pslvny-chtvlym-lmdp-5n1007
+- Price: 95.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192DP
+- Description: קישוט דקורטיבי למדף
+- Image: https://artori.co.il/assets/product-1773749741835-bthpu.webp
+
+### בלקוני - מדף מפתחות דקורטיבי - דגם A Hers
+https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-a72jbb
+- Price: 169.00 ILS
+- Availability: In stock
+- Category: מדפי מפתחות
+- SKU: AD124
+- Description: מקום מקסים לחפצים קטנים
+- Image: https://artori.co.il/assets/product-1773749741556-g1kt2l.webp
+
+### וולי - סימנית אטב לספר, מעוצבת כתולעת ספרים
+https://artori.co.il/product/vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-upuuln
+- Price: 25.00 ILS
+- Availability: In stock
+- Category: סימניות
+- SKU: AD38..
+- Description: מתנה מושלמת לכל תולעת ספרים
+- Image: https://artori.co.il/assets/product-1773749741571-jhnji.webp
+
+### פרינסס ושרלוק - זוג פסלוני חתולים למדף
+https://artori.co.il/product/prynss-vshrlvk-zvg-pslvny-chtvlym-lmdp-nnx9cv
+- Price: 95.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192PS
+- Description: קישוט דקורטיבי למדף
+- Image: https://artori.co.il/assets/product-1773749741731-4qq1vh.webp
+
+### דיוה וצ׳רצ׳יל - זוג פסלוני חתולים לקישוט מדף
+https://artori.co.il/product/dyvh-vtsrtsyl-zvg-pslvny-chtvlym-lkyshvt-mdp-5qm69a
+- Price: 95.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192CD
+- Description: קישוט מקסים למדף, מתנה לאוהבי חתולים
+- Image: https://artori.co.il/assets/product-1773749741835-inq15.webp
+
+### תחתיות לכוסות מעוצבות כשטיחוני רכב
+https://artori.co.il/product/tchtyvt-lkvsvt-mavtsbvt-kshtychvny-rkb-v9xase
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: תחתיות
+- SKU: AD348
+- Description: מתנה מקורית לאוהבי מכוניות
+- Image: https://artori.co.il/assets/product-1773749725270-wqls89.webp
+
+### מחזיק מעמד - קישוט למדף
+https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-0r3lw0
+- Price: 69.00 ILS
+- Availability: In stock
+- Category: מוצרים אחרים להעמדה על שולחן / מדף
+- SKU: AD108
+- Description: גיבור על מחזיק מדפים וחפצים באויר
+- Image: https://artori.co.il/assets/product-1773749725065-3mftho.webp
+
+### מסגרת גומיות - מתקן שולחני לפתקי ממו ותמונות
+https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-gn98x2
+- Price: 49.00 ILS (sale, was 69.00 ILS)
+- Availability: In stock
+- Category: מסגרות
+- SKU: AD236P
+- Description: סטנד לפתקים ותמונות שהוא גם ריפוי בעיסוק. ניתן לעיצוב משתנה.
+- Image: https://artori.co.il/assets/product-1773749724648-axbqlr.webp
+
+### בטיפול שלה - כיסוי לקופסת טישו מלבנית
+https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-xn8tks
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: כיסויים לקופסת טישו
+- SKU: AD193
+- Description: כיסוי לקופסאת טישו - קופסא מלבנית
+- Image: https://artori.co.il/assets/product-1773749724256-7u136y.webp
+
+### בטיפול שלה - כיסוי לקופסת טישו מרובעת
+https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mrvbat-19e261
+- Price: 55.00 ILS
+- Availability: Out of stock
+- Category: כיסויים לקופסת טישו
+- SKU: AD194
+- Description: כיסוי לקופסאת טישו - קופסא מרובעת
+- Image: https://artori.co.il/assets/product-1773749724859-jm9vfm.webp
+
+### קולב קוביות תלת מימד - 6 קוביות
+https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-85l6ob
+- Price: 69.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD122
+- Description: מתלה אקססוריז שטוח לארון
+- Image: https://artori.co.il/assets/product-1773749725656-p6v2av.webp
+
+### קולב קוביות תלת מימד - 3 קוביות
+https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-f0fbfv
+- Price: 69.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD123
+- Description: מתלה אקססוריז שטוח לארון
+- Image: https://artori.co.il/assets/product-1773749724460-luq9l.webp
+
+### תלוי - אלברט - מתלה מבוסס שיווי משקל
+https://artori.co.il/product/tlvy-albrt-mtlh-mbvss-shyvvy-mshkl-1bm4rh
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD279
+- Description: מתלה קוף דקורטיבי
+- Image: https://artori.co.il/assets/product-1773749708752-tpeldhu.webp
+
+### פסלוני חתולים - סט של חמישה חתולים דקורטיביים להצבה על מדף
+https://artori.co.il/product/pslvny-chtvlym-st-shl-chmyshh-chtvlym-dkvrtybyym-lhtsbh-al-mdp-2gzpl3
+- Price: 220.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192AB
+- Description: מתנה מושלמת לאוהבי חתולים! זמין כסט, זוגות או בודדים
+- Image: https://artori.co.il/assets/product-1774449316497-nm9r7j.webp
+
+### אולה - מתלה מגבת
+https://artori.co.il/product/avlh-mtlh-mgbt-c1dgg7
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD261
+- Description: מתלה למגבת מטבח בדמות רקדנית פלמנקו
+- Image: https://artori.co.il/assets/product-1773749708157-wbfoqq.webp
+
+### אוסקר - פסלון חתול להעמדה על מדף
+https://artori.co.il/product/avskr-pslvn-chtvl-lhamdh-al-mdp-j31liu
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192OB
+- Description: נוכחות רגועה ושקטה על המדף שלכם. לא מיילל ולא שורט
+- Image: https://artori.co.il/assets/product-1774448316997-9gfxw.webp
+
+### פרינסס - פסלון חתול למדף
+https://artori.co.il/product/prynss-pslvn-chtvl-lmdp-zr2u7f
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192PB
+- Description: עיצוב נקי לאוהבי חתולים
+- Image: https://artori.co.il/assets/product-1773749703567-okasji.webp
+
+### שרלוק - פסלון חתול למדף
+https://artori.co.il/product/shrlvk-pslvn-chtvl-lmdp-tffj66
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192SB
+- Description: נוכחות רגועה ושקטה על המדף שלכם. לא מיילל ולא שורט
+- Image: https://artori.co.il/assets/product-1773749705346-ujhio.webp
+
+### אוסקר - פסלון חתול למדף
+https://artori.co.il/product/avskr-pslvn-chtvl-lmdp-5gjlbn
+- Price: 0.00 ILS
+- Availability: In stock
+- Description: Metal shelf / mantle decoration.
+- Image: https://artori.co.il/assets/product-1773749701198-1ohwqf.webp
+
+### דיוה ופרינסס - זוג פסלוני חתולים למדף
+https://artori.co.il/product/dyvh-vprynss-zvg-pslvny-chtvlym-lmdp-cl0s64
+- Price: 95.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192DP
+- Description: קישוט דקורטיבי למדף
+- Image: https://artori.co.il/assets/product-1773749741835-bthpu.webp
+
+### תלוי - לואי - מתלה מבוסס שיווי משקל
+https://artori.co.il/product/tlvy-lvay-mtlh-mbvss-shyvvy-mshkl-wrfb9x
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD273
+- Description: תוספת דקורטיבית ושימושית למדף, לאוהבי עיצוב וחתולים
+- Image: https://artori.co.il/assets/product-1773749690000-mkl9oh.webp
+
+### צ'רצ'יל - פסלון חתול להעמדה על מדף
+https://artori.co.il/product/tsrtsyl-pslvn-chtvl-lhamdh-al-mdp-diwubh
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: חתולים
+- SKU: AD192CB
+- Description: עיצוב נקי לאוהבי חתולים
+- Image: https://artori.co.il/assets/product-1773749691852-rc97h.webp
+
+### סופרגל - תומכת ספרים גיבורת על למדף ספרים או לשולחן העבודה במשרד או בחדר הילדים
+https://artori.co.il/product/svprgl-tvmkt-sprym-gybvrt-al-lmdp-sprym-av-lshvlchn-habvdh-bmshrd-av-bchdr-hyldym-7m1r67
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD103
+- Description: הגיבורה של הסיפור
+- Image: https://artori.co.il/assets/product-1773749690199-rrj8hf.webp
+
+### תלוי - פרשס - מתלה מבוסס שיווי משקל בעיצוב של חתול
+https://artori.co.il/product/tlvy-prshs-mtlh-mbvss-shyvvy-mshkl-baytsvb-shl-chtvl-hjcc1s
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD274
+- Description: חתול דקורטיבי ושימושי למדף
+- Image: https://artori.co.il/assets/product-1773749690214-yx7ayf.webp
+
+### שעון קיר - מפת יפו - עברית
+https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-zdn9le
+- Price: 79.00 ILS (sale, was 99.00 ILS)
+- Availability: Out of stock
+- Category: שעוני קיר
+- SKU: AD220
+- Description: שעון כיכר השעון - יפו - עברית שעון קיר הכולל קטע מתוך מפת תל אביב יפו, באזור יפו העתיקה ובמרכזו מחוגים הממוקמים בדיוק בכיכר השעון. בשעון ניתן לראות את רחובות יפו העתיקה, שוק הפשפשים, טיילת יפו, הים וכיכר הסוכנות המכונה "כיכר השעון". מתנה מקורית לאורחים מחו"ל או לפטריוטים מקומיים. קיים בעברית או אנגלית. קוטר : 30 ס"מ. עשוי מזכוכית מחוסמת עם הדפסה אחורית איכותית ומבריקה. השעון כולל מנגנון שקט ורציף ונמכר באריזה איכותית ומגינה.
+- Image: https://artori.co.il/assets/product-1773749691634-az40wl.webp
+
+### שעון קיר - מפת ירושלים - עברית
+https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-rxlx7w
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: שעוני קיר
+- SKU: AD224
+- Description: שעון כיכר השעון - "טליתא קומי" ירושלים: עברית שעון קיר המתאר קטע ממפת מרכז ירושלים, כאשר מחוגי השעון ממוקמים בקרן הרחובות בן יהודה והמלך ג'ורג בכיכר המכונה כיכר "טליתא קומי". מקור השם, שתרגומו המילולי מארמית לעברית הוא "ילדה קטנה, קומי", נעוץ בסיפור מהברית החדשה המתאר נס שנעשה ע"י ישו, אשר גרם לילדה קטנה - בתו של יאיר הגלילי, לקום ולהלך, וזאת לאחר שחלתה ומתה. במקום שכן בעבר מבנה מפואר, ששימש בית יתומות וכלל בחזיתו קשתות, שלט הנושא את השם "טליתא קומי" ושעון גדול. המבנה נהרס עם השנים, אולם חזיתו ו…
+- Image: https://artori.co.il/assets/product-1773749690787-7hehog.webp
+
+### וונדרשלף - מדפית ספרים צפה גיבורת על
+https://artori.co.il/product/vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-poros7
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: מדפי ספרים
+- SKU: AD104
+- Description: מדף ספרים צף
+- Image: https://artori.co.il/assets/product-1773749689815-e7n1d.webp
+
+### אקסטרים - פסלון מדף
+https://artori.co.il/product/akstrym-pslvn-mdp-t5tgtd
+- Price: 69.90 ILS
+- Availability: In stock
+- Category: מוצרים אחרים להעמדה על שולחן / מדף
+- SKU: AD294
+- Description: להחליק על הקצה
+- Image: https://artori.co.il/assets/product-1773749683285-nwz7pw.webp
+
+### רוני ומוטי שחקני מטקות - פסלון מדף דקורטיבי
+https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-e80hn5
+- Price: 199.00 ILS
+- Availability: In stock
+- Category: למשרד / חלל עבודה
+- SKU: ma26
+- Description: פסלונים של שחקני מטקות ישראלים
+- Image: https://artori.co.il/assets/product-1773749683054-i21fap.webp
+
+### שחקני מטקות - פסלוני מדף מצחיקים ודקורטיביים
+https://artori.co.il/product/shchkny-mtkvt-pslvny-mdp-mtschykym-vdkvrtybyym-r3bn0x
+- Price: 240.00 ILS
+- Availability: Out of stock
+- Category: שחקני מטקות
+- SKU: ma510
+- Description: פסלונים של שחקני מטקות ישראלים
+- Image: https://artori.co.il/assets/product-1773749683043-75t7o.webp
+
+### מתלה קולב
+https://artori.co.il/product/mtlh-kvlb-93wzar
+- Price: 0.00 ILS
+- Availability: In stock
+- Category: מתלים
+- SKU: AD350
+- Description: מתלה לבגדים, חפצים, תכשיטים, תיקים וכו' בצורת קולב בגדים מוקטן
+- Image: https://artori.co.il/assets/product-1773749676979-g4596d.webp
+
+### סנאי מפצח אגוזים
+https://artori.co.il/product/snay-mptsch-agvzym-xp7h9x
+- Price: 79.90 ILS
+- Availability: In stock
+- Category: עוד למטבח ולאירוח
+- SKU: AD360
+- Description: מעשה בשלושה אגוזים
+- Image: https://artori.co.il/assets/product-1773749674206-gdghsp.webp
+
+### זוג תומכי ספרים לספרי בישול
+https://artori.co.il/product/zvg-tvmky-sprym-lspry-byshvl-op89ln
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD285
+- Description: תומכים לספרי בישול
+- Image: https://artori.co.il/assets/product-1773749660061-45meob.webp
+
+### כלב טוב - מתקן לקיסמים
+https://artori.co.il/product/klb-tvb-mtkn-lkysmym-1eoh9u
+- Price: 39.89 ILS
+- Availability: In stock
+- Category: עוד למטבח ולאירוח
+- SKU: AD27..
+- Description: חברו הטוב ביותר של האדם, עכשיו קרוב לצלחת \nמתנה שימושית ויפה לאוהבי כלבים
+- Image: https://artori.co.il/assets/product-1774277529610-fkft5b.webp
+
+### פקקופסא - קופסת אחסון לאמבטיה
+https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-xmszko
+- Price: 39.00 ILS (sale, was 55.00 ILS)
+- Availability: In stock
+- Category: מוצרים אחרים להעמדה על שולחן / מדף
+- SKU: AD260
+- Description: קופסת קרמיקה בצורת פקק אמבטיה
+- Image: https://artori.co.il/assets/product-1773749649903-cb5948.webp
+
+### סוף העיפרון - כוס לציוד משרדי
+https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-ni4xmd
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: ציוד משרדי
+- SKU: AD243
+- Description: סוף לבלגן \n \nלמחוק את הבלגן מהשולחן
+- Image: https://artori.co.il/assets/product-1773749649109-6xokoj.webp
+
+### קלמחק - קלמר מעוצב כמחק
+https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-72hrgb
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: ציוד משרדי
+- SKU: AD252
+- Description: מוחק את הבלגן מהשולחן
+- Image: https://artori.co.il/assets/product-1773749649319-r6rat.webp
+
+### מחק'ס - מחק מעוצב כמו נוזל מחיקה (טיפקס)
+https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-ye5ktb
+- Price: 9.90 ILS
+- Availability: In stock
+- Category: ציוד משרדי
+- SKU: AD253
+- Description: הפתעה מגניבה בקלמר
+- Image: https://artori.co.il/assets/product-1773749649315-g7hits.webp
+
+### שעון קיר - מפת ירושלים - אנגלית
+https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-a0c73u
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: שעוני קיר
+- SKU: AD226
+- Description: שעון קיר עם גרפיקה של מפת כיכר השעון טליתא קומי במרכז העיר ירושלים
+- Image: https://artori.co.il/assets/product-1773749645668-603vwl.webp
+
+### שעון קיר - מפת יפו - אנגלית
+https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-83pka3
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: שעוני קיר
+- SKU: AD222
+- Description: שעון קיר עם גרפיקה של מפת כיכר השעון ביפו
+- Image: https://artori.co.il/assets/product-1773749645595-7kzcr.webp
+
+### שעון קיר - מפת ירושלים - שער יפו
+https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-qozfiy
+- Price: 79.00 ILS (sale, was 99.00 ILS)
+- Availability: Out of stock
+- Category: שעוני קיר
+- SKU: AD234
+- Description: שעון קיר עם גרפיקה של מפת ירושלים
+- Image: https://artori.co.il/assets/product-1773749645593-ftwrpr6.webp
+
+### נערת שער - מתקן לכרטיסי ביקור
+https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-4r2tq0
+- Price: 89.00 ILS
+- Availability: In stock
+- Category: ציוד משרדי
+- SKU: AD180
+- Description: אין מה להסתיר..
+- Image: https://artori.co.il/assets/product-1773749635821-ert0b.webp
+
+### תחתית כיריים - מתכת
+https://artori.co.il/product/tchtyt-kyryym-mtkt-xq9jtf
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: תחתיות
+- SKU: AD189
+- Description: משהו פה ממשיך להתבשל...
+- Image: https://artori.co.il/assets/product-1773749636423-trxzdh.webp
+
+### תחתית כיריים - סיליקון
+https://artori.co.il/product/tchtyt-kyryym-sylykvn-v0ulnu
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: תחתיות
+- SKU: AD188
+- Description: Hot dish, Cool table \n \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749636011-kchh8g.webp
+
+### בטיפול - כיסוי לקופסת טישו מרובעת
+https://artori.co.il/product/btypvl-kysvy-lkvpst-tyshv-mrvbat-9kd9n5
+- Price: 55.00 ILS
+- Availability: In stock
+- Category: כיסויים לקופסת טישו
+- SKU: AD191
+- Description: כיסוי מעוצב לקופסת טישו מרובעת
+- Image: https://artori.co.il/assets/product-1773749636213-pezaal.webp
+
+### פלנקטון - מסננת פסטה או מסננת כללית למטבח - אדום
+https://artori.co.il/product/plnktvn-msnnt-psth-av-msnnt-kllyt-lmtbch-advm-odjwod
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: עוד למטבח ולאירוח
+- SKU: AD190
+- Description: מסננת פסטה מן הים
+- Image: https://artori.co.il/assets/product-1773749636022-rby6z.webp
+
+### מציון פירמידה - מתקן למצות לחג הפסח מעוצב כפירמידה מצרית - צבע: כסף
+https://artori.co.il/product/mtsyvn-pyrmydh-mtkn-lmtsvt-lchg-hpsch-mavtsb-kpyrmydh-mtsryt-tsba-ksp-mtzpyy
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מציונים
+- SKU: AD157
+- Description: ליל הסדר בסטייל
+- Image: https://artori.co.il/assets/product-1773749627987-dfg74q.webp
+
+### מציון פירמידה - מתקן למצות לחג הפסח מעוצב כפירמידה מצרית - צבע: זהב
+https://artori.co.il/product/mtsyvn-pyrmydh-mtkn-lmtsvt-lchg-hpsch-mavtsb-kpyrmydh-mtsryt-tsba-zhb-0qbdr3
+- Price: 139.00 ILS
+- Availability: In stock
+- Category: מציונים
+- SKU: AD158
+- Description: מתקן למצות
+- Image: https://artori.co.il/assets/product-1773749627979-iaigp.webp
+
+### החתול והכלב - מעמד לנייר סופג - שחור
+https://artori.co.il/product/hchtvl-vhklb-mamd-lnyyr-svpg-shchvr-e29dzp
+- Price: 159.90 ILS
+- Availability: In stock
+- Category: מתקנים לנייר סופג
+- SKU: AD161
+- Description: החתול, הכלב ומה שבינהם... \n \n&nbsp;
+- Image: https://artori.co.il/assets/product-1773749627789-349m2o.webp
+
+### החתול והעורב - מעמד לנייר סופג - שחור
+https://artori.co.il/product/hchtvl-vhavrb-mamd-lnyyr-svpg-shchvr-yiqyc8
+- Price: 159.90 ILS
+- Availability: In stock
+- Category: מתקנים לנייר סופג
+- SKU: AD164
+- Description: החתול, העורב ומה שבינהם...
+- Image: https://artori.co.il/assets/product-1774449733306-d1hodh.webp
+
+### בטיפול - כיסוי לקופסת טישו מלבנית
+https://artori.co.il/product/btypvl-kysvy-lkvpst-tyshv-mlbnyt-85qkaa
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: כיסויים לקופסת טישו
+- SKU: AD160
+- Description: כיסוי מעוצב לקופסת טישו מלבנית
+- Image: https://artori.co.il/assets/product-1773749627789-3vhige.webp
+
+### תומך ספרים מעוצב ״מתגונן״ - Falling Bookend - לעיצוב וקישוט מדף הספרים
+https://artori.co.il/product/tvmk-sprym-mavtsb-mtgvnn-falling-bookend-laytsvb-vkyshvt-mdp-hsprym-76sat9
+- Price: 99.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD100
+- Description: דרמה על מדף הספרים
+- Image: https://artori.co.il/assets/product-1773749608478-x12qhs.webp
+
+### סופרשלף - מדף ספרים צף בעיצוב גיבור על - מדף דקורטיבי לחלל המגורים, חלל העבודה או חדר הילדים
+https://artori.co.il/product/svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-qjxdx3
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: מדפי ספרים
+- SKU: AD102
+- Description: מדף ספרים צף
+- Image: https://artori.co.il/assets/product-1773749608836-f0wqwj.webp
+
+### תומך ספרים גיבור על - מעמד דקורטיבי לספרים למדף, לספריה או לשולחן העבודה
+https://artori.co.il/product/tvmk-sprym-gybvr-al-mamd-dkvrtyby-lsprym-lmdp-lspryh-av-lshvlchn-habvdh-snqu3f
+- Price: 109.00 ILS
+- Availability: In stock
+- Category: תומכי ספרים
+- SKU: AD101
+- Description: "הגיבור של הסיפור"
+- Image: https://artori.co.il/assets/product-1773749608215-ajx892.webp
+
+### זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית
+https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-qfllsq
+- Price: 129.00 ILS
+- Availability: Out of stock
+- Category: יונים
+- SKU: AD140
+- Description: אהבה על המדף..
+- Image: https://artori.co.il/assets/product-1773749608176-c0oty.webp
+
+### שור ומטדור - מפיון למפיות אדומות
+https://artori.co.il/product/shvr-vmtdvr-mpyvn-lmpyvt-advmvt-4x4gtp
+- Price: 69.00 ILS
+- Availability: In stock
+- Category: מפיונים
+- SKU: AD150
+- Description: נקיון כפיים במלחמת השוורים
+- Image: https://artori.co.il/assets/product-1773749608181-cuayws.webp
+
+### פותחן לבקבוק בירה בצורת סכין גילוח של פעם
+https://artori.co.il/product/pvtchn-lbkbvk-byrh-btsvrt-skyn-gylvch-shl-pam-kb7j7p
+- Price: 49.90 ILS
+- Availability: In stock
+- Category: עוד למטבח ולאירוח
+- SKU: AD131
+- Description: לגברים ששותים ומתגלחים..
+- Image: https://artori.co.il/assets/product-1773749607997-rpweh5h.webp
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://artori.co.il/sitemap.xml
-- **Robots.txt**: https://artori.co.il/robots.txt
+## About ארטאורי דיזיין
+A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.
+
+## Target Audience
+- חובבי עיצוב צעירים
+- בעלי בתים עירוניים
+- מעצבי פנים
+- בעלי בתים ראשונים
+
+## Industry
+עיצוב ומוצרי בית
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://artori.co.il/sitemap.xml
+- Robots: https://artori.co.il/robots.txt
+- Flattened page text (for LLMs): https://artori.co.il/llms-full.txt
+- Products (JSON): https://artori.co.il/products.json
+- Products (Google Merchant RSS): https://artori.co.il/product-feed.xml
