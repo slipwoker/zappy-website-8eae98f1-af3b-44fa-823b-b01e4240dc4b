@@ -215,6 +215,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="החשבון שלי">
     <meta name="twitter:description" content="החשבון שלי">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://artori.co.il#organization","name":"ארטאורי דיזיין","url":"https://artori.co.il","description":"A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.","address":{"@type":"PostalAddress","streetAddress":"הרדוף 19, הוד השרון, 4502117, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@artoridesign.com","telephone":"054-6242000","availableLanguage":["he","en"]}]},{"@type":"WebSite","@id":"https://artori.co.il#website","url":"https://artori.co.il","name":"ארטאורי דיזיין","publisher":{"@id":"https://artori.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://artori.co.il"},{"@type":"ListItem","position":2,"name":"Account","item":"https://artori.co.il/account"}]}]}</script>
     <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
@@ -924,11 +925,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 
     <style id="zappy-widget-visibility">
-      #mic-access-tool-general-button, .mic-access-tool-general-button,
-      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
-      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
-        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
       }
     </style>
 </head>
@@ -941,9 +968,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     window.ZAPPY_WEBSITE_ID = "8eae98f1-af3b-44fa-823b-b01e4240dc4b";
     // Preview pages are served by the Zappy server itself (localhost in dev), so use that base.
     // Deployed sites are static and must call the public Zappy API (never localhost).
-    window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview'))
-      ? "https://api.zappy5.com"
-      : "https://api.zappy5.com";
+    window.ZAPPY_API_BASE = "https://api.zappy5.com";
   </script>
   
     <div class="mobile-search-panel" id="mobile-search-panel">
@@ -1323,6 +1348,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
+  var __generatedDir = document.documentElement.getAttribute('dir') || 'ltr';
+
   // Language resources (inline to avoid CDN dependency)
   const resources = {
   "he": {
@@ -5490,9 +5517,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       }
 
-      // Pure text element (or wrapper like <font>text</font>) — use innerHTML
-      // when the translation or existing markup contains line breaks / inline
-      // formatting so <br> and inline tags survive the swap.
+      // Carry over inline formatting from the source element when the translation
+      // is plain text. E.g., source: <font color="#fff">Hebrew</font>,
+      // translation: "English" → wrap as <font color="#fff">English</font>.
+      var fontChild = el.querySelector('font[color], font[face], font[size]');
+      if (fontChild && !inlineFormatPattern.test(translation)) {
+        var fontTag = '<font';
+        for (var ai = 0; ai < fontChild.attributes.length; ai++) {
+          fontTag += ' ' + fontChild.attributes[ai].name + '="' + fontChild.attributes[ai].value.replace(/"/g, '&quot;') + '"';
+        }
+        translation = fontTag + '>' + translation + '</font>';
+      }
+
       var hasNewlines = translation.indexOf(newlineChar) !== -1;
       var hasInlineFormat = inlineFormatPattern.test(translation);
       var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
@@ -5513,7 +5549,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         el.setAttribute('placeholder', translation);
       }
     });
-    
+
     // Update alt attributes
     document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
       const key = el.getAttribute('data-i18n-alt');
@@ -5522,7 +5558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         el.setAttribute('alt', translation);
       }
     });
-    
+
     // Update title attributes
     document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
       const key = el.getAttribute('data-i18n-title');
@@ -5531,7 +5567,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         el.setAttribute('title', translation);
       }
     });
-    
+
     // Update meta description / og:* / twitter:* / keywords / author
     document.querySelectorAll('[data-i18n-content]').forEach(function(el) {
       const key = el.getAttribute('data-i18n-content');
@@ -5635,10 +5671,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
     
     // Swap inline text-align on content elements when direction changes.
-    // RTL-primary sites have text-align:right baked into inline styles;
-    // these must become text-align:left when viewing in LTR, and vice versa.
-    var defaultIsRTL = rtlLanguages.includes('he');
-    var needsSwap = isRTL !== defaultIsRTL;
+    // The HTML was generated with a specific direction (captured as
+    // __generatedDir at script start, before any runtime changes).
+    // When the active language's direction differs from the generation
+    // direction, inline text-align values must be mirrored.
+    var generatedIsRTL = __generatedDir === 'rtl';
+    var needsSwap = isRTL !== generatedIsRTL;
     document.querySelectorAll('[style]').forEach(function(el) {
       if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
       if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
@@ -5655,38 +5693,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     });
 
-    // Swap text-align in CSS stylesheet rules when direction changes.
-    // CSS rules with text-align:right (from RTL-primary generation) must become
-    // text-align:left when viewing in LTR, and vice versa.
-    if (!window.__zappyOrigTA) window.__zappyOrigTA = new WeakMap();
-    var origTAMap = window.__zappyOrigTA;
+    // Swap directional CSS properties in stylesheet rules when direction changes.
+    // Handles text-align (right↔left) and — for flex-direction:column rules only
+    // — align-items (flex-end↔flex-start).  Recurses into @media/@supports so
+    // responsive rules are also mirrored.  Uses setProperty() to preserve the
+    // original !important priority.
+    if (!window.__zappyOrigCSS) window.__zappyOrigCSS = new WeakMap();
+    var origCSSMap = window.__zappyOrigCSS;
+    function swapCSSRule(cssRule) {
+      if (cssRule.cssRules && cssRule.cssRules.length) {
+        for (var ci = 0; ci < cssRule.cssRules.length; ci++) swapCSSRule(cssRule.cssRules[ci]);
+        return;
+      }
+      if (!cssRule.style || !cssRule.selectorText) return;
+      if (cssRule.selectorText.indexOf('[dir=') !== -1) return;
+      if (cssRule.style.direction) return;
+      if (/^(html|body)\s*,?\s*(html|body)?\s*$/.test(cssRule.selectorText.trim())) return;
+      if (/\.(lang-option|lang-switcher|mobile-lang)/.test(cssRule.selectorText)) return;
+      if (!origCSSMap.has(cssRule)) {
+        origCSSMap.set(cssRule, {
+          ta: cssRule.style.textAlign || '',
+          taPri: cssRule.style.getPropertyPriority('text-align'),
+          ai: cssRule.style.alignItems || '',
+          aiPri: cssRule.style.getPropertyPriority('align-items'),
+          fd: cssRule.style.flexDirection || ''
+        });
+      }
+      var orig = origCSSMap.get(cssRule);
+      var rta = orig.ta;
+      if (rta && rta !== 'center' && rta !== 'justify' && rta !== 'start' && rta !== 'end') {
+        var newTA = needsSwap ? (rta === 'right' ? 'left' : 'right') : rta;
+        cssRule.style.setProperty('text-align', newTA, orig.taPri);
+      }
+      var rai = orig.ai;
+      if ((rai === 'flex-end' || rai === 'flex-start') && orig.fd === 'column') {
+        var newAI = needsSwap ? (rai === 'flex-end' ? 'flex-start' : 'flex-end') : rai;
+        cssRule.style.setProperty('align-items', newAI, orig.aiPri);
+      }
+    }
     for (var si = 0; si < document.styleSheets.length; si++) {
       try {
         var sheetRules = document.styleSheets[si].cssRules;
-        for (var ri = 0; ri < sheetRules.length; ri++) {
-          var cssRule = sheetRules[ri];
-          if (!cssRule.style || !cssRule.selectorText) continue;
-          var rta = cssRule.style.textAlign;
-          if (!rta || rta === 'center' || rta === 'justify' || rta === 'start' || rta === 'end') continue;
-          if (cssRule.selectorText.indexOf('[dir=') !== -1) continue;
-          if (/direction\s*:/i.test(cssRule.cssText)) continue;
-          if (/^(html|body)\s*,?\s*(html|body)?\s*$/.test(cssRule.selectorText.trim())) continue;
-          if (/\.(lang-option|lang-switcher|mobile-lang)/.test(cssRule.selectorText)) continue;
-          if (!origTAMap.has(cssRule)) {
-            origTAMap.set(cssRule, rta);
-          }
-          var origRTA = origTAMap.get(cssRule);
-          if (needsSwap) {
-            cssRule.style.textAlign = origRTA === 'right' ? 'left' : 'right';
-          } else {
-            cssRule.style.textAlign = origRTA;
-          }
-        }
+        for (var ri = 0; ri < sheetRules.length; ri++) swapCSSRule(sheetRules[ri]);
       } catch(e) {}
     }
 
+    // Swap align-items on inline-styled flex-direction:column containers
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
+      if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
+      var ai = el.style.alignItems;
+      if (ai !== 'flex-end' && ai !== 'flex-start') return;
+      if (el.style.flexDirection !== 'column') return;
+      if (!el.hasAttribute('data-ai-orig')) {
+        el.setAttribute('data-ai-orig', ai);
+      }
+      var origAI = el.getAttribute('data-ai-orig');
+      if (needsSwap) {
+        el.style.alignItems = origAI === 'flex-end' ? 'flex-start' : 'flex-end';
+      } else {
+        el.style.alignItems = origAI;
+      }
+    });
+
     // Update catalog menu RTL class to match current direction
-    // This is critical for e-commerce sites with category navigation
     document.querySelectorAll('.zappy-catalog-menu').forEach(function(el) {
       if (isRTL) {
         el.classList.add('rtl');
