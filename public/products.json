@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-10T13:16:59.805Z",
+  "generated_at": "2026-05-14T08:55:47.002Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 117,
@@ -795,19 +795,19 @@
     },
     {
       "id": "65b784ab-c634-43e5-ae13-f967f1c7401f",
-      "slug": "kvby-vnysym-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ktn-sazm1f",
-      "name": "קובי וניסים שחקני מטקות - פסלון מדף דקורטיבי - קטן",
+      "slug": "zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-kz8826",
+      "name": "זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת",
       "name_translations": {
-        "en": "Kobi and Nissim Matkot Players - Decorative Bookend Figurine - Small",
-        "he": "קובי וניסים שחקני מטקות - פסלון מדף דקורטיבי - קטן"
+        "en": "Pair of Matkot Players - Decorative Shelf Figurine, Made of Metal",
+        "he": "זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"
       },
-      "description": "<p class=\"ql-align-right\">מקורו של משחק המטקות אינו ידוע, אך הוא מאומץ מזה שנים רבות כמשחק המייצג יותר מכל את הישראלי הטיפוסי. המשחק משוחק בעיקר על חוף הים, בעיקר בחודשי הקיץ, על ידי שני משתתפים החובטים בכדור פלסטיק גמיש באמצעות מחבטי עץ עגולים. למשחק אין כמעט חוקים וכל שמוטל על המשתתפים הוא לדאוג לכך שהכדור לא ייפול לקרקע. במשחק אין מנצח או מפסיד (אולי פרט לאלו שהצליחו, או הצליחו פחות, להתחמק מכדור גומי טועה בראש...). פסלי המתכת של \"ארטאורי דיזיין\"&nbsp;מתארים מספר דמויות של שחקני מטקות ישראלים שהם לאו דווקא חטובי גוף. לשחקן הישראלי המצוי, עב הכרס, זו ככל הנראה הפעילות הספורטיבית היחידה עליה הוא אינו מוותר בין מנת אבטיח לג'חנון של שבת. הפסלים מקפיאים את הדמויות בתנועת משחק או מנוחה.</p><p>גובה - 15 ס\"מ</p><p>*זוג פסלונים</p>",
+      "description": "<p class=\"ql-align-right\">מקורו של משחק המטקות אינו ידוע, אך הוא מאומץ מזה שנים רבות כמשחק המייצג יותר מכל את הישראלי הטיפוסי. המשחק משוחק בעיקר על חוף הים, בעיקר בחודשי הקיץ, על ידי שני משתתפים החובטים בכדור פלסטיק גמיש באמצעות מחבטי עץ עגולים. למשחק אין כמעט חוקים וכל שמוטל על המשתתפים הוא לדאוג לכך שהכדור לא ייפול לקרקע. במשחק אין מנצח או מפסיד (אולי פרט לאלו שהצליחו, או הצליחו פחות, להתחמק מכדור גומי טועה בראש...). פסלי המתכת של \"ארטאורי דיזיין\"&nbsp;מתארים מספר דמויות של שחקני מטקות ישראלים שהם לאו דווקא חטובי גוף. לשחקן הישראלי המצוי, עב הכרס, זו ככל הנראה הפעילות הספורטיבית היחידה עליה הוא אינו מוותר בין מנת אבטיח לג'חנון של שבת. הפסלים מקפיאים את הדמויות בתנועת משחק או מנוחה.</p><p><br></p>",
       "short_description": "פסלונים של שחקני מטקות ישראלים",
       "sku": "ma510-1",
       "brand": null,
-      "price": 60,
-      "base_price": 120,
-      "sale_price": 60,
+      "price": 199,
+      "base_price": 199,
+      "sale_price": null,
       "currency": "ILS",
       "images": [
         "https://artori.co.il/assets/product-1773749828567-w3mbh.webp",
@@ -817,13 +817,13 @@
         "https://artori.co.il/assets/product-1773749684440-0wvsz.webp",
         "https://artori.co.il/assets/product-1773749685051-fyaik.webp"
       ],
-      "in_stock": false,
-      "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/kvby-vnysym-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ktn-sazm1f",
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-kz8826",
       "categories": [
         "שחקני מטקות"
       ],
-      "updated_at": "2026-04-30T09:01:29.327Z"
+      "updated_at": "2026-05-14T08:55:15.063Z"
     },
     {
       "id": "f61ca3f6-6c19-440e-9462-5c8d987675fa",
