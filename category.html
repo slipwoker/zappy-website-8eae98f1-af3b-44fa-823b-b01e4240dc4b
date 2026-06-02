@@ -934,6 +934,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </style>
     <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="https://meshulam.co.il/_media/js/apple_pay_sdk/sdk.min.js"></script>
 
     <style id="zappy-dropdown-submenu-styles">
       /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
@@ -1046,7 +1047,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="search-results" id="mobile-search-results"></div>
     </div>
-  <nav class="navbar"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" aria-label="Call" data-phone="0546242000"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-brand"> <a href="/" class="logo-link"> <img class="logo" data-placeholder="logo" data-context="business logo" width="160" height="40" src="/assets/logo-1773731144070-bweihw.webp?v=1773731144336-9e860u" alt="ארטאורי דיזיין" data-i18n-alt="home_alt_53"> </a> </div> <ul class="nav-menu" id="navMenu"> <li class="menu-item-has-children zappy-products-dropdown"> <a href="/products" data-i18n="home_nav_45"> מוצרים <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <path d="M6 9l6 6 6-6"></path> </svg> </a> <ul class="sub-menu" id="zappy-nav-category-links"> <li><a href="/products" data-i18n="home_nav_46">כל המוצרים</a></li> <!-- Categories will be loaded dynamically --> </ul> </li> <li><a href="/collections" data-i18n="home_nav_47">קולקציות</a></li><li><a href="/our-story" data-i18n="home_nav_48">הסיפור שלנו</a></li><li><a href="/contact" data-i18n="home_nav_49">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+  <nav class="navbar"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" aria-label="Call" data-phone="0546242000"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-brand"> <a href="/" class="logo-link"> <img class="logo" data-placeholder="logo" data-context="business logo" width="160" height="40" src="/assets/logo-1773731144070-bweihw.webp?v=1773731144336-9e860u" alt="ארטאורי דיזיין" data-i18n-alt="home_alt_53"> </a> </div> <ul class="nav-menu" id="navMenu">  
+    <li class="menu-item-has-children zappy-products-dropdown">
+      <a href="/collections">
+        מוצרים
+        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
+      <ul class="sub-menu" id="zappy-nav-category-links">
+        <li><a href="/collections" data-i18n="ecom_products">מוצרים</a></li>
+        <!-- Categories will be loaded dynamically -->
+      </ul>
+    </li>
+  <li><a href="/our-story" data-i18n="home_nav_48">הסיפור שלנו</a></li><li><a href="/contact" data-i18n="home_nav_49">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -1133,6 +1147,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
   </div>
 </aside>
+  
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
   <script>
   <!-- Search handling for e-commerce pages -->
   (function() {
@@ -1150,8 +1172,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         url.searchParams.set('search', query);
         window.location.href = url.toString();
       } else {
-        // In deployed mode, navigate to products with search
-        window.location.href = '/products?search=' + encodeURIComponent(query);
+        // In deployed mode, navigate to the catalog in the ACTIVE language.
+        // Static catalog pages (/products) are served as per-language files
+        // (/en/products), while the courses catalog (/courses) is language-
+        // switched via ?lang. Derive the active language from the current URL
+        // (path prefix on static pages, ?lang on courses pages) so search keeps
+        // the language instead of dropping back to the site default. NOTE: the
+        // \ in the regex is intentional — this block lives in a template
+        // literal that bakes the page, so a bare \/ would be dropped.
+        var base = '/products';
+        var activeLang = (function() {
+          try { var q = new URLSearchParams(window.location.search).get('lang'); if (q) return q.toLowerCase(); } catch (e) {}
+          var m = (window.location.pathname || '').match(/^\/([a-z]{2})(?:\/|$)/i);
+          return m ? m[1].toLowerCase() : '';
+        })();
+        var dest = base === '/courses'
+          ? base + '?search=' + encodeURIComponent(query) + (activeLang ? '&lang=' + encodeURIComponent(activeLang) : '')
+          : (activeLang ? '/' + activeLang : '') + base + '?search=' + encodeURIComponent(query);
+        window.location.href = dest;
       }
     }
     
@@ -1304,6 +1342,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   const resources = {
   "he": {
     "translation": {
+      "ecom_loading": "טוען…",
       "ecom_accountWelcome": "ברוך הבא",
       "ecom_addAddress": "הוסף כתובת",
       "ecom_addBundleToCart": "הוספת {count} מוצרים לעגלה",
@@ -1322,6 +1361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_applyCoupon": "החל",
       "ecom_backToProducts": "חזרה למוצרים",
       "ecom_browseFavorites": "גלו את כל המוצרים שלנו",
+      "ecom_bundleDiscount": "הנחת חבילה",
       "ecom_bundleTotal": "סה\"כ לעגלה",
       "ecom_callNow": "התקשר עכשיו",
       "ecom_cancel": "ביטול",
@@ -1341,6 +1381,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_couponCode": "קוד קופון",
       "ecom_couponExpired": "הקופון פג תוקף",
       "ecom_couponMinOrder": "סכום הזמנה מינימלי",
+      "ecom_coursesCatalogEmpty": "אין קורסים זמינים עדיין.",
+      "ecom_coursesCatalogError": "נכשל בטעינת הקורסים.",
+      "ecom_coursesCatalogSubtitle": "עיינו בספריית הקורסים המלאה שלנו.",
+      "ecom_coursesCatalogTitle": "קורסים",
+      "ecom_coursesCertificateLoading": "מאמת…",
+      "ecom_coursesCertificateTitle": "אימות תעודה",
+      "ecom_coursesDetailEnroll": "הוסף לעגלה",
+      "ecom_coursesDetailResume": "המשך ללמוד",
+      "ecom_coursesDigitalDelivery": "גישה דיגיטלית מקוונת",
+      "ecom_coursesLessonCompleted": "הושלם",
+      "ecom_coursesLessonLoading": "טוען שיעור…",
+      "ecom_coursesLessonMarkComplete": "סימון כהושלם",
+      "ecom_coursesLessonNext": "הבא",
+      "ecom_coursesLessonPrev": "הקודם",
+      "ecom_coursesMyLearningEmpty": "עדיין לא נרשמתם לקורסים.",
+      "ecom_coursesMyLearningLoading": "טוען את הקורסים שלך…",
+      "ecom_coursesMyLearningSubtitle": "המשיכו מהמקום שבו עצרתם.",
+      "ecom_coursesMyLearningTitle": "הלמידה שלי",
+      "ecom_coursesCertCourse": "קורס",
+      "ecom_coursesCertDownload": "הורדה",
+      "ecom_coursesCertError": "האימות נכשל.",
+      "ecom_coursesCertInvalid": "לא ניתן לאמת את התעודה הזו.",
+      "ecom_coursesCertIssued": "הונפק",
+      "ecom_coursesCertStudent": "תלמיד",
+      "ecom_coursesCertValid": "מאומת",
+      "ecom_coursesCertIssuer": "הונפק על ידי",
+      "ecom_coursesCertCode": "קוד אימות",
+      "ecom_coursesViewCertificate": "צפייה בתעודה",
+      "ecom_coursesCertEarnedTitle": "הקורס הושלם!",
+      "ecom_coursesCertEarnedBody": "התעודה שלך מוכנה.",
+      "ecom_coursesCurriculumEmpty": "תכנית הלימודים תגיע בקרוב.",
+      "ecom_coursesFree": "חינם",
+      "ecom_coursesJoinLive": "הצטרף בשידור חי",
+      "ecom_coursesLessonGate": "הירשם לקורס זה כדי לגשת לשיעור זה.",
+      "ecom_coursesLessonLocked": "השיעור נעול",
+      "ecom_coursesLessonLoadError": "טעינת השיעור נכשלה.",
+      "ecom_coursesEnrollCta": "צפה בקורס והירשם",
+      "ecom_coursesEnrollmentRevoked": "ההרשמה שלך לקורס אינה פעילה יותר.",
+      "ecom_coursesDripLocked": "שיעור זה ייפתח לפי לוח זמנים.",
+      "ecom_coursesVideoProcessing": "הסרטון עדיין בעיבוד. נסה שוב בקרוב.",
+      "ecom_coursesVideoFailed": "עיבוד הסרטון נכשל. העלה מחדש את סרטון השיעור מ-Course Studio.",
+      "ecom_coursesDetailLoading": "טוען…",
+      "ecom_coursesDetailInstructor": "מדריך",
+      "ecom_coursesDetailCurriculum": "תכנית לימודים",
+      "ecom_coursesLevelBeginner": "מתחיל",
+      "ecom_coursesLevelIntermediate": "בינוני",
+      "ecom_coursesLevelAdvanced": "מתקדם",
+      "ecom_coursesLessonUnsupported": "סוג השיעור הזה עדיין לא נתמך.",
+      "ecom_coursesLiveScheduled": "מפגש חי מתוזמן",
+      "ecom_coursesPreview": "תצוגה מקדימה",
+      "ecom_coursesQuizError": "נכשל בטעינת החידון.",
+      "ecom_coursesQuizLoading": "טוען חידון...",
+      "ecom_coursesQuizNone": "אין חידון בשיעור זה.",
+      "ecom_coursesQuizPassed": "עברת בהצלחה!",
+      "ecom_coursesQuizRetry": "נסה שוב.",
+      "ecom_coursesQuizSubmit": "שלח",
+      "ecom_allCourses": "כל הקורסים",
+      "ecom_backToCourses": "חזרה לקורסים",
+      "ecom_coursesNav": "קורסים",
+      "ecom_featuredCourses": "קורסים מומלצים",
+      "ecom_loadingCourses": "טוען קורסים...",
+      "ecom_noFeaturedCourses": "עוד לא נבחרו קורסים מומלצים. צפו בכל הקורסים שלנו!",
+      "ecom_searchCourses": "חיפוש קורסים",
       "ecom_customerInfo": "פרטי לקוח",
       "ecom_customerLogin": "התחברות לקוחות",
       "ecom_days": "ימים",
@@ -1490,6 +1593,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_yourOrders": "ההזמנות שלך",
       "ecom_zip": "מיקוד",
       "ecom_zipPostal": "מיקוד",
+      "ecom_coursesAlreadyOwned": "כבר יש לך גישה לקורס זה.",
+      "ecom_coursesAlreadyOwnedCheckout": "כבר נרשמת לקורס שבעגלת הקניות.",
+      "ecom_coursesEnrollmentCheckFailed": "לא ניתן לאמת בעלות על הקורס. אנא נסה שוב.",
+      "ecom_coursesAlreadyEnrolledPrompt": "כבר נרשמת?",
+      "ecom_coursesLoginLink": "לכניסה",
+      "ecom_processing": "מעבד...",
+      "ecom_checkoutFailed": "שגיאה בתהליך התשלום. נסו שוב.",
       "cart_p_6": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
       "cart_p_7": "© 2026 ארטאורי דיזיין. כל הזכויות שמורות.",
       "cart_h1_1": "עגלת הקניות שלך",
@@ -3266,6 +3376,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   },
   "en": {
     "translation": {
+      "ecom_loading": "Loading…",
       "ecom_accountWelcome": "Welcome",
       "ecom_addAddress": "Add Address",
       "ecom_addBundleToCart": "Add {count} items to cart",
@@ -3284,6 +3395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_applyCoupon": "Apply",
       "ecom_backToProducts": "Back to Products",
       "ecom_browseFavorites": "Discover all our products",
+      "ecom_bundleDiscount": "Bundle Discount",
       "ecom_bundleTotal": "Bundle total",
       "ecom_callNow": "Call Now",
       "ecom_cancel": "Cancel",
@@ -3303,6 +3415,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_couponCode": "Coupon Code",
       "ecom_couponExpired": "Coupon has expired",
       "ecom_couponMinOrder": "Minimum order amount",
+      "ecom_coursesCatalogEmpty": "No courses available yet.",
+      "ecom_coursesCatalogError": "Failed to load courses.",
+      "ecom_coursesCatalogSubtitle": "Browse our full course library.",
+      "ecom_coursesCatalogTitle": "Courses",
+      "ecom_coursesCertificateLoading": "Verifying…",
+      "ecom_coursesCertificateTitle": "Certificate Verification",
+      "ecom_coursesDetailEnroll": "Add to Cart",
+      "ecom_coursesDetailResume": "Resume learning",
+      "ecom_coursesDigitalDelivery": "Digital online access",
+      "ecom_coursesLessonCompleted": "Completed",
+      "ecom_coursesLessonLoading": "Loading lesson…",
+      "ecom_coursesLessonMarkComplete": "Mark complete",
+      "ecom_coursesLessonNext": "Next",
+      "ecom_coursesLessonPrev": "Previous",
+      "ecom_coursesMyLearningEmpty": "You haven't enrolled in any courses yet.",
+      "ecom_coursesMyLearningLoading": "Loading your courses…",
+      "ecom_coursesMyLearningSubtitle": "Continue where you left off.",
+      "ecom_coursesMyLearningTitle": "My Learning",
+      "ecom_coursesCertCourse": "Course",
+      "ecom_coursesCertDownload": "Download",
+      "ecom_coursesCertError": "Verification failed.",
+      "ecom_coursesCertInvalid": "This certificate could not be verified.",
+      "ecom_coursesCertIssued": "Issued",
+      "ecom_coursesCertStudent": "Student",
+      "ecom_coursesCertValid": "Verified",
+      "ecom_coursesCertIssuer": "Issued by",
+      "ecom_coursesCertCode": "Verification code",
+      "ecom_coursesViewCertificate": "View certificate",
+      "ecom_coursesCertEarnedTitle": "Course complete!",
+      "ecom_coursesCertEarnedBody": "Your certificate is ready.",
+      "ecom_coursesCurriculumEmpty": "Curriculum coming soon.",
+      "ecom_coursesFree": "Free",
+      "ecom_coursesJoinLive": "Join live",
+      "ecom_coursesLessonGate": "Enroll in this course to access this lesson.",
+      "ecom_coursesLessonLocked": "Lesson locked",
+      "ecom_coursesLessonLoadError": "Failed to load lesson.",
+      "ecom_coursesEnrollCta": "View course & enroll",
+      "ecom_coursesEnrollmentRevoked": "Your enrollment is no longer active.",
+      "ecom_coursesDripLocked": "This lesson unlocks on a schedule.",
+      "ecom_coursesVideoProcessing": "Video is still processing. Check back soon.",
+      "ecom_coursesVideoFailed": "Video processing failed. Please re-upload the lesson video from Course Studio.",
+      "ecom_coursesDetailLoading": "Loading…",
+      "ecom_coursesDetailInstructor": "Instructor",
+      "ecom_coursesDetailCurriculum": "Curriculum",
+      "ecom_coursesLevelBeginner": "Beginner",
+      "ecom_coursesLevelIntermediate": "Intermediate",
+      "ecom_coursesLevelAdvanced": "Advanced",
+      "ecom_coursesLessonUnsupported": "This lesson type is not yet supported.",
+      "ecom_coursesLiveScheduled": "Live session scheduled",
+      "ecom_coursesPreview": "Preview",
+      "ecom_coursesQuizError": "Failed to load quiz.",
+      "ecom_coursesQuizLoading": "Loading quiz…",
+      "ecom_coursesQuizNone": "No quiz on this lesson.",
+      "ecom_coursesQuizPassed": "You passed!",
+      "ecom_coursesQuizRetry": "Try again.",
+      "ecom_coursesQuizSubmit": "Submit",
+      "ecom_allCourses": "All Courses",
+      "ecom_backToCourses": "Back to courses",
+      "ecom_coursesNav": "Courses",
+      "ecom_featuredCourses": "Featured Courses",
+      "ecom_loadingCourses": "Loading courses...",
+      "ecom_noFeaturedCourses": "No featured courses yet. Browse our full course library!",
+      "ecom_searchCourses": "Search courses",
       "ecom_customerInfo": "Customer Info",
       "ecom_customerLogin": "Customer Login",
       "ecom_days": "days",
@@ -3452,6 +3627,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "ecom_yourOrders": "Your Orders",
       "ecom_zip": "ZIP Code",
       "ecom_zipPostal": "Zip / Postal Code",
+      "ecom_coursesAlreadyOwned": "You already own this course.",
+      "ecom_coursesAlreadyOwnedCheckout": "You are already enrolled in a course in your cart.",
+      "ecom_coursesEnrollmentCheckFailed": "Could not verify course ownership. Please try again.",
+      "ecom_coursesAlreadyEnrolledPrompt": "Already enrolled?",
+      "ecom_coursesLoginLink": "Log in",
+      "ecom_processing": "Processing...",
+      "ecom_checkoutFailed": "Checkout failed. Please try again.",
       "cart_p_6": "Home design items and gifts with character that bring warmth, interest and humor to any living space",
       "cart_p_7": "© 2026 Artori Design. All rights reserved.",
       "cart_h1_1": "Your Shopping Cart",
@@ -5302,6 +5484,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         previewUrl.searchParams.set('lang', targetLang);
       }
       window.location.assign(previewUrl.pathname + previewUrl.search + previewUrl.hash);
+      return;
+    }
+
+    // COURSES DYNAMIC PAGES: paths like /courses/:slug, /lesson/:id,
+    // /my-learning, /certificate/:code are served by a single static
+    // template with Render rewrite rules. There are no physical
+    // /en/courses/:slug files — prepending /<lang>/ would 404. Instead,
+    // toggle ?lang= and let the i18n runtime translate in-place (same
+    // approach as preview mode).
+    var strippedPath = path;
+    var langPrefix = path.match(/^\/([a-z]{2})(?=\/|$)/i);
+    if (langPrefix && availableLanguages.includes(langPrefix[1].toLowerCase())) {
+      strippedPath = path.slice(langPrefix[0].length) || '/';
+    }
+    if (/^\/(courses(\/|$)|lesson\/|my-learning(\/|$)|certificate\/)/.test(strippedPath)) {
+      var dynUrl = new URL(window.location.href);
+      dynUrl.pathname = strippedPath;
+      if (targetLang === 'he') {
+        dynUrl.searchParams.delete('lang');
+      } else {
+        dynUrl.searchParams.set('lang', targetLang);
+      }
+      window.location.assign(dynUrl.pathname + dynUrl.search + dynUrl.hash);
       return;
     }
 
