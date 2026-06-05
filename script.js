@@ -13523,10 +13523,10 @@ function fixContrast(){
 })();
 
 
-/* ZAPPY_ECOM_LANGUAGE_ROUTING_RUNTIME_V19 */
+/* ZAPPY_ECOM_LANGUAGE_ROUTING_RUNTIME_V20 */
 (function() {
-  if (window.__zappyEcomLanguageRoutingRuntime >= 19) return;
-  window.__zappyEcomLanguageRoutingRuntime = 19;
+  if (window.__zappyEcomLanguageRoutingRuntime >= 20) return;
+  window.__zappyEcomLanguageRoutingRuntime = 20;
 
   // Routing strategy: use path-based language URLs for ALL storefront pages
   // (including dynamic /product/:slug and /category/:slug). The publish
@@ -13939,18 +13939,18 @@ function fixContrast(){
   // declaration merging that was eating the standalone CSS injection.
   function ensureRuntimeCssInjected() {
     var existing = document.getElementById('zappy-ecom-routing-runtime-css');
-    if (existing && existing.getAttribute('data-v') === '24') return;
+    if (existing && existing.getAttribute('data-v') === '25') return;
     if (existing) existing.remove();
     var style = document.createElement('style');
     style.id = 'zappy-ecom-routing-runtime-css';
     style.setAttribute('data-zappy-runtime', 'ecom-routing');
-    style.setAttribute('data-v', '24');
+    style.setAttribute('data-v', '25');
     style.textContent =
       '@media (min-width: 769px){' +
         'html[dir="ltr"] .nav-container > .nav-brand,body[dir="ltr"] .nav-container > .nav-brand,html[dir="ltr"] .nav-right-group > .nav-brand,body[dir="ltr"] .nav-right-group > .nav-brand{order:-1!important}' +
         'html[dir="ltr"] .nav-container > .nav-menu,body[dir="ltr"] .nav-container > .nav-menu,html[dir="ltr"] .nav-right-group > .nav-menu,body[dir="ltr"] .nav-right-group > .nav-menu{order:1!important;margin-inline-start:0!important;flex:1 1 0!important;min-width:0!important;overflow:visible!important;align-items:center!important}' +
         'html[dir="ltr"] .nav-container > .nav-menu > li,body[dir="ltr"] .nav-container > .nav-menu > li,html[dir="ltr"] .nav-right-group > .nav-menu > li,body[dir="ltr"] .nav-right-group > .nav-menu > li{flex:0 0 auto!important}' +
-        'html[dir="ltr"] .nav-container > .lang-switcher,body[dir="ltr"] .nav-container > .lang-switcher,html[dir="ltr"] .nav-container > .nav-ecommerce-icons,body[dir="ltr"] .nav-container > .nav-ecommerce-icons,html[dir="ltr"] .nav-right-group > .lang-switcher,body[dir="ltr"] .nav-right-group > .lang-switcher,html[dir="ltr"] .nav-right-group > .nav-ecommerce-icons,body[dir="ltr"] .nav-right-group > .nav-ecommerce-icons{order:2!important;flex:0 0 auto!important;min-width:max-content!important}' +
+        'html[dir="ltr"] .nav-container > .lang-switcher,body[dir="ltr"] .nav-container > .lang-switcher,html[dir="ltr"] .nav-container > .nav-ecommerce-icons,body[dir="ltr"] .nav-container > .nav-ecommerce-icons,html[dir="ltr"] .nav-container > .nav-cta-container,body[dir="ltr"] .nav-container > .nav-cta-container,html[dir="ltr"] .nav-right-group > .lang-switcher,body[dir="ltr"] .nav-right-group > .lang-switcher,html[dir="ltr"] .nav-right-group > .nav-ecommerce-icons,body[dir="ltr"] .nav-right-group > .nav-ecommerce-icons,html[dir="ltr"] .nav-right-group > .nav-cta-container,body[dir="ltr"] .nav-right-group > .nav-cta-container{order:2!important;flex:0 0 auto!important;min-width:max-content!important}' +
         'html[dir="ltr"] .nav-container > .nav-ecommerce-icons.nav-icons-left,body[dir="ltr"] .nav-container > .nav-ecommerce-icons.nav-icons-left,html[dir="ltr"] .nav-right-group > .nav-ecommerce-icons.nav-icons-left,body[dir="ltr"] .nav-right-group > .nav-ecommerce-icons.nav-icons-left{margin-inline-start:auto!important;flex:0 0 auto!important;min-width:max-content!important}' +
         'html[dir="rtl"] .nav-container > .nav-menu,body[dir="rtl"] .nav-container > .nav-menu,html[dir="rtl"] .nav-right-group > .nav-menu,body[dir="rtl"] .nav-right-group > .nav-menu{flex:1 1 0!important;min-width:0!important;overflow:visible!important;align-items:center!important}' +
         'html[dir="rtl"] .nav-container > .nav-menu > li,body[dir="rtl"] .nav-container > .nav-menu > li,html[dir="rtl"] .nav-right-group > .nav-menu > li,body[dir="rtl"] .nav-right-group > .nav-menu > li{flex:0 0 auto!important}' +
@@ -13986,6 +13986,20 @@ function fixContrast(){
 
   function tuneDesktopNavWrapping() {
     if (window.innerWidth <= 768) return;
+    // The "More" overflow runtime (ZAPPY_NAV_OVERFLOW_MENU_V1) fully supersedes
+    // the legacy two-line wrapping: it collapses overflowing items into a
+    // "More" dropdown and strips zappy-desktop-wrap on every reflow. When it is
+    // active we MUST NOT re-add the wrap class here — this patch() pass runs at
+    // 1500ms, AFTER the overflow runtime's final reflow (1200ms), and nothing
+    // reflows the overflow menu again, so re-adding zappy-desktop-wrap would
+    // regress the desktop nav to the clipped/wrapped layout permanently. Defer
+    // entirely: strip any stale class and let the overflow runtime own overflow.
+    if (window.__zappyNavOverflowInit) {
+      document.querySelectorAll('.nav-menu.zappy-desktop-wrap, #navMenu.zappy-desktop-wrap').forEach(function(menu) {
+        menu.classList.remove('zappy-desktop-wrap');
+      });
+      return;
+    }
     document.querySelectorAll('.nav-container > .nav-menu, .nav-right-group > .nav-menu, .nav-container > #navMenu, .nav-right-group > #navMenu').forEach(function(menu) {
       if (!menu || !menu.querySelectorAll) return;
       menu.classList.remove('zappy-desktop-wrap');
