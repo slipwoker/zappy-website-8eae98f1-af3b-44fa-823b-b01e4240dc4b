@@ -1025,7 +1025,7 @@ English
 
 
 
-קראתי ואני מסכים/ה ל  תנאי השימוש   ול  מדיניות הפרטיות
+קראתי ואני מסכים/ה ל תנאי השימוש  ול מדיניות הפרטיות
 
 
 
@@ -4485,7 +4485,7 @@ SKU: AD501
 ---
 
 ### תומך ספרים קליף הנגר (Cliffhanger)
-URL: https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-10u8lp
+URL: https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-501wbv
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD112
@@ -4525,7 +4525,7 @@ SKU: AD877
 ---
 
 ### תומך ספרים בורחים - Runaway Bookend
-URL: https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-7d9okg
+URL: https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-1f7u9j
 Price: 99.00 ILS
 Availability: Out of stock
 SKU: AD105
@@ -5135,7 +5135,7 @@ SKU: AD360
 ---
 
 ### זוג תומכי ספרים לספרי בישול
-URL: https://artori.co.il/product/zvg-tvmky-sprym-lspry-byshvl-op89ln
+URL: https://artori.co.il/product/zvg-tvmky-sprym-lspry-byshvl-7g5nzb
 Price: 109.00 ILS
 Availability: In stock
 SKU: AD285
@@ -5325,7 +5325,7 @@ SKU: AD160
 ---
 
 ### תומך ספרים מעוצב ״מתגונן״ - Falling Bookend - לעיצוב וקישוט מדף הספרים
-URL: https://artori.co.il/product/tvmk-sprym-mavtsb-mtgvnn-falling-bookend-laytsvb-vkyshvt-mdp-hsprym-76sat9
+URL: https://artori.co.il/product/tvmk-sprym-mavtsb-mtgvnn-falling-bookend-laytsvb-vkyshvt-mdp-hsprym-jgm00a
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD100
