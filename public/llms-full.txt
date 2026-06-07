@@ -5065,7 +5065,7 @@ SKU: AD220
 ---
 
 ### שעון קיר - מפת ירושלים - עברית
-URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-rxlx7w
+URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-pgibyc
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD224
@@ -5195,7 +5195,7 @@ SKU: AD253
 ---
 
 ### שעון קיר - מפת ירושלים - אנגלית
-URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-a0c73u
+URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-pmsk2z
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD226

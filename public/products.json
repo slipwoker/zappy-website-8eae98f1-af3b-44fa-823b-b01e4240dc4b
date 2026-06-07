@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:52:33.080Z",
+  "generated_at": "2026-06-07T16:53:10.599Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -3038,7 +3038,7 @@
     },
     {
       "id": "df65dd35-25c1-4933-bd00-b1fffd2a6790",
-      "slug": "shavn-kyr-mpt-yrvshlym-abryt-rxlx7w",
+      "slug": "shavn-kyr-mpt-yrvshlym-abryt-pgibyc",
       "name": "שעון קיר - מפת ירושלים - עברית",
       "name_translations": {
         "en": "Wall Clock - Jerusalem Map - Hebrew",
@@ -3060,11 +3060,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-rxlx7w",
+      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-abryt-pgibyc",
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-04-30T09:01:31.155Z"
+      "updated_at": "2026-06-07T16:53:07.616Z"
     },
     {
       "id": "8a5d4707-c255-4bd4-b64b-a3f7b0f997d3",
@@ -3376,7 +3376,7 @@
       "slug": "svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7",
       "name": "סוף העיפרון - כוס לציוד משרדי",
       "name_translations": {
-        "en": "Pencil End - Office Supplies Cup",
+        "en": "Pencil End - Cup for Office Supplies",
         "he": "סוף העיפרון - כוס לציוד משרדי"
       },
       "description": "<p class=\"ql-align-right\">Pencil End Cup – סוף העיפרון</p><p class=\"ql-align-right\">מעמד שולחני יפה ומעוצב לאחסון ציוד משרדי.</p><p class=\"ql-align-right\">מעוצב כקצה של עיפרון עם מחק בצבע ורוד.</p><p class=\"ql-align-right\">יחידה הכוללת שני כלי אחסון - החלק העליון לעטים, עפרונות, טושים, מספריים, והחלק התחתון לסיכות, גומיות, מחקים, מהדקים.</p><p class=\"ql-align-right\">מידות – גובה: 14 ס\"מ, קוטר : 7 ס\"מ.</p><p class=\"ql-align-right\">משקל: 80 גר'</p><p class=\"ql-align-right\">עשוי מתכת ופלסטיק</p><p>מסופק כרגע ללא אריזת מתנה</p>",
@@ -3401,7 +3401,7 @@
       "categories": [
         "ציוד משרדי"
       ],
-      "updated_at": "2026-06-07T16:52:31.059Z"
+      "updated_at": "2026-06-07T16:52:36.706Z"
     },
     {
       "id": "3cd443e1-dc3f-4c65-a8a1-74979fe21d25",
@@ -3468,7 +3468,7 @@
     },
     {
       "id": "776eab90-aaa2-48ea-969c-a1f2d0bd8432",
-      "slug": "shavn-kyr-mpt-yrvshlym-anglyt-a0c73u",
+      "slug": "shavn-kyr-mpt-yrvshlym-anglyt-pmsk2z",
       "name": "שעון קיר - מפת ירושלים - אנגלית",
       "name_translations": {
         "en": "Wall Clock - Jerusalem Map - English",
@@ -3490,11 +3490,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-a0c73u",
+      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-anglyt-pmsk2z",
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-04-30T09:01:31.573Z"
+      "updated_at": "2026-06-07T16:53:08.443Z"
     },
     {
       "id": "2cae7d76-a9a7-4699-8bd1-541e36d57e66",
