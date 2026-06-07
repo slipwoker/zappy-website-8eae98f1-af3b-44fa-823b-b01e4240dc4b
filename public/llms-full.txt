@@ -4354,7 +4354,7 @@ SKU: AD136
 ---
 
 ### מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט
-URL: https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-3vy1pg
+URL: https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ogu50s
 Price: 139.00 ILS
 Availability: In stock
 SKU: AD406
@@ -4583,7 +4583,7 @@ SKU: AD196
 ---
 
 ### מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט
-URL: https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-rxy0sy
+URL: https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-0bdsrm
 Price: 139.00 ILS
 Availability: In stock
 SKU: AD197
