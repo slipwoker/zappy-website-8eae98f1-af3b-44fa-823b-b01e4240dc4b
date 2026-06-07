@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:54:17.162Z",
+  "generated_at": "2026-06-07T16:56:20.595Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -895,7 +895,7 @@
       "slug": "pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg",
       "name": "פאזל 1000 חלקים - טיימס סקוור ניו יורק",
       "name_translations": {
-        "en": "1000-Piece Puzzle - Times Square New York",
+        "en": "1000 Piece Puzzle - Times Square New York",
         "he": "פאזל 1000 חלקים - טיימס סקוור ניו יורק"
       },
       "description": "<p>ה\"טיימס סקוור\" בתפוח הגדול, הבניינים הגבוהים, המוניות הצהובות, הפרסומות על מסכי הענק, האנשים הססגוניים, כל אלה ועוד באיור מקסים וצבעוני בסגנון ייחודי ואסתטי של המאיירת תמר כליף, סטודנטית לאיור ב\"בצלאל\" שאיירה בכישרון רב את מה שנחרט בזיכרונה בביקורה בניו יורק עם משפחתה. פאזל איכותי בן 1000 חלקים. פעילות מהנה ומספקת, קבוצתית או אישית, עם תוצאה צבעונית ואסתטית שיכולה לקשט כל קיר בבית. מידות: 75 על 50 ס\"מ. חומר: נייר. הוראות ניקוי: על ידי מטלית יבשה.&nbsp;&nbsp;</p>",
@@ -927,7 +927,7 @@
       "categories": [
         "פאזלים"
       ],
-      "updated_at": "2026-06-07T16:54:15.092Z"
+      "updated_at": "2026-06-07T16:54:22.834Z"
     },
     {
       "id": "185bf867-5767-4bcb-ae51-07ebdbbe3777",
@@ -972,7 +972,7 @@
     },
     {
       "id": "c309a1a0-3ae1-483f-83b8-9f93eb8cd591",
-      "slug": "pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-kkriah",
+      "slug": "pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2",
       "name": "פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי",
       "name_translations": {
         "en": "Pierre - Kitchen Towel Holder in French Wine Waiter Design",
@@ -1000,18 +1000,18 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-kkriah",
+      "url": "https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:29.334Z"
+      "updated_at": "2026-06-07T16:56:08.600Z"
     },
     {
       "id": "29d6cba8-1015-4969-9cd5-95c8b8e4588b",
-      "slug": "artavry-bayr-pazl-1000-chlkym-ihy5eu",
+      "slug": "artavry-bayr-pazl-1000-chlkym-89y61q",
       "name": "ארטאורי בעיר - פאזל 1000 חלקים",
       "name_translations": {
-        "en": "Artauri in the City - 1000 Piece Puzzle",
+        "en": "Artori in the City - 1000 Piece Puzzle",
         "he": "ארטאורי בעיר - פאזל 1000 חלקים"
       },
       "description": "<p>בין בניינים של רחוב בעיר דמיונית, צלליותיהן של דמויות כמה מהמוצרים של \"ארטאורי דיזיין\" מקבלות חיים. בתוך העיר הצבעונית והשוקקת, האם תוכלו לאתר מאילו מוצרים נלקחו הצלליות השחורות? פאזל איכותי בן 1000 חלקים - פעילות מהנה ומספקת עם תוצאה אסתטית וצבעונית שיכולה לקשט קיר בבית. מידות: 75 על 50 ס\"מ. חומר: נייר. הוראות ניקוי: באמצעות מטלית יבשה.&nbsp;&nbsp;</p>",
@@ -1032,11 +1032,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-ihy5eu",
+      "url": "https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q",
       "categories": [
         "פאזלים"
       ],
-      "updated_at": "2026-04-30T09:01:29.525Z"
+      "updated_at": "2026-06-07T16:54:38.661Z"
     },
     {
       "id": "15c7a80a-6128-4b8a-a16b-2c504f64c006",
@@ -2522,13 +2522,13 @@
     },
     {
       "id": "81586164-c917-406f-a097-6bcb22db14ac",
-      "slug": "kvlb-kvbyvt-tlt-mymd-6-kvbyvt-85l6ob",
+      "slug": "kvlb-kvbyvt-tlt-mymd-6-kvbyvt-qnuvi1",
       "name": "קולב קוביות תלת מימד - 6 קוביות",
       "name_translations": {
         "en": "3D Cubes Hanger - 6 Cubes",
         "he": "קולב קוביות תלת מימד - 6 קוביות"
       },
-      "description": "<p class=\"ql-align-right\">מתלה בצורת קוביות תלת מימדיות המשמש לאחסון מטפחות, עניבות, צעיפים, חגורות, תכשיטים ועוד. המתלה נותן תחושה שהוא תלת מימדי בעוד הוא שטוח לגמרי, חוסך מקום ונוח לאחסון ותליה. קיים בשני דגמים, 6 קוביות הכולל 11 פתחים המשמשים לאחסון ושלוש קוביות הכולל 5 פתחים המשמשים לתליה. מוצר זה הוא 6 קוביות. זו מתנה דקורטיבית ומעוצבת ומאוד שימושית לבית, עוזרת בארגון וסדר ויפה לעין. מידות: גובה 24ס\"מ, רוחב 22.7ס\"מ עובי&nbsp;2&nbsp;מ\"מ. צבע: שחור. משקל: 300&nbsp;גרם. חומר: ברזל בצביעה בתנור.</p><p class=\"ql-align-right\"><br></p><p>נמכר באריזת צלופן איכותית, שטוחה וחוסכת מקום. </p>",
+      "description": "<p class=\"ql-align-right\">מתלה בצורת קוביות תלת מימדיות המשמש לאחסון מטפחות, עניבות, צעיפים, חגורות, תכשיטים ועוד. המתלה נותן תחושה שהוא תלת מימדי בעוד הוא שטוח לגמרי, חוסך מקום ונוח לאחסון ותליה. קיים בשני דגמים, 6 קוביות הכולל 11 פתחים המשמשים לאחסון ושלוש קוביות הכולל 5 פתחים המשמשים לתליה. מוצר זה הוא 6 קוביות. זו מתנה דקורטיבית ומעוצבת ומאוד שימושית לבית, עוזרת בארגון וסדר ויפה לעין. מידות: גובה 24ס\"מ, רוחב 22.7ס\"מ עובי&nbsp;2&nbsp;מ\"מ. צבע: שחור. משקל: 300&nbsp;גרם. חומר: ברזל בצביעה בתנור.</p><p class=\"ql-align-right\"><br></p><p>נמכר באריזת צלופן איכותית, שטוחה וחוסכת מקום.</p>",
       "short_description": "מתלה אקססוריז שטוח לארון",
       "sku": "AD122",
       "brand": null,
@@ -2543,21 +2543,21 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-85l6ob",
+      "url": "https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-qnuvi1",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:30.748Z"
+      "updated_at": "2026-06-07T16:55:47.672Z"
     },
     {
       "id": "6432697e-68fc-4295-ada2-fee5e745c82c",
-      "slug": "kvlb-kvbyvt-tlt-mymd-3-kvbyvt-f0fbfv",
+      "slug": "kvlb-kvbyvt-tlt-mymd-3-kvbyvt-ag7n7k",
       "name": "קולב קוביות תלת מימד - 3 קוביות",
       "name_translations": {
         "en": "3D Cubes Hanger - 3 Cubes",
         "he": "קולב קוביות תלת מימד - 3 קוביות"
       },
-      "description": "<p class=\"ql-align-right\">מתלה בצורת קוביות תלת מימדיות המשמש לאחסון מטפחות, עניבות, צעיפים, חגורות, תכשיטים ועוד. המתלה נותן תחושה שהוא תלת מימדי בעוד הוא שטוח לגמרי, חוסך מקום ונוח לאחסון ותליה. קיים בשני דגמים, 6 קוביות הכולל 11 פתחים המשמשים לאחסון ושלוש קוביות הכולל 5 פתחים המשמשים לתליה. מוצר זה הוא 3&nbsp;קוביות. זו מתנה דקורטיבית ומעוצבת ומאוד שימושית לבית, עוזרת בארגון וסדר ויפה לעין. מידות: גובה 24ס\"מ, רוחב 22.7ס\"מ עובי&nbsp;2&nbsp;מ\"מ. צבע: שחור. משקל: 300&nbsp;גרם. חומר: ברזל בצביעה בתנור.</p><p class=\"ql-align-right\"><br></p><p>נמכר באריזת צלופן איכותית, שטוחה וחוסכת מקום. </p>",
+      "description": "<p class=\"ql-align-right\">מתלה בצורת קוביות תלת מימדיות המשמש לאחסון מטפחות, עניבות, צעיפים, חגורות, תכשיטים ועוד. המתלה נותן תחושה שהוא תלת מימדי בעוד הוא שטוח לגמרי, חוסך מקום ונוח לאחסון ותליה. קיים בשני דגמים, 6 קוביות הכולל 11 פתחים המשמשים לאחסון ושלוש קוביות הכולל 5 פתחים המשמשים לתליה. מוצר זה הוא 3&nbsp;קוביות. זו מתנה דקורטיבית ומעוצבת ומאוד שימושית לבית, עוזרת בארגון וסדר ויפה לעין. מידות: גובה 24ס\"מ, רוחב 22.7ס\"מ עובי&nbsp;2&nbsp;מ\"מ. צבע: שחור. משקל: 300&nbsp;גרם. חומר: ברזל בצביעה בתנור.</p><p class=\"ql-align-right\"><br></p><p>נמכר באריזת צלופן איכותית, שטוחה וחוסכת מקום.</p>",
       "short_description": "מתלה אקססוריז שטוח לארון",
       "sku": "AD123",
       "brand": null,
@@ -2570,11 +2570,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-f0fbfv",
+      "url": "https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-ag7n7k",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:30.750Z"
+      "updated_at": "2026-06-07T16:55:40.165Z"
     },
     {
       "id": "558588f0-963c-478c-b9c5-50b15ad1f321",
@@ -3202,7 +3202,7 @@
     },
     {
       "id": "f8242daf-8036-4ee4-84ec-7030375de981",
-      "slug": "mtlh-kvlb-93wzar",
+      "slug": "mtlh-kvlb-sew8mj",
       "name": "מתלה קולב",
       "name_translations": {
         "en": "Hanger Hook",
@@ -3221,11 +3221,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mtlh-kvlb-93wzar",
+      "url": "https://artori.co.il/product/mtlh-kvlb-sew8mj",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:31.361Z"
+      "updated_at": "2026-06-07T16:55:54.883Z"
     },
     {
       "id": "b236507d-832b-46e6-b036-707869f01ef2",
@@ -4009,10 +4009,10 @@
     },
     {
       "id": "a2d0e53d-b26e-432d-99e2-28193ea1ab09",
-      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-qfllsq",
+      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-4z7gbw",
       "name": "זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית",
       "name_translations": {
-        "en": "Pair of Doves - Decorative Dove Figurines for Shelf Display - Special and Romantic Gift for Home Decor",
+        "en": "Pair of Doves - Decorative Dove Figurines for Shelf Display - Special Romantic Gift for Home Decor",
         "he": "זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית"
       },
       "description": "<p>LOVEBIRDS - זוג יונים</p><p><strong>זוג פסלונים דקורטיביים מעוצבים כצלליות של ציפורים, עשויים מתכת איכותית בגימור מאט. </strong>צמד יונים היושבות על קצה מדף ומביטות זו בזו.</p><p>עיצוב נקי ואלגנטי המוסיף טאץ׳ של רומנטיקה והרמוניה לכל חלל.</p><p>✨ <strong>פריט דקורטיבי מרגש:</strong></p><p>עיצוב מלא משמעות של אהבה, חיבור ואינטימיות, מתאים לחלל המגורים או לחדר השינה.</p><p>✨ <strong>מתנה רומנטית מושלמת:</strong></p><p>מתנה אידיאלית לחנוכת בית, ימי נישואין, חג האהבה או Valentine’s Day – תשומת לב מקורית למי שיקר לכם באמת. מתנה לזוג, מתנה לבן / בת הזוג.</p><p>✨ <strong>איכות ויוקרה:</strong></p><p>מגיע באריזת מתנה מעוצבת ומרשימה, שתהפוך את החוויה למושלמת מהשנייה הראשונה.</p>",
@@ -4037,7 +4037,7 @@
       ],
       "in_stock": false,
       "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-qfllsq",
+      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-4z7gbw",
       "categories": [
         "יונים",
         "מוצרים אחרים להעמדה על שולחן / מדף",
@@ -4049,7 +4049,7 @@
         "לחדר השינה",
         "למשרד / חלל עבודה"
       ],
-      "updated_at": "2026-04-30T09:01:31.988Z"
+      "updated_at": "2026-06-07T16:55:15.094Z"
     },
     {
       "id": "7887e0c0-2f5b-4739-9bba-e7a9dcec6ad5",

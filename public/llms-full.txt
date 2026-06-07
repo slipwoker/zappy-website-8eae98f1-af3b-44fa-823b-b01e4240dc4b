@@ -4495,7 +4495,7 @@ Cliffhanger - על הקצה - תומך ספרים דרמטי תחזיקו חזק
 ---
 
 ### פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי
-URL: https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-kkriah
+URL: https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2
 Price: 39.00 ILS (sale, was 55.00 ILS)
 Availability: In stock
 SKU: AD288
@@ -4505,7 +4505,7 @@ SKU: AD288
 ---
 
 ### ארטאורי בעיר - פאזל 1000 חלקים
-URL: https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-ihy5eu
+URL: https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q
 Price: 79.00 ILS (sale, was 99.00 ILS)
 Availability: In stock
 SKU: AD500
@@ -4916,7 +4916,7 @@ SKU: AD194
 ---
 
 ### קולב קוביות תלת מימד - 6 קוביות
-URL: https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-85l6ob
+URL: https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-6-kvbyvt-qnuvi1
 Price: 69.00 ILS
 Availability: In stock
 SKU: AD122
@@ -4926,7 +4926,7 @@ SKU: AD122
 ---
 
 ### קולב קוביות תלת מימד - 3 קוביות
-URL: https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-f0fbfv
+URL: https://artori.co.il/product/kvlb-kvbyvt-tlt-mymd-3-kvbyvt-ag7n7k
 Price: 69.00 ILS
 Availability: In stock
 SKU: AD123
@@ -5115,7 +5115,7 @@ SKU: ma510
 ---
 
 ### מתלה קולב
-URL: https://artori.co.il/product/mtlh-kvlb-93wzar
+URL: https://artori.co.il/product/mtlh-kvlb-sew8mj
 Price: 0.00 ILS
 Availability: In stock
 SKU: AD350
@@ -5355,7 +5355,7 @@ SKU: AD101
 ---
 
 ### זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית
-URL: https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-qfllsq
+URL: https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-4z7gbw
 Price: 129.00 ILS
 Availability: Out of stock
 SKU: AD140
