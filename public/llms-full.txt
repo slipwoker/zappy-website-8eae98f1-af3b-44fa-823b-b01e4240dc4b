@@ -4711,7 +4711,7 @@ SKU: WA107
 ---
 
 ### בלקוני - מדף מפתחות דקורטיבי - דגם A His
-URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-yratzl
+URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo
 Price: 169.00 ILS
 Availability: In stock
 SKU: AD126
@@ -4721,7 +4721,7 @@ SKU: AD126
 ---
 
 ### בלקוני - מדף מפתחות דקורטיבי - דגם B His
-URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-9vmjmw
+URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy
 Price: 169.00 ILS
 Availability: In stock
 SKU: AD127
@@ -4740,7 +4740,7 @@ Availability: In stock
 ---
 
 ### בלקוני - מדף מפתחות דקורטיבי - דגם B Hers
-URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-veg6z9
+URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru
 Price: 169.00 ILS
 Availability: In stock
 SKU: AD125
@@ -4826,7 +4826,7 @@ SKU: AD192DP
 ---
 
 ### בלקוני - מדף מפתחות דקורטיבי - דגם A Hers
-URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-a72jbb
+URL: https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-n8l516
 Price: 169.00 ILS
 Availability: In stock
 SKU: AD124

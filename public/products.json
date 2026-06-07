@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:49:55.257Z",
+  "generated_at": "2026-06-07T16:51:05.302Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -1769,7 +1769,7 @@
     },
     {
       "id": "0325fedc-dd4a-43ed-bcce-72e528da8dfc",
-      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-yratzl",
+      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo",
       "name": "בלקוני - מדף מפתחות דקורטיבי - דגם A His",
       "name_translations": {
         "en": "Balcony - Decorative Key Shelf - Model A His",
@@ -1794,15 +1794,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-yratzl",
+      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo",
       "categories": [
         "מדפי מפתחות"
       ],
-      "updated_at": "2026-04-30T09:01:30.134Z"
+      "updated_at": "2026-06-07T16:50:22.537Z"
     },
     {
       "id": "1e45ffa0-b638-4211-af16-fcc33cb845e9",
-      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-9vmjmw",
+      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy",
       "name": "בלקוני - מדף מפתחות דקורטיבי - דגם B His",
       "name_translations": {
         "en": "Balcony - Decorative Key Shelf - Model B His",
@@ -1828,11 +1828,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-9vmjmw",
+      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy",
       "categories": [
         "מדפי מפתחות"
       ],
-      "updated_at": "2026-04-30T09:01:30.134Z"
+      "updated_at": "2026-06-07T16:50:11.230Z"
     },
     {
       "id": "5223d7d7-e803-4a4c-bbd9-ac6b97ec55e7",
@@ -1872,7 +1872,7 @@
     },
     {
       "id": "bf75c526-ede0-4ff3-97cb-adbc6d2beaae",
-      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-veg6z9",
+      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru",
       "name": "בלקוני - מדף מפתחות דקורטיבי - דגם B Hers",
       "name_translations": {
         "en": "Balcony - Decorative Key Shelf - Model B Hers",
@@ -1898,11 +1898,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-veg6z9",
+      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru",
       "categories": [
         "מדפי מפתחות"
       ],
-      "updated_at": "2026-04-30T09:01:30.151Z"
+      "updated_at": "2026-06-07T16:50:32.887Z"
     },
     {
       "id": "bbbdddc5-b593-4960-8a38-5a694d817c47",
@@ -2201,7 +2201,7 @@
     },
     {
       "id": "3847e7f0-132e-4763-8b40-0cc3664390a7",
-      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-a72jbb",
+      "slug": "blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-n8l516",
       "name": "בלקוני - מדף מפתחות דקורטיבי - דגם A Hers",
       "name_translations": {
         "en": "Balcony - Decorative Key Shelf - Model A Hers",
@@ -2229,11 +2229,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-a72jbb",
+      "url": "https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-hers-n8l516",
       "categories": [
         "מדפי מפתחות"
       ],
-      "updated_at": "2026-04-30T09:01:30.358Z"
+      "updated_at": "2026-06-07T16:50:43.781Z"
     },
     {
       "id": "016e001a-09f7-4c8d-8574-fe207d984624",
