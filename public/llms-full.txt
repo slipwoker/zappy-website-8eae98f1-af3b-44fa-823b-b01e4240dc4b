@@ -4876,7 +4876,7 @@ SKU: AD348
 ---
 
 ### מחזיק מעמד - קישוט למדף
-URL: https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-0r3lw0
+URL: https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-lghfsg
 Price: 69.00 ILS
 Availability: In stock
 SKU: AD108
@@ -4896,7 +4896,7 @@ SKU: AD236P
 ---
 
 ### בטיפול שלה - כיסוי לקופסת טישו מלבנית
-URL: https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-xn8tks
+URL: https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-3zw8g4
 Price: 109.00 ILS
 Availability: In stock
 SKU: AD193

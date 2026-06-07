@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:03:30.414Z",
+  "generated_at": "2026-06-07T17:04:10.534Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -2383,7 +2383,7 @@
     },
     {
       "id": "3c7c8187-6441-42a9-ac5d-f9f51639c5b1",
-      "slug": "mchzyk-mamd-kyshvt-lmdp-0r3lw0",
+      "slug": "mchzyk-mamd-kyshvt-lmdp-lghfsg",
       "name": "מחזיק מעמד - קישוט למדף",
       "name_translations": {
         "en": "Stand Holder - Shelf Decoration",
@@ -2407,11 +2407,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-0r3lw0",
+      "url": "https://artori.co.il/product/mchzyk-mamd-kyshvt-lmdp-lghfsg",
       "categories": [
         "מוצרים אחרים להעמדה על שולחן / מדף"
       ],
-      "updated_at": "2026-04-30T09:01:30.558Z"
+      "updated_at": "2026-06-07T17:04:04.553Z"
     },
     {
       "id": "b98f8d02-0384-475b-aaff-2e813b67d4e8",
@@ -2452,7 +2452,7 @@
     },
     {
       "id": "0bb3d490-82bd-4835-8b6f-40b34f9d6775",
-      "slug": "btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-xn8tks",
+      "slug": "btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-3zw8g4",
       "name": "בטיפול שלה - כיסוי לקופסת טישו מלבנית",
       "name_translations": {
         "en": "In Her Treatment - Rectangular Tissue Box Cover",
@@ -2481,12 +2481,12 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-xn8tks",
+      "url": "https://artori.co.il/product/btypvl-shlh-kysvy-lkvpst-tyshv-mlbnyt-3zw8g4",
       "categories": [
         "כיסויים לקופסת טישו",
         "מתנות לפסיכולוג/ית"
       ],
-      "updated_at": "2026-04-30T09:01:30.562Z"
+      "updated_at": "2026-06-07T17:03:37.536Z"
     },
     {
       "id": "5dff4359-20b0-4969-bc10-80cacb70eddf",
