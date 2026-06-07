@@ -4415,7 +4415,7 @@ SKU: AD101+AD103
 ---
 
 ### ביזי יוגה - סטנד לסמארטפון - גאיה
-URL: https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-fq0hic
+URL: https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD134
@@ -4563,7 +4563,7 @@ Availability: Out of stock
 ---
 
 ### ביזי - סטנד לסמארטפון - צ'אטי פאטי
-URL: https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-su8xd2
+URL: https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD145
@@ -4633,7 +4633,7 @@ SKU: AD254
 ---
 
 ### ביזי - סטנד לסמארטפון - טוויט פיט
-URL: https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-dlleld
+URL: https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD148

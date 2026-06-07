@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:05:07.902Z",
+  "generated_at": "2026-06-07T17:06:35.907Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -694,7 +694,7 @@
     },
     {
       "id": "564bf438-f07c-4b10-b2ba-ca4f8fcc372d",
-      "slug": "byzy-yvgh-stnd-lsmartpvn-gayh-fq0hic",
+      "slug": "byzy-yvgh-stnd-lsmartpvn-gayh-i045fu",
       "name": "ביזי יוגה - סטנד לסמארטפון - גאיה",
       "name_translations": {
         "en": "Busy Yoga - Smartphone Stand - Gaia",
@@ -716,11 +716,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-fq0hic",
+      "url": "https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu",
       "categories": [
         "סטנדים לטלפון נייד"
       ],
-      "updated_at": "2026-04-30T09:01:29.126Z"
+      "updated_at": "2026-06-07T17:05:32.753Z"
     },
     {
       "id": "2f1d9ee3-5141-4989-94dd-1358bf22b24b",
@@ -1235,7 +1235,7 @@
     },
     {
       "id": "0f92b861-73d7-4b71-8298-53383bb5f73a",
-      "slug": "byzy-stnd-lsmartpvn-tsaty-paty-su8xd2",
+      "slug": "byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u",
       "name": "ביזי - סטנד לסמארטפון - צ'אטי פאטי",
       "name_translations": {
         "en": "Busy - Smartphone Stand - Chatty Patty",
@@ -1262,11 +1262,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-su8xd2",
+      "url": "https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u",
       "categories": [
         "סטנדים לטלפון נייד"
       ],
-      "updated_at": "2026-04-30T09:01:29.538Z"
+      "updated_at": "2026-06-07T17:06:34.514Z"
     },
     {
       "id": "240ddf9c-d633-45b0-9057-9ac2c2162fdb",
@@ -1481,7 +1481,7 @@
     },
     {
       "id": "23fde723-721b-48b1-ad9e-cb5b36388120",
-      "slug": "byzy-stnd-lsmartpvn-tvvyt-pyt-dlleld",
+      "slug": "byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold",
       "name": "ביזי - סטנד לסמארטפון - טוויט פיט",
       "name_translations": {
         "en": "Busy - Smartphone Stand - Tweet Fit",
@@ -1504,11 +1504,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-dlleld",
+      "url": "https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold",
       "categories": [
         "סטנדים לטלפון נייד"
       ],
-      "updated_at": "2026-04-30T09:01:29.741Z"
+      "updated_at": "2026-06-07T17:06:03.405Z"
     },
     {
       "id": "f4a023e9-07aa-43a2-bf23-1ddf2968f0fe",
