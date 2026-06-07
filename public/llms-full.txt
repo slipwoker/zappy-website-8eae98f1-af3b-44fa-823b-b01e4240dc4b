@@ -4475,7 +4475,7 @@ SKU: ma510-1
 ---
 
 ### פאזל 1000 חלקים - טיימס סקוור ניו יורק
-URL: https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-6hmbsk
+URL: https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg
 Price: 79.00 ILS (sale, was 99.00 ILS)
 Availability: In stock
 SKU: AD501
@@ -5055,7 +5055,7 @@ SKU: AD274
 ---
 
 ### שעון קיר - מפת יפו - עברית
-URL: https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-zdn9le
+URL: https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-9l5og5
 Price: 79.00 ILS (sale, was 99.00 ILS)
 Availability: Out of stock
 SKU: AD220
@@ -5205,7 +5205,7 @@ SKU: AD226
 ---
 
 ### שעון קיר - מפת יפו - אנגלית
-URL: https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-83pka3
+URL: https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-re90us
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD222
@@ -5215,7 +5215,7 @@ SKU: AD222
 ---
 
 ### שעון קיר - מפת ירושלים - שער יפו
-URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-qozfiy
+URL: https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-d1rfnv
 Price: 79.00 ILS (sale, was 99.00 ILS)
 Availability: Out of stock
 SKU: AD234

@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:53:10.599Z",
+  "generated_at": "2026-06-07T16:54:17.162Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -892,7 +892,7 @@
     },
     {
       "id": "f61ca3f6-6c19-440e-9462-5c8d987675fa",
-      "slug": "pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-6hmbsk",
+      "slug": "pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg",
       "name": "פאזל 1000 חלקים - טיימס סקוור ניו יורק",
       "name_translations": {
         "en": "1000-Piece Puzzle - Times Square New York",
@@ -923,11 +923,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-6hmbsk",
+      "url": "https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg",
       "categories": [
         "פאזלים"
       ],
-      "updated_at": "2026-04-30T09:01:29.328Z"
+      "updated_at": "2026-06-07T16:54:15.092Z"
     },
     {
       "id": "185bf867-5767-4bcb-ae51-07ebdbbe3777",
@@ -3009,7 +3009,7 @@
     },
     {
       "id": "21809719-c36e-46ec-b17f-e267e163c5c1",
-      "slug": "shavn-kyr-mpt-ypv-abryt-zdn9le",
+      "slug": "shavn-kyr-mpt-ypv-abryt-9l5og5",
       "name": "שעון קיר - מפת יפו - עברית",
       "name_translations": {
         "en": "Wall Clock - Jaffa Map - Hebrew",
@@ -3030,11 +3030,11 @@
       ],
       "in_stock": false,
       "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-zdn9le",
+      "url": "https://artori.co.il/product/shavn-kyr-mpt-ypv-abryt-9l5og5",
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-04-30T09:01:31.154Z"
+      "updated_at": "2026-06-07T16:53:31.717Z"
     },
     {
       "id": "df65dd35-25c1-4933-bd00-b1fffd2a6790",
@@ -3494,11 +3494,11 @@
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-06-07T16:53:08.443Z"
+      "updated_at": "2026-06-07T16:53:16.623Z"
     },
     {
       "id": "2cae7d76-a9a7-4699-8bd1-541e36d57e66",
-      "slug": "shavn-kyr-mpt-ypv-anglyt-83pka3",
+      "slug": "shavn-kyr-mpt-ypv-anglyt-re90us",
       "name": "שעון קיר - מפת יפו - אנגלית",
       "name_translations": {
         "en": "Wall Clock - Jaffa Map - English",
@@ -3520,15 +3520,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-83pka3",
+      "url": "https://artori.co.il/product/shavn-kyr-mpt-ypv-anglyt-re90us",
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-04-30T09:01:31.580Z"
+      "updated_at": "2026-06-07T16:53:25.690Z"
     },
     {
       "id": "3b6e5495-647d-4654-9e6c-395e79ed8c4b",
-      "slug": "shavn-kyr-mpt-yrvshlym-shar-ypv-qozfiy",
+      "slug": "shavn-kyr-mpt-yrvshlym-shar-ypv-d1rfnv",
       "name": "שעון קיר - מפת ירושלים - שער יפו",
       "name_translations": {
         "en": "Wall Clock - Jerusalem Map - Jaffa Gate",
@@ -3547,11 +3547,11 @@
       ],
       "in_stock": false,
       "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-qozfiy",
+      "url": "https://artori.co.il/product/shavn-kyr-mpt-yrvshlym-shar-ypv-d1rfnv",
       "categories": [
         "שעוני קיר"
       ],
-      "updated_at": "2026-04-30T09:01:31.580Z"
+      "updated_at": "2026-06-07T16:53:46.261Z"
     },
     {
       "id": "7e186811-260e-49fb-bcda-d2a34af710ed",
