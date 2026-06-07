@@ -5085,7 +5085,7 @@ SKU: AD104
 ---
 
 ### אקסטרים - פסלון מדף
-URL: https://artori.co.il/product/akstrym-pslvn-mdp-t5tgtd
+URL: https://artori.co.il/product/akstrym-pslvn-mdp-wo5ma9
 Price: 69.90 ILS
 Availability: In stock
 SKU: AD294
@@ -5155,7 +5155,7 @@ SKU: AD27..
 ---
 
 ### פקקופסא - קופסת אחסון לאמבטיה
-URL: https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-xmszko
+URL: https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-2toixi
 Price: 39.00 ILS (sale, was 55.00 ILS)
 Availability: In stock
 SKU: AD260

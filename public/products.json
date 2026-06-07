@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:04:10.534Z",
+  "generated_at": "2026-06-07T17:05:07.902Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -2386,7 +2386,7 @@
       "slug": "mchzyk-mamd-kyshvt-lmdp-lghfsg",
       "name": "מחזיק מעמד - קישוט למדף",
       "name_translations": {
-        "en": "Stand Holder - Shelf Decoration",
+        "en": "Steadfast Holder - Shelf Decoration",
         "he": "מחזיק מעמד - קישוט למדף"
       },
       "description": "<p class=\"ql-align-right\">ה\"מחזיק מעמד\" הוא סוג של גיבור על שנותן את התחושה שהוא מונע מחפצים שונים מליפול. ה\"מחזיק מעמד\" עובד בצורה אידיאלית כאשר מצמידים אותו לחפצים שאופן החיבור שלהם אינו גלוי לעין. לדוגמא \"מחזיק מעמד\" מתאים מאוד למדף צף כגון זה של איקיאה. המגנט בידה של הדמות, מתמגנט לבורג הנסתר המצוי בתחתית המדף כך שנוצר הרושם שהוא זה שמחזיק אותו מליפול. ניתן להשתמש במוצר בחפצים נוספים כגון שעונים, מסגרות תמונה וכו'. ה\"מחזיק מעמד\" הוא תוספת קולית לקישוט הבית, היא יוצרת עניין ומעלה חיוך. לא רק למעריצי גיבורי על.</p>",
@@ -2411,7 +2411,7 @@
       "categories": [
         "מוצרים אחרים להעמדה על שולחן / מדף"
       ],
-      "updated_at": "2026-06-07T17:04:04.553Z"
+      "updated_at": "2026-06-07T17:04:11.681Z"
     },
     {
       "id": "b98f8d02-0384-475b-aaff-2e813b67d4e8",
@@ -3104,7 +3104,7 @@
     },
     {
       "id": "83dd94ea-edc7-4f07-83ec-390798288aab",
-      "slug": "akstrym-pslvn-mdp-t5tgtd",
+      "slug": "akstrym-pslvn-mdp-wo5ma9",
       "name": "אקסטרים - פסלון מדף",
       "name_translations": {
         "en": "Extreme - Shelf Figurine",
@@ -3128,11 +3128,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/akstrym-pslvn-mdp-t5tgtd",
+      "url": "https://artori.co.il/product/akstrym-pslvn-mdp-wo5ma9",
       "categories": [
         "מוצרים אחרים להעמדה על שולחן / מדף"
       ],
-      "updated_at": "2026-04-30T09:01:31.168Z"
+      "updated_at": "2026-06-07T17:04:34.531Z"
     },
     {
       "id": "037275e1-66f4-40c8-a5a3-465f1ad94d77",
@@ -3337,7 +3337,7 @@
     },
     {
       "id": "42dae9e7-6cb9-4927-a658-dd81dcc37fed",
-      "slug": "pkkvpsa-kvpst-achsvn-lambtyh-xmszko",
+      "slug": "pkkvpsa-kvpst-achsvn-lambtyh-2toixi",
       "name": "פקקופסא - קופסת אחסון לאמבטיה",
       "name_translations": {
         "en": "Cork Box - Bathroom Storage Container",
@@ -3365,11 +3365,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-xmszko",
+      "url": "https://artori.co.il/product/pkkvpsa-kvpst-achsvn-lambtyh-2toixi",
       "categories": [
         "מוצרים אחרים להעמדה על שולחן / מדף"
       ],
-      "updated_at": "2026-04-30T09:01:31.375Z"
+      "updated_at": "2026-06-07T17:04:25.179Z"
     },
     {
       "id": "49e21dd7-917f-49ac-9858-1d023ddf37c4",
