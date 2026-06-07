@@ -1,10 +1,43 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:30:15.598Z",
+  "generated_at": "2026-06-07T16:41:10.126Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
-  "count": 118,
+  "count": 119,
   "products": [
+    {
+      "id": "12dd1b5d-9aa6-49ac-8c17-f2a318ce746e",
+      "slug": "tvmk-sprym-rvkb-avpnyym-the-apex-lean-xxj5s2",
+      "name": "תומך ספרים רוכב אופניים - The Apex Lean",
+      "name_translations": {
+        "en": "Cyclist Bookend - The Apex Lean",
+        "he": "תומך ספרים רוכב אופניים - The Apex Lean"
+      },
+      "description": "<p><strong>תומך ספרים בעיצוב רוכב אופני כביש</strong></p><p><br></p><p>למי שחי את הכביש, סופר קילומטרים ורודף אחרי המהירות, אבל יודע גם להאט עם ספר טוב. זהו לא תומך ספרים רגיל; הוא מחזיק את אוסף הספרים שלכם בזווית דינמית ומלאת אופי, הלוכדת את הרגע המרגש של רוכב אופני כביש הנכנס עמוק אל תוך פנייה חדה.</p><p><br></p><p>יותר מתומך ספרים פונקציונלי, זהו גם פסל מדף מרשים המכניס לחלל תחושת תנועה, אנרגיה ותשוקה לרכיבה. מתנה מושלמת לרוכבי אופניים, לחובבי ספורט ולכל מי שמעריך עיצוב נקי בהשראת תנועה ומהירות.</p><p><br></p><p>מיוצר ממתכת איכותית ועמידה, בגימור צביעה בתנור לקבלת עמידות מרבית ומראה מוקפד לאורך שנים.</p><p><br></p><p><strong>חומר:</strong> מתכת</p><p> <strong>צבע:</strong> שחור</p><p> <strong>מידות:</strong> 24.8 × 9.5 × 7.7 ס”מ</p><p> <strong>משקל:</strong> 174 גרם</p><p><br></p>",
+      "short_description": "היופי נמצא בזווית הנכונה",
+      "sku": "AD296",
+      "brand": null,
+      "price": 89,
+      "base_price": 89,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://artori.co.il/assets/product-1780850414494-e3q9du.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-xxj5s2",
+      "categories": [
+        "לחדר השינה",
+        "לחדר הילדים",
+        "למשרד / חלל עבודה",
+        "מתנות לגבר",
+        "תומכי ספרים",
+        "מתנות לילד/ה",
+        "חדש!"
+      ],
+      "updated_at": "2026-06-07T16:40:37.525Z"
+    },
     {
       "id": "eac2d590-849e-4362-a3e7-2dc02af4f592",
       "slug": "htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-b0q0jf",

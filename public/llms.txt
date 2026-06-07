@@ -72,7 +72,16 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 118**
+**Total active products: 119**
+
+### תומך ספרים רוכב אופניים - The Apex Lean
+https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-xxj5s2
+- Price: 89.00 ILS
+- Availability: In stock
+- Category: לחדר השינה
+- SKU: AD296
+- Description: היופי נמצא בזווית הנכונה
+- Image: https://artori.co.il/assets/product-1780850414494-e3q9du.webp
 
 ### הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט
 https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-b0q0jf
