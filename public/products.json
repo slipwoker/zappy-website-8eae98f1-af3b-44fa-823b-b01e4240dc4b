@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:51:17.217Z",
+  "generated_at": "2026-06-07T16:52:33.080Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -1188,7 +1188,7 @@
         "להול הכניסה לבית",
         "מתנות לחנוכת בית"
       ],
-      "updated_at": "2026-06-07T16:51:12.700Z"
+      "updated_at": "2026-06-07T16:51:21.287Z"
     },
     {
       "id": "01ad7cbd-e706-4690-8064-b25055f2104e",
@@ -3373,7 +3373,7 @@
     },
     {
       "id": "49e21dd7-917f-49ac-9858-1d023ddf37c4",
-      "slug": "svp-hayprvn-kvs-ltsyvd-mshrdy-ni4xmd",
+      "slug": "svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7",
       "name": "סוף העיפרון - כוס לציוד משרדי",
       "name_translations": {
         "en": "Pencil End - Office Supplies Cup",
@@ -3397,15 +3397,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-ni4xmd",
+      "url": "https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7",
       "categories": [
         "ציוד משרדי"
       ],
-      "updated_at": "2026-04-30T09:01:31.381Z"
+      "updated_at": "2026-06-07T16:52:31.059Z"
     },
     {
       "id": "3cd443e1-dc3f-4c65-a8a1-74979fe21d25",
-      "slug": "klmchk-klmr-mavtsb-kmchk-72hrgb",
+      "slug": "klmchk-klmr-mavtsb-kmchk-1h57oe",
       "name": "קלמחק - קלמר מעוצב כמחק",
       "name_translations": {
         "en": "Pencil Case - Designer Pencil Case Shaped Like an Eraser",
@@ -3427,15 +3427,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-72hrgb",
+      "url": "https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-1h57oe",
       "categories": [
         "ציוד משרדי"
       ],
-      "updated_at": "2026-04-30T09:01:31.559Z"
+      "updated_at": "2026-06-07T16:52:00.465Z"
     },
     {
       "id": "b28523da-cef5-487b-85e5-649a355b1159",
-      "slug": "mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-ye5ktb",
+      "slug": "mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-2xzoum",
       "name": "מחק'ס - מחק מעוצב כמו נוזל מחיקה (טיפקס)",
       "name_translations": {
         "en": "Erase-X - Designer Eraser Shaped Like Correction Fluid (Tipp-Ex)",
@@ -3457,14 +3457,14 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-ye5ktb",
+      "url": "https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-2xzoum",
       "categories": [
         "ציוד משרדי",
         "לחדר הילדים",
         "למשרד / חלל עבודה",
         "מתנות לילד/ה"
       ],
-      "updated_at": "2026-04-30T09:01:31.564Z"
+      "updated_at": "2026-06-07T16:52:20.673Z"
     },
     {
       "id": "776eab90-aaa2-48ea-969c-a1f2d0bd8432",
@@ -3555,7 +3555,7 @@
     },
     {
       "id": "7e186811-260e-49fb-bcda-d2a34af710ed",
-      "slug": "nart-shar-mtkn-lkrtysy-bykvr-4r2tq0",
+      "slug": "nart-shar-mtkn-lkrtysy-bykvr-l3o66z",
       "name": "נערת שער - מתקן לכרטיסי ביקור",
       "name_translations": {
         "en": "Hair Girl - Business Card Holder",
@@ -3575,11 +3575,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-4r2tq0",
+      "url": "https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-l3o66z",
       "categories": [
         "ציוד משרדי"
       ],
-      "updated_at": "2026-04-30T09:01:31.583Z"
+      "updated_at": "2026-06-07T16:51:51.292Z"
     },
     {
       "id": "f2fba736-c817-4f93-a5a0-8c6371ef3087",

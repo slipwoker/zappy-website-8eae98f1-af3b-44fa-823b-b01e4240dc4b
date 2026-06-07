@@ -5165,7 +5165,7 @@ SKU: AD260
 ---
 
 ### סוף העיפרון - כוס לציוד משרדי
-URL: https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-ni4xmd
+URL: https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7
 Price: 49.90 ILS
 Availability: In stock
 SKU: AD243
@@ -5175,7 +5175,7 @@ Pencil End Cup – סוף העיפרון מעמד שולחני יפה ומעוצ
 ---
 
 ### קלמחק - קלמר מעוצב כמחק
-URL: https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-72hrgb
+URL: https://artori.co.il/product/klmchk-klmr-mavtsb-kmchk-1h57oe
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD252
@@ -5185,7 +5185,7 @@ SKU: AD252
 ---
 
 ### מחק'ס - מחק מעוצב כמו נוזל מחיקה (טיפקס)
-URL: https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-ye5ktb
+URL: https://artori.co.il/product/mchks-mchk-mavtsb-kmv-nvzl-mchykh-typks-2xzoum
 Price: 9.90 ILS
 Availability: In stock
 SKU: AD253
@@ -5225,7 +5225,7 @@ SKU: AD234
 ---
 
 ### נערת שער - מתקן לכרטיסי ביקור
-URL: https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-4r2tq0
+URL: https://artori.co.il/product/nart-shar-mtkn-lkrtysy-bykvr-l3o66z
 Price: 89.00 ILS
 Availability: In stock
 SKU: AD180
