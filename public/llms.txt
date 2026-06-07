@@ -72,7 +72,16 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 117**
+**Total active products: 118**
+
+### הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט
+https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-b0q0jf
+- Price: 89.00 ILS
+- Availability: In stock
+- Category: חדש!
+- SKU: AD295
+- Description: תפנית חדה בעלילה
+- Image: https://artori.co.il/assets/product-1780849584062-0mwgvo.webp
 
 ### בננה ביץ׳ - מתלה לבננות
 https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-4to0xl

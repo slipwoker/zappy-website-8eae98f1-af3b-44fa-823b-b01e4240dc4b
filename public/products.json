@@ -1,10 +1,42 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T15:16:33.499Z",
+  "generated_at": "2026-06-07T16:30:15.598Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
-  "count": 117,
+  "count": 118,
   "products": [
+    {
+      "id": "eac2d590-849e-4362-a3e7-2dc02af4f592",
+      "slug": "htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-b0q0jf",
+      "name": "הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט",
+      "name_translations": {
+        "en": "Full Lean - Designer Bookend Shaped Like a Sport Motorcycle",
+        "he": "הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט"
+      },
+      "description": "<p>למי שחי את החיים במסלול המהיר אבל עדיין נהנה לעצור לרגע עם ספר טוב. זהו לא תומך ספרים רגיל – הוא מחזיק את הספרים בזווית דרמטית ודינמית, המדמה אופנוע ספורט החותך פנייה חדה בהטיה מלאה.</p><p><br></p><p>יותר מתומך ספרים, זהו גם פסל מדף מרשים שמוסיף אופי ותנועה לכל חלל. מתנה מושלמת לחובבי אופנועים ולכל מי שמרגיש את הריגוש של הרכיבה גם כשהוא לא על הכביש.</p><p><br></p><p>מיוצר ממתכת איכותית ועמידה, בגימור צביעה בתנור לשמירה על מראה מרשים לאורך שנים.</p>",
+      "short_description": "תפנית חדה בעלילה",
+      "sku": "AD295",
+      "brand": null,
+      "price": 89,
+      "base_price": 89,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://artori.co.il/assets/product-1780849584062-0mwgvo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-b0q0jf",
+      "categories": [
+        "חדש!",
+        "מתנות למשרד",
+        "תומכי ספרים",
+        "לחדר השינה",
+        "למשרד / חלל עבודה",
+        "מתנות לגבר"
+      ],
+      "updated_at": "2026-06-07T16:29:43.371Z"
+    },
     {
       "id": "5d4958df-e718-45e0-b8ce-1d6ec377ca62",
       "slug": "bnnh-byts-mtlh-lbnnvt-4to0xl",
