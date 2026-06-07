@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T16:56:20.595Z",
+  "generated_at": "2026-06-07T16:57:06.210Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -1040,10 +1040,10 @@
     },
     {
       "id": "15c7a80a-6128-4b8a-a16b-2c504f64c006",
-      "slug": "tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-5p838p",
+      "slug": "tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx",
       "name": "תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות",
       "name_translations": {
-        "en": "Hanging - Albert Junior - Bag Hanger and Keychain Holder",
+        "en": "Hanging - Albert Junior - Bag Hanger and Key Holder",
         "he": "תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות"
       },
       "description": "<p>מתלה לתיק בצורת קוף שימפנזה.</p><p>יכול לשמש לתליית התיק במקומות שונים כמו בבית,&nbsp;בית קפה, בשולחן לימודים וכו'. המתלה יכול להתחבר גם לצרור המפתחות.</p><p>הוראות: הניחו את כף ידו של הקוף על השולחן (מתאים למשטחים שעוביים לא עולה על 4 ס\"מ). הניחו את רצועת התיק על ידו התחתונה של הקוף. ייצבו את המתלה כך שלא יתנדנד. מתאים לתיקים וחפצים שמשקלים לא עולה על 3 ק\"ג.</p>",
@@ -1067,12 +1067,12 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-5p838p",
+      "url": "https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx",
       "categories": [
         "מתלים",
         "קופים"
       ],
-      "updated_at": "2026-04-30T09:01:29.528Z"
+      "updated_at": "2026-06-07T16:56:33.028Z"
     },
     {
       "id": "66d068a7-df69-4ce1-8e6a-79d8c4e2ab67",
@@ -1552,7 +1552,7 @@
     },
     {
       "id": "10e50ac9-c8d6-4d17-8c44-3a3973156c8e",
-      "slug": "mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-0jfftl",
+      "slug": "mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61",
       "name": "מטוסי נייר - סט מתלים מעוצבים לקיר",
       "name_translations": {
         "en": "Paper Airplanes - Set of Designer Wall Hooks",
@@ -1580,11 +1580,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-0jfftl",
+      "url": "https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:29.934Z"
+      "updated_at": "2026-06-07T16:57:04.200Z"
     },
     {
       "id": "c4f7ee12-b49c-4424-b766-5310d7a09ab7",
@@ -2651,7 +2651,7 @@
     },
     {
       "id": "6f701f81-1325-4039-ae9f-849af83c5162",
-      "slug": "avlh-mtlh-mgbt-c1dgg7",
+      "slug": "avlh-mtlh-mgbt-t2bb26",
       "name": "אולה - מתלה מגבת",
       "name_translations": {
         "en": "Ola - Towel Hanger",
@@ -2674,11 +2674,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/avlh-mtlh-mgbt-c1dgg7",
+      "url": "https://artori.co.il/product/avlh-mtlh-mgbt-t2bb26",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-04-30T09:01:30.764Z"
+      "updated_at": "2026-06-07T16:56:42.582Z"
     },
     {
       "id": "f0ad00a8-6c42-4c88-9883-c05d9e2a0a24",

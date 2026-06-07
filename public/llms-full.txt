@@ -4515,7 +4515,7 @@ SKU: AD500
 ---
 
 ### תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות
-URL: https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-5p838p
+URL: https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx
 Price: 49.90 ILS
 Availability: In stock
 SKU: AD877
@@ -4653,7 +4653,7 @@ SKU: AD143
 ---
 
 ### מטוסי נייר - סט מתלים מעוצבים לקיר
-URL: https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-0jfftl
+URL: https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61
 Price: 149.00 ILS
 Availability: In stock
 SKU: AD262
@@ -4956,7 +4956,7 @@ SKU: AD192AB
 ---
 
 ### אולה - מתלה מגבת
-URL: https://artori.co.il/product/avlh-mtlh-mgbt-c1dgg7
+URL: https://artori.co.il/product/avlh-mtlh-mgbt-t2bb26
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD261
