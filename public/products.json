@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:07:06.775Z",
+  "generated_at": "2026-06-07T17:08:04.221Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -1413,13 +1413,13 @@
     },
     {
       "id": "275a9976-c155-499a-a67b-85ea498c0274",
-      "slug": "ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-awv7b9",
+      "slug": "ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k",
       "name": "\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל",
       "name_translations": {
-        "en": "\"Art Creation\" - Picture Frame - Couple and Bench",
+        "en": "\"Work of Art\" - Picture Frame - Couple and Bench",
         "he": "\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל"
       },
-      "description": "<p>מסגרת מעוצבת לתמונה שמציגה רגע מתוך ביקור במוזיאון, ויצירת האומנות עליה מסתכלות הדמויות היא למעשה תמונה שצילמתם בעצמכם ובחרתם למסגר.</p><p>ניתן להשיג בשני דגמים, באחד זוג מתבונן ואישה מצלמת ובשני זוג מתבונן ולצדו איש יושב על ספסל צפייה.</p><p>מיועד לתמונות במידות: 10*15 או 13*18 ס\"מ</p><p>הוראות שימוש:</p><p> - יש להדביק את התמונה המודפסת במרכז הקרטון המצורף באמצעות הדבק הדו צדדי שעל גבי</p><p> הקרטון, כך שתישאר מסגרת חלקה מסביב לתמונה.</p><p> - ניתן לתלות את המסגרת על הקיר באמצעות שימוש בחוט חזק מושחל ומתוח בין שני החורים</p><p> בצידה האחורי של המסגרת או להניחה על משטח תצוגה.</p>",
+      "description": "<p>מסגרת מעוצבת לתמונה שמציגה רגע מתוך ביקור במוזיאון, ויצירת האומנות עליה מסתכלות הדמויות היא למעשה תמונה שצילמתם בעצמכם ובחרתם למסגר.</p><p>ניתן להשיג בשני דגמים, באחד זוג מתבונן ואישה מצלמת ובשני זוג מתבונן ולצדו איש יושב על ספסל צפייה.</p><p>מיועד לתמונות במידות: 10*15 או 13*18 ס\"מ</p><p>הוראות שימוש:</p><p>- יש להדביק את התמונה המודפסת במרכז הקרטון המצורף באמצעות הדבק הדו צדדי שעל גבי</p><p>הקרטון, כך שתישאר מסגרת חלקה מסביב לתמונה.</p><p>- ניתן לתלות את המסגרת על הקיר באמצעות שימוש בחוט חזק מושחל ומתוח בין שני החורים</p><p>בצידה האחורי של המסגרת או להניחה על משטח תצוגה.</p>",
       "short_description": "למסגר כמו במוזיאון",
       "sku": "AD255",
       "brand": null,
@@ -1439,15 +1439,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-awv7b9",
+      "url": "https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k",
       "categories": [
         "מסגרות"
       ],
-      "updated_at": "2026-04-30T09:01:29.740Z"
+      "updated_at": "2026-06-07T17:07:22.208Z"
     },
     {
       "id": "a266a02d-21e0-4a6b-b660-62c8ab9993e2",
-      "slug": "ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-75w96t",
+      "slug": "ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b",
       "name": "\"יצירת אמנות\" - מסגרת לתמונה - זוג וצלמת - שחור",
       "name_translations": {
         "en": "\"Art Creation\" - Picture Frame - Couple and Photographer - Black",
@@ -1473,11 +1473,11 @@
       ],
       "in_stock": false,
       "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-75w96t",
+      "url": "https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b",
       "categories": [
         "מסגרות"
       ],
-      "updated_at": "2026-04-30T09:01:29.739Z"
+      "updated_at": "2026-06-07T17:07:31.367Z"
     },
     {
       "id": "23fde723-721b-48b1-ad9e-cb5b36388120",
@@ -2415,10 +2415,10 @@
     },
     {
       "id": "b98f8d02-0384-475b-aaff-2e813b67d4e8",
-      "slug": "msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-gn98x2",
+      "slug": "msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-hi2bwe",
       "name": "מסגרת גומיות - מתקן שולחני לפתקי ממו ותמונות",
       "name_translations": {
-        "en": "Rubber Band Frame - Desktop Organizer for Memo Notes and Photos",
+        "en": "Rubber Band Frame - Desktop Stand for Memo Notes and Photos",
         "he": "מסגרת גומיות - מתקן שולחני לפתקי ממו ותמונות"
       },
       "description": "<p>מסגרת דקורטיבית לתליית תמונות, פתקים, חשבונות, כרטיסי ביקור וכו'.</p><p>&nbsp;המסגרת עשויה מברזל בצביעה איכותית בתנור וכוללת בתוכה אלמנטים קישוטיים המשמשים כעוגנים למתיחת&nbsp;גומיות מצד אחד לשני עד כדי יצירת מעין רשת, שעליה ניתן לתלות דברים שונים.</p><p>המסגרת ניתנת לתלייה על הקיר וגם להצבה על שולחן או מדף באמצעות רגלית שמסופקת עם המוצר (בשני המקרים השימוש אפשרי לאורך או לרוחב).</p><p>המסגרת מסופקת עם מספר גומיות כך שניתן להשתמש בה באופן מידי. עם זאת, ניתן ואף רצוי להשתמש במסגרת לשימוש חוזר בגומיות שונות שיש תמיד בבית או במשרד.</p><p>שילובים שונים ויצירתיים של הגומיות על המסגרת, יוצרת מוצר משתנה ודינמי ומאפשרת להביא לידי ביטוי את היצירתיות של המשתמש.</p><p>זו מתנה דקורטיבית ושימושית כאחד, לבית או לסביבת העבודה, עוזרת בארגון וסדר, כיפית ויצירתית לשימוש ויפה לעין.</p><p>זמין בשני גדלים:</p><p>גדול 35X25</p><p>קטן 24X17.5</p>",
@@ -2444,11 +2444,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-gn98x2",
+      "url": "https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-hi2bwe",
       "categories": [
         "מסגרות"
       ],
-      "updated_at": "2026-04-30T09:01:30.562Z"
+      "updated_at": "2026-06-07T17:07:41.342Z"
     },
     {
       "id": "0bb3d490-82bd-4835-8b6f-40b34f9d6775",

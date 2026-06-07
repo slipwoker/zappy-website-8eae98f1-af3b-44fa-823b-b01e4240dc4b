@@ -4613,7 +4613,7 @@ SKU: AD144
 ---
 
 ### "יצירת אמנות" - מסגרת לתמונה - זוג וספסל
-URL: https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-awv7b9
+URL: https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k
 Price: 149.00 ILS
 Availability: In stock
 SKU: AD255
@@ -4623,7 +4623,7 @@ SKU: AD255
 ---
 
 ### "יצירת אמנות" - מסגרת לתמונה - זוג וצלמת - שחור
-URL: https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-75w96t
+URL: https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b
 Price: 149.00 ILS
 Availability: Out of stock
 SKU: AD254
@@ -4886,7 +4886,7 @@ SKU: AD108
 ---
 
 ### מסגרת גומיות - מתקן שולחני לפתקי ממו ותמונות
-URL: https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-gn98x2
+URL: https://artori.co.il/product/msgrt-gvmyvt-mtkn-shvlchny-lptky-mmv-vtmvnvt-hi2bwe
 Price: 49.00 ILS (sale, was 69.00 ILS)
 Availability: In stock
 SKU: AD236P
