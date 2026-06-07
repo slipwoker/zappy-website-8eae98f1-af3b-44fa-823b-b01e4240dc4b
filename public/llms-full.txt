@@ -4465,7 +4465,7 @@ SKU: AD142
 ---
 
 ### זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת
-URL: https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-kz8826
+URL: https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5
 Price: 199.00 ILS
 Availability: In stock
 SKU: ma510-1
@@ -5095,7 +5095,7 @@ SKU: AD294
 ---
 
 ### רוני ומוטי שחקני מטקות - פסלון מדף דקורטיבי
-URL: https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-e80hn5
+URL: https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-mfa4z2
 Price: 199.00 ILS
 Availability: In stock
 SKU: ma26

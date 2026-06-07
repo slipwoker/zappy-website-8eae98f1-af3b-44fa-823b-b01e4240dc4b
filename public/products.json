@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:02:30.864Z",
+  "generated_at": "2026-06-07T17:03:30.414Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -860,13 +860,13 @@
     },
     {
       "id": "65b784ab-c634-43e5-ae13-f967f1c7401f",
-      "slug": "zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-kz8826",
+      "slug": "zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5",
       "name": "זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת",
       "name_translations": {
         "en": "Pair of Matkot Players - Decorative Shelf Figurine, Made of Metal",
         "he": "זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"
       },
-      "description": "<p class=\"ql-align-right\">מקורו של משחק המטקות אינו ידוע, אך הוא מאומץ מזה שנים רבות כמשחק המייצג יותר מכל את הישראלי הטיפוסי. המשחק משוחק בעיקר על חוף הים, בעיקר בחודשי הקיץ, על ידי שני משתתפים החובטים בכדור פלסטיק גמיש באמצעות מחבטי עץ עגולים. למשחק אין כמעט חוקים וכל שמוטל על המשתתפים הוא לדאוג לכך שהכדור לא ייפול לקרקע. במשחק אין מנצח או מפסיד (אולי פרט לאלו שהצליחו, או הצליחו פחות, להתחמק מכדור גומי טועה בראש...). פסלי המתכת של \"ארטאורי דיזיין\"&nbsp;מתארים מספר דמויות של שחקני מטקות ישראלים שהם לאו דווקא חטובי גוף. לשחקן הישראלי המצוי, עב הכרס, זו ככל הנראה הפעילות הספורטיבית היחידה עליה הוא אינו מוותר בין מנת אבטיח לג'חנון של שבת. הפסלים מקפיאים את הדמויות בתנועת משחק או מנוחה.</p><p><br></p>",
+      "description": "<p class=\"ql-align-right\">מקורו של משחק המטקות אינו ידוע, אך הוא מאומץ מזה שנים רבות כמשחק המייצג יותר מכל את הישראלי הטיפוסי. המשחק משוחק בעיקר על חוף הים, בעיקר בחודשי הקיץ, על ידי שני משתתפים החובטים בכדור פלסטיק גמיש באמצעות מחבטי עץ עגולים. למשחק אין כמעט חוקים וכל שמוטל על המשתתפים הוא לדאוג לכך שהכדור לא ייפול לקרקע. במשחק אין מנצח או מפסיד (אולי פרט לאלו שהצליחו, או הצליחו פחות, להתחמק מכדור גומי טועה בראש...). פסלי המתכת של \"ארטאורי דיזיין\"&nbsp;מתארים מספר דמויות של שחקני מטקות ישראלים שהם לאו דווקא חטובי גוף. לשחקן הישראלי המצוי, עב הכרס, זו ככל הנראה הפעילות הספורטיבית היחידה עליה הוא אינו מוותר בין מנת אבטיח לג'חנון של שבת. הפסלים מקפיאים את הדמויות בתנועת משחק או מנוחה.</p>",
       "short_description": "פסלונים של שחקני מטקות ישראלים",
       "sku": "ma510-1",
       "brand": null,
@@ -884,11 +884,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-kz8826",
+      "url": "https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5",
       "categories": [
         "שחקני מטקות"
       ],
-      "updated_at": "2026-05-14T08:55:15.063Z"
+      "updated_at": "2026-06-07T17:02:49.947Z"
     },
     {
       "id": "f61ca3f6-6c19-440e-9462-5c8d987675fa",
@@ -3136,7 +3136,7 @@
     },
     {
       "id": "037275e1-66f4-40c8-a5a3-465f1ad94d77",
-      "slug": "rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-e80hn5",
+      "slug": "rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-mfa4z2",
       "name": "רוני ומוטי שחקני מטקות - פסלון מדף דקורטיבי",
       "name_translations": {
         "en": "Roni and Moti Matkot Players - Decorative Shelf Figurine",
@@ -3159,7 +3159,7 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-e80hn5",
+      "url": "https://artori.co.il/product/rvny-vmvty-shchkny-mtkvt-pslvn-mdp-dkvrtyby-mfa4z2",
       "categories": [
         "למשרד / חלל עבודה",
         "לסלון / חלל מגורים",
@@ -3167,7 +3167,7 @@
         "להעמדה על שולחן / מדף",
         "שחקני מטקות"
       ],
-      "updated_at": "2026-04-30T09:01:31.170Z"
+      "updated_at": "2026-06-07T17:02:57.869Z"
     },
     {
       "id": "fbb8739c-dde0-439b-832d-143aa89d2b3e",
