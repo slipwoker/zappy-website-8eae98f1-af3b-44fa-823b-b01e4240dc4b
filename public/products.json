@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:01:53.522Z",
+  "generated_at": "2026-06-07T17:02:30.864Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -3583,7 +3583,7 @@
     },
     {
       "id": "f2fba736-c817-4f93-a5a0-8c6371ef3087",
-      "slug": "tchtyt-kyryym-mtkt-xq9jtf",
+      "slug": "tchtyt-kyryym-mtkt-vz1gfz",
       "name": "תחתית כיריים - מתכת",
       "name_translations": {
         "en": "Stovetop Trivet - Metal",
@@ -3608,15 +3608,15 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/tchtyt-kyryym-mtkt-xq9jtf",
+      "url": "https://artori.co.il/product/tchtyt-kyryym-mtkt-vz1gfz",
       "categories": [
         "תחתיות"
       ],
-      "updated_at": "2026-04-30T09:01:31.761Z"
+      "updated_at": "2026-06-07T17:01:58.271Z"
     },
     {
       "id": "529b2d63-974c-4db5-9510-a04546d7bf6b",
-      "slug": "tchtyt-kyryym-sylykvn-v0ulnu",
+      "slug": "tchtyt-kyryym-sylykvn-mclumn",
       "name": "תחתית כיריים - סיליקון",
       "name_translations": {
         "en": "Stovetop Trivet - Silicone",
@@ -3642,11 +3642,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/tchtyt-kyryym-sylykvn-v0ulnu",
+      "url": "https://artori.co.il/product/tchtyt-kyryym-sylykvn-mclumn",
       "categories": [
         "תחתיות"
       ],
-      "updated_at": "2026-04-30T09:01:31.763Z"
+      "updated_at": "2026-06-07T17:02:13.179Z"
     },
     {
       "id": "72037048-f743-430d-8b03-00575dfbcece",

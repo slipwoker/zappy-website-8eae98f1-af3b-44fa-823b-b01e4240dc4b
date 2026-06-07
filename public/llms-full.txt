@@ -5235,7 +5235,7 @@ SKU: AD180
 ---
 
 ### תחתית כיריים - מתכת
-URL: https://artori.co.il/product/tchtyt-kyryym-mtkt-xq9jtf
+URL: https://artori.co.il/product/tchtyt-kyryym-mtkt-vz1gfz
 Price: 99.00 ILS
 Availability: In stock
 SKU: AD189
@@ -5245,7 +5245,7 @@ SKU: AD189
 ---
 
 ### תחתית כיריים - סיליקון
-URL: https://artori.co.il/product/tchtyt-kyryym-sylykvn-v0ulnu
+URL: https://artori.co.il/product/tchtyt-kyryym-sylykvn-mclumn
 Price: 55.00 ILS
 Availability: In stock
 SKU: AD188
