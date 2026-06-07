@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-07T17:08:13.868Z",
+  "generated_at": "2026-06-07T17:08:58.006Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 119,
@@ -3229,7 +3229,7 @@
     },
     {
       "id": "b236507d-832b-46e6-b036-707869f01ef2",
-      "slug": "snay-mptsch-agvzym-xp7h9x",
+      "slug": "snay-mptsch-agvzym-ma08cc",
       "name": "סנאי מפצח אגוזים",
       "name_translations": {
         "en": "Squirrel Nutcracker",
@@ -3251,11 +3251,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/snay-mptsch-agvzym-xp7h9x",
+      "url": "https://artori.co.il/product/snay-mptsch-agvzym-ma08cc",
       "categories": [
         "עוד למטבח ולאירוח"
       ],
-      "updated_at": "2026-04-30T09:01:31.360Z"
+      "updated_at": "2026-06-07T17:08:24.912Z"
     },
     {
       "id": "776b6bbf-4859-47c5-aa7a-644481cab718",
