@@ -1,10 +1,33 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-10T11:00:44.220Z",
+  "generated_at": "2026-06-10T11:15:56.534Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
-  "count": 119,
+  "count": 120,
   "products": [
+    {
+      "id": "50c1ee97-6971-4115-9771-a680bef46947",
+      "slug": "tst-shl-zapy-4v7596",
+      "name": "טסט של זאפי",
+      "name_translations": {
+        "en": "Zapi's Test",
+        "he": "טסט של זאפי"
+      },
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 290,
+      "base_price": 300,
+      "sale_price": 290,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": false,
+      "stock_status": "out_of_stock",
+      "url": "https://artori.co.il/product/tst-shl-zapy-4v7596",
+      "categories": [],
+      "updated_at": "2026-06-10T11:15:24.174Z"
+    },
     {
       "id": "12dd1b5d-9aa6-49ac-8c17-f2a318ce746e",
       "slug": "tvmk-sprym-rvkb-avpnyym-the-apex-lean-xxj5s2",
