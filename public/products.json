@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-11T15:20:30.578Z",
+  "generated_at": "2026-06-11T15:33:41.390Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -65,7 +65,7 @@
     },
     {
       "id": "eac2d590-849e-4362-a3e7-2dc02af4f592",
-      "slug": "htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-66q5fu",
+      "slug": "htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-5ytyyp",
       "name": "הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט",
       "name_translations": {
         "en": "Full Lean - Designer Bookend Shaped Like a Sport Motorcycle",
@@ -83,13 +83,14 @@
         "https://artori.co.il/assets/product-1781191148367-34mtvt.webp",
         "https://artori.co.il/assets/product-1781191141170-eg005fh.webp",
         "https://artori.co.il/assets/product-1781191117553-zyso6.webp",
-        "https://artori.co.il/assets/product-1780849584062-0mwgvo.webp",
         "https://artori.co.il/assets/product-1781191125700-8ea5ca.webp",
-        "https://artori.co.il/assets/product-1781191133560-0yo57.webp"
+        "https://artori.co.il/assets/product-1781191133560-0yo57.webp",
+        "https://artori.co.il/assets/product-1781191944596-25yzx.webp",
+        "https://artori.co.il/assets/product-1781191969969-gfdiors.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-66q5fu",
+      "url": "https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-5ytyyp",
       "categories": [
         "חדש!",
         "מתנות למשרד",
@@ -98,7 +99,7 @@
         "למשרד / חלל עבודה",
         "מתנות לגבר"
       ],
-      "updated_at": "2026-06-11T15:19:57.483Z"
+      "updated_at": "2026-06-11T15:33:08.891Z"
     },
     {
       "id": "5d4958df-e718-45e0-b8ce-1d6ec377ca62",
