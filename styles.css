@@ -16328,4 +16328,19 @@ html[dir="ltr"] [class*="solution-text"] {
   direction: ltr !important;
   text-align: left !important;
 }
+
+/* V2 navbar wrapper: RTL-baked sites only set display:flex on
+   .nav-right-group via the RTL-scoped rule (html[dir="rtl"]/[lang="he"]/
+   [lang="ar"] .nav-right-group). In LTR there is no such rule, so the wrapper
+   collapses to its default display:block and the .nav-menu ul wraps BELOW the
+   .nav-brand logo instead of sitting in the same row. Re-establish the flex
+   row for LTR. Desktop-scoped so it doesn't clobber the mobile
+   "display: contents" rule that flattens the wrapper for the hamburger menu. */
+@media (min-width: 769px) {
+  html[dir="ltr"] .nav-right-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+}
 /* ZAPPY-LTR-TEXTALIGN-OVERRIDES:END */
