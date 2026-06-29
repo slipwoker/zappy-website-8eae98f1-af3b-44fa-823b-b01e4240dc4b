@@ -11767,13 +11767,13 @@ a, button {
   padding: 24px;
   margin-bottom: 24px;
 }
-.section-header {
+.account-section .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-.section-header h2 { font-size: 1.25rem; color: var(--text-dark); margin: 0; }
+.account-section .section-header h2 { font-size: 1.25rem; color: var(--text-dark); margin: 0; }
 .btn-text {
   background: none;
   border: none;
@@ -13537,7 +13537,11 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
   /* Products menu: normalize link height so dropdown item doesn't look like “two rows” */
   .navbar, .nav-container, .nav-menu, .nav-menu > li { overflow: visible !important; }
   .navbar .nav-menu { align-items: center !important; }
-  .navbar .nav-menu > li { display: flex !important; align-items: center !important; }
+  /* Exclude the mobile-only Contact mirror (.mobile-contact-link / .nav-cta-mobile-item):
+     it must stay desktop-hidden via the min-width:769px .nav-menu .mobile-contact-link
+     display:none rule. Without the :not() guards this higher-specificity !important rule
+     out-specifics that hide and leaks the leftover Contact CTA button onto the desktop navbar. */
+  .navbar .nav-menu > li:not(.mobile-contact-link):not(.nav-cta-mobile-item) { display: flex !important; align-items: center !important; }
   .navbar .nav-menu > li > a {
     display: inline-flex !important;
     align-items: center !important;
