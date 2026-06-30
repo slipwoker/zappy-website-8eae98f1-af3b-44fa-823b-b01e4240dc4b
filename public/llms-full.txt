@@ -1084,7 +1084,7 @@ English
 
 
 
-קראתי ואני מסכים/ה ל  תנאי השימוש   ול  מדיניות הפרטיות
+קראתי ואני מסכים/ה ל תנאי השימוש  ול מדיניות הפרטיות
 
 
 
@@ -4446,13 +4446,6 @@ English
 ---
 
 ## Product Catalog
-
-### טסט של זאפי
-URL: https://artori.co.il/product/tst-shl-zapy-rho9y7
-Price: 290.00 ILS (sale, was 300.00 ILS)
-Availability: Out of stock
-
----
 
 ### תומך ספרים רוכב אופניים - The Apex Lean
 URL: https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-xxj5s2
