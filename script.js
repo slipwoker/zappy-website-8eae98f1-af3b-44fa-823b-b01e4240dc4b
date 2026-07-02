@@ -358,6 +358,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -3280,6 +3282,9 @@ function stripHtmlToText(html) {
       if (field) {
         field.addEventListener('input', function() {
           clearFieldError(fieldId, fieldId + '-error');
+          if (fieldId === 'customer-email') {
+            scheduleFirstOrderDiscountCheck(field.value);
+          }
           updatePlaceOrderState();
         });
       }
@@ -3294,6 +3299,7 @@ function stripHtmlToText(html) {
           checkFirstOrderDiscount(em);
         }
       });
+      scheduleFirstOrderDiscountCheck(emailFieldForFirstOrder.value, 0);
     }
 
     // shipping-state is a <select>, so use 'change' instead of 'input'
@@ -3418,13 +3424,6 @@ function stripHtmlToText(html) {
         }
       }
       
-      // Validate payment is configured (skip for free checkout)
-      var freeCheckoutOrder = isCartZeroTotal();
-      if (!freeCheckoutOrder && (!isPaymentConfigured || !selectedPaymentMethod)) {
-        alert(t.paymentNotConfigured || (isRTL ? 'תשלום מקוון לא מוגדר. צרו קשר עם בעל האתר.' : 'Online payment not configured. Please contact the store owner.'));
-        return;
-      }
-      
       // Validate terms and conditions checkbox - MUST be checked to proceed
       var termsBox = document.getElementById('terms-checkbox');
       if (!termsBox || !termsBox.checked) {
@@ -3449,6 +3448,17 @@ function stripHtmlToText(html) {
           }
         }
         console.log('[E-COMMERCE] Validation failed, stopping checkout');
+        return;
+      }
+
+      // Make the visible checkout summary converge with the authoritative
+      // server-side checkout/init calculation before we decide free/payment state.
+      await checkFirstOrderDiscount(customerEmail);
+
+      // Validate payment is configured (skip for free checkout)
+      var freeCheckoutOrder = isCartZeroTotal();
+      if (!freeCheckoutOrder && (!isPaymentConfigured || !selectedPaymentMethod)) {
+        alert(t.paymentNotConfigured || (isRTL ? 'תשלום מקוון לא מוגדר. צרו קשר עם בעל האתר.' : 'Online payment not configured. Please contact the store owner.'));
         return;
       }
       
@@ -3881,6 +3891,7 @@ function stripHtmlToText(html) {
     
     if (savedEmail && !emailInput.value) {
       emailInput.value = savedEmail;
+      scheduleFirstOrderDiscountCheck(savedEmail, 0);
     }
 
     [nameInput, emailInput, phoneInput].forEach(function(input) {
@@ -3910,7 +3921,12 @@ function stripHtmlToText(html) {
         showLoggedIn(displayName, customer.email || savedEmail || '');
         
         if (customer.name && !nameInput.value && nameInput.dataset.checkoutEdited !== '1') nameInput.value = customer.name;
-        if (customer.email && !emailInput.value && emailInput.dataset.checkoutEdited !== '1') emailInput.value = customer.email;
+        if (customer.email && !emailInput.value && emailInput.dataset.checkoutEdited !== '1') {
+          emailInput.value = customer.email;
+          scheduleFirstOrderDiscountCheck(customer.email, 0);
+        } else if (emailInput.value) {
+          scheduleFirstOrderDiscountCheck(emailInput.value, 0);
+        }
         if (customer.phone && phoneInput && !phoneInput.value && phoneInput.dataset.checkoutEdited !== '1') phoneInput.value = customer.phone;
         
         // Auto-fill shipping address from customer's default address
@@ -4280,6 +4296,7 @@ function stripHtmlToText(html) {
     cart[idx].quantity = Math.max(1, (cart[idx].quantity || 1) + delta);
     saveCart();
     updateCartCount();
+    scheduleFirstOrderDiscountForCurrentEmail(0);
     updateOrderTotals();
     updateCheckoutItemsCount();
     applyCoursesOnlyCheckoutUi();
@@ -4292,6 +4309,7 @@ function stripHtmlToText(html) {
     cart.splice(idx, 1);
     saveCart();
     updateCartCount();
+    scheduleFirstOrderDiscountForCurrentEmail(0);
     updateOrderTotals();
     updateCheckoutItemsCount();
     applyCoursesOnlyCheckoutUi();
@@ -4312,6 +4330,12 @@ function stripHtmlToText(html) {
   let firstOrderFreeShipping = false;
   let firstOrderApplied = null;
   let firstOrderCheckedEmail = '';
+  let firstOrderCheckedSubtotal = null;
+  let firstOrderCheckTimer = null;
+  let firstOrderInFlightPromise = null;
+  let firstOrderInFlightEmail = '';
+  let firstOrderInFlightSubtotal = null;
+  let firstOrderRequestSeq = 0;
 
   // Quantity-bundle discount state
   let quantityBundles = [];
@@ -4475,29 +4499,107 @@ function stripHtmlToText(html) {
     }
   }
 
-  async function checkFirstOrderDiscount(email) {
-    if (!email || email === firstOrderCheckedEmail) return;
-    firstOrderCheckedEmail = email;
+  function clearFirstOrderDiscountState() {
+    firstOrderRequestSeq++;
     firstOrderDiscount = 0;
     firstOrderFreeShipping = false;
     firstOrderApplied = null;
-    try {
-      var subtotal = getCartSubtotal();
-      var res = await fetch(buildApiUrl('/api/ecommerce/storefront/first-order-discount'), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ websiteId: websiteId, customerEmail: email, orderSubtotal: subtotal })
-      });
-      var data = await res.json();
-      if (data.success && data.data) {
-        firstOrderDiscount = data.data.totalDiscount || 0;
-        firstOrderFreeShipping = data.data.freeShipping || false;
-        firstOrderApplied = data.data.appliedDiscount || null;
-      }
-    } catch (e) {
-      console.warn('[E-COMMERCE] Failed to check first-order discount', e);
+    firstOrderCheckedEmail = '';
+    firstOrderCheckedSubtotal = null;
+    firstOrderInFlightPromise = null;
+    firstOrderInFlightEmail = '';
+    firstOrderInFlightSubtotal = null;
+  }
+
+  function scheduleFirstOrderDiscountCheck(email, delayMs) {
+    if (firstOrderCheckTimer) clearTimeout(firstOrderCheckTimer);
+    var em = (email || '').trim();
+    if (!em || !isValidEmail(em)) {
+      clearFirstOrderDiscountState();
+      updateOrderTotals();
+      return Promise.resolve();
     }
-    updateOrderTotals();
+    var subtotal = getCartSubtotal();
+    if (em !== firstOrderCheckedEmail || firstOrderCheckedSubtotal === null || Math.abs(firstOrderCheckedSubtotal - subtotal) >= 0.005) {
+      firstOrderRequestSeq++;
+      firstOrderDiscount = 0;
+      firstOrderFreeShipping = false;
+      firstOrderApplied = null;
+      firstOrderCheckedSubtotal = null;
+      firstOrderInFlightPromise = null;
+      firstOrderInFlightEmail = '';
+      firstOrderInFlightSubtotal = null;
+      updateOrderTotals();
+    }
+    firstOrderCheckTimer = setTimeout(function() {
+      firstOrderCheckTimer = null;
+      checkFirstOrderDiscount(em);
+    }, delayMs == null ? 350 : delayMs);
+    return Promise.resolve();
+  }
+
+  function scheduleFirstOrderDiscountForCurrentEmail(delayMs) {
+    var emailInput = document.getElementById('customer-email');
+    var em = emailInput ? emailInput.value : '';
+    return scheduleFirstOrderDiscountCheck(em, delayMs);
+  }
+
+  async function checkFirstOrderDiscount(email) {
+    var em = (email || '').trim();
+    var subtotal = getCartSubtotal();
+    if (!em || !isValidEmail(em)) {
+      clearFirstOrderDiscountState();
+      updateOrderTotals();
+      updatePlaceOrderState();
+      return;
+    }
+    if (firstOrderInFlightPromise && em === firstOrderInFlightEmail && firstOrderInFlightSubtotal !== null && Math.abs(firstOrderInFlightSubtotal - subtotal) < 0.005) {
+      return firstOrderInFlightPromise;
+    }
+    if (em === firstOrderCheckedEmail && firstOrderCheckedSubtotal !== null && Math.abs(firstOrderCheckedSubtotal - subtotal) < 0.005) return;
+    if (firstOrderCheckTimer) {
+      clearTimeout(firstOrderCheckTimer);
+      firstOrderCheckTimer = null;
+    }
+    var requestSeq = ++firstOrderRequestSeq;
+    firstOrderInFlightEmail = em;
+    firstOrderInFlightSubtotal = subtotal;
+    firstOrderDiscount = 0;
+    firstOrderFreeShipping = false;
+    firstOrderApplied = null;
+    firstOrderInFlightPromise = (async function() {
+      try {
+        var res = await fetch(buildApiUrl('/api/ecommerce/storefront/first-order-discount'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ websiteId: websiteId, customerEmail: em, orderSubtotal: subtotal })
+        });
+        var data = await res.json();
+        if (requestSeq !== firstOrderRequestSeq) return;
+        firstOrderCheckedEmail = em;
+        firstOrderCheckedSubtotal = subtotal;
+        if (data.success && data.data) {
+          firstOrderDiscount = data.data.totalDiscount || 0;
+          firstOrderFreeShipping = data.data.freeShipping || false;
+          firstOrderApplied = data.data.appliedDiscount || null;
+        }
+      } catch (e) {
+        if (requestSeq === firstOrderRequestSeq) {
+          firstOrderCheckedEmail = em;
+          firstOrderCheckedSubtotal = subtotal;
+        }
+        console.warn('[E-COMMERCE] Failed to check first-order discount', e);
+      } finally {
+        if (requestSeq === firstOrderRequestSeq) {
+          firstOrderInFlightPromise = null;
+          firstOrderInFlightEmail = '';
+          firstOrderInFlightSubtotal = null;
+          updateOrderTotals();
+          updatePlaceOrderState();
+        }
+      }
+    })();
+    return firstOrderInFlightPromise;
   }
 
   async function fetchSeasonalDiscounts() {
