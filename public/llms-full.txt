@@ -1108,7 +1108,7 @@ English
 
 
 
-קראתי ואני מסכים/ה ל  תנאי השימוש   ול  מדיניות הפרטיות
+קראתי ואני מסכים/ה ל תנאי השימוש  ול מדיניות הפרטיות
 
 
 
@@ -4625,9 +4625,9 @@ Brand: Artori Design
 ---
 
 ### וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים
-URL: https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-rujc8c
+URL: https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-xbsaut
 Price: 25.00 ILS
-Availability: In stock
+Availability: Out of stock
 SKU: AD384
 Brand: Artori Design
 
