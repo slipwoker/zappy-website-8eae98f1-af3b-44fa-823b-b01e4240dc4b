@@ -9,171 +9,7 @@
     <!-- Zappy Analytics -->
 <!-- ZAPPY_INTEGRATION_END analytics:add_facebook_pixel -->
   
-    <style id="zppb-promo-banner-styles">
-    .zppb-overlay { display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.45); align-items: center; justify-content: center; }
-    .zppb-overlay.zppb-visible { display:flex; }
-    .zppb-banner { position:relative; overflow:hidden; text-align:center; padding:48px 36px; background:#1a1a2e; color:#ffffff; border-radius:16px; max-width:500px; width:92%; min-height:500px; display:flex; flex-direction:column; box-shadow:0 20px 60px rgba(0,0,0,0.3); animation: zppbFadeIn 0.35s ease forwards; }
-    .zppb-bg-img { position:absolute; inset:0; background-size:cover; background-position:center; }
-    .zppb-content { position:relative; z-index:1; flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-    .zppb-close { position:absolute; top:14px; right:14px; z-index:2; background:rgba(0,0,0,0.3); border:none; color:#fff; width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; padding:0; }
-    .zppb-close-icon { width:18px; height:18px; display:block; pointer-events:none; }
-    .zppb-close:hover { background:rgba(0,0,0,0.5); }
-    .zppb-h { font-size:28px; font-weight:700; margin:0 0 10px; color:#ffffff !important; }
-    .zppb-sub { font-size:16px; opacity:0.85; margin:0 0 24px; max-width:380px; color:#ffffff !important; white-space:pre-line; }
-    .zppb-cta { display:inline-block; padding:14px 36px; border-radius:50px; font-size:16px; font-weight:600; text-decoration:none; cursor:pointer; border:none; background:#e94560; color:#ffffff; margin-top:8px; }
-    .zppb-cta:hover { opacity:0.9; }
-    .zppb-coupon { display:inline-block; margin-bottom:20px; padding:10px 24px; border:2px dashed #e94560; border-radius:10px; font-family:monospace; font-weight:700; font-size:18px; color:#e94560; letter-spacing:2px; }
-    .zppb-countdown { display:flex; gap:8px; justify-content:center; margin-bottom:24px; font-size:32px; font-weight:700; font-family:monospace; direction:ltr; }
-    .zppb-countdown span { background:#e94560; color:#ffffff; padding:8px 16px; border-radius:8px; }
-    .zppb-fields { display:flex; flex-direction:column; gap:10px; max-width:340px; width:100%; margin:0 auto 20px; }
-    .zppb-input { width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.15); color:#ffffff; font-size:15px; outline:none; box-sizing:border-box; }
-    .zppb-input::placeholder { color:#ffffff; opacity:0.5; }
-    .zppb-input:focus { border-color:#e94560; background:rgba(255,255,255,0.25); }
-    @keyframes zppbFadeIn { from { opacity:0; } to { opacity:1; } }
-    @keyframes zppbSlideUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes zppbScaleIn { from { opacity:0; transform:scale(0.85); } to { opacity:1; transform:scale(1); } }
-    @media (max-width:480px) { .zppb-banner { padding:32px 20px; min-height:400px; } .zppb-h { font-size:22px; } .zppb-sub { font-size:14px; } .zppb-countdown { font-size:24px; } .zppb-countdown span { padding:6px 12px; } }
-    body.zappy-edit-mode .zppb-overlay { display:none !important; }
-    </style>
 
-    <style id="zappy-announcement-bar-styles">
-    /* Announcement Bar Styles */
-    .zappy-announcement-bar {
-      background-color: #6B1621 !important;
-      color: #ffffff !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      width: 100% !important;
-      text-align: center !important;
-      padding: 10px 20px !important;
-      font-size: 14px !important;
-      font-weight: 500 !important;
-      line-height: 1.4 !important;
-      box-sizing: border-box !important;
-      z-index: 1001 !important;
-      min-height: 40px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    .zappy-announcement-bar .zappy-announcement-message {
-      position: absolute !important;
-      opacity: 0 !important;
-      transition: opacity 0.5s ease-in-out !important;
-      width: 100% !important;
-      left: 0 !important;
-      right: 0 !important;
-      padding: 0 20px !important;
-      box-sizing: border-box !important;
-    }
-    .zappy-announcement-bar .zappy-announcement-message.active {
-      opacity: 1 !important;
-    }
-    </style>
-    <style id="zappy-critical-above-fold-css">
-html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
-</style>
-    <link rel="preload" href="/styles.css" as="style" />
-    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
-    
-    <script type="text/javascript" src="https://meshulam.co.il/_media/js/apple_pay_sdk/sdk.min.js"></script>
-
-    <style id="zappy-dropdown-submenu-styles">
-      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
-      /* Base styles for dropdown submenus - parent must be positioned */
-      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
-      /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
-      /* CRITICAL: Desktop hover styles to show dropdown */
-      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Submenu item styling */
-      .sub-menu li { list-style: none; margin: 0; padding: 0; }
-      .sub-menu a { display: block !important; padding: 10px 16px !important; color: var(--text-dark, #333) !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
-      .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
-      [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 10px !important; padding-right: 28px !important; }
-      .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
-      .sub-menu a:hover { background-color: #f5f5f5; }
-      /* RTL (Hebrew/Arabic) dropdown positioning */
-      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
-      /* Desktop: show submenu on Menu Group hover */
-      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Menu Group title styling */
-      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
-      
-      /* ========== MOBILE SUBMENU STYLES ========== */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .navbar .sub-menu.mobile-expanded, .nav-menu .sub-menu.mobile-expanded, #navMenu .sub-menu.mobile-expanded { max-height: none !important; overflow-y: visible !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
-        /* Disable hover behavior on mobile */
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; padding: 0 !important; line-height: inherit !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
-        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
-        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-dark) !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; padding: 0 !important; margin: 0 !important; }
-        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; color: var(--text-dark) !important; white-space: normal !important; }
-        .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
-        [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 0 !important; padding-right: 28px !important; }
-        .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
-        .nav-menu.active, #navMenu.active { max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box !important; }
-        .navbar .sub-menu li a, nav.navbar .sub-menu li a, .zappy-products-dropdown .sub-menu a { color: var(--text-dark) !important; }
-      }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
-
-    <style id="zappy-widget-visibility">
-      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
-      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
-      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
-      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
-      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
-      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
-      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
-      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
-      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
-      html[dir="ltr"] ._access-icon,
-      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
-      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
-      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
-      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
-      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
-      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
-      @media (max-width: 768px) {
-        #mic-access-tool-general-button, .mic-access-tool-general-button,
-        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
-        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
-        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
-          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
-        }
-      }
-      @media (min-width: 769px) {
-        #mic-access-tool-general-button, .mic-access-tool-general-button,
-        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
-        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
-        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
-          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
-        }
-      }
-    </style>
-</head>
-<body>
-
-<div class="zappy-announcement-bar">
-      <span class="zappy-announcement-message active">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
-      <span class="zappy-announcement-message">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
-    </div>
 <script>window.ZAPPY_PRODUCTS_LISTING_PATH = "/products";</script>
     <!-- ZAPPY_INTEGRATION_START analytics:add_google_tag_manager -->
 <!-- Google Tag Manager (noscript) -->
@@ -209,7 +45,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       <li data-category-id="19453142-9567-4420-ad4a-44f6b5a8c7ac" data-category-slug="bookends"><a href="/category/bookends" dir="rtl">תומכי ספרים</a></li><li data-category-id="f26acbb7-bd54-436a-9c23-f333551ead1b" data-category-slug="bookmarks"><a href="/category/bookmarks" dir="rtl">סימניות</a></li><li class="zappy-nav-parent" data-category-id="9b87e281-a5b1-40ac-999c-d3d3c9fa35f7" data-category-slug="shelves"><a href="/category/shelves" dir="rtl">מדפים</a></li><li class="zappy-nav-child" data-category-id="721ba84f-bcbc-4975-96ea-c7af858e847c" data-category-slug="bookshelves"><a href="/category/bookshelves" dir="rtl">מדפי ספרים</a></li><li class="zappy-nav-child" data-category-id="125da808-02d5-4a87-84f2-a261898d446d" data-category-slug="toilet-paper-shelves"><a href="/category/toilet-paper-shelves" dir="rtl">מדפים לגלילי נייר טואלט</a></li><li class="zappy-nav-child" data-category-id="72300d79-90b2-4d50-bbec-1246766a6c62" data-category-slug="key-holders"><a href="/category/key-holders" dir="rtl">מדפי מפתחות</a></li><li class="zappy-nav-parent" data-category-id="6c5e2baf-1e72-4986-864a-2e069fc27b45" data-category-slug="deskshelf-display"><a href="/category/deskshelf-display" dir="rtl">להעמדה על שולחן / מדף</a></li><li class="zappy-nav-child" data-category-id="d448b992-d73d-4f0b-a46b-27ae8952220f" data-category-slug="frames"><a href="/category/frames" dir="rtl">מסגרות</a></li><li class="zappy-nav-child" data-category-id="e12fff82-e122-4b55-bf6b-c866c65cf858" data-category-slug="office-equipment"><a href="/category/office-equipment" dir="rtl">ציוד משרדי</a></li><li class="zappy-nav-child" data-category-id="7c69abb4-9e5c-4be7-ae10-ca566cf2b3b3" data-category-slug="paddleball-players"><a href="/category/paddleball-players" dir="rtl">שחקני מטקות</a></li><li class="zappy-nav-child" data-category-id="99308e90-f80c-4e23-9611-1b61f0e2c0a5" data-category-slug="tissue-box-covers"><a href="/category/tissue-box-covers" dir="rtl">כיסויים לקופסת טישו</a></li><li class="zappy-nav-child" data-category-id="48d0460a-50b2-48ec-b7a6-763597a75a4b" data-category-slug="mobile-phone-stands"><a href="/category/mobile-phone-stands" dir="rtl">סטנדים לטלפון נייד</a></li><li class="zappy-nav-child" data-category-id="80589292-7ecc-49ab-b2f1-31e1458cd6fd" data-category-slug="tableshelf-accessories"><a href="/category/tableshelf-accessories" dir="rtl">מוצרים אחרים להעמדה על שולחן / מדף</a></li><li class="zappy-nav-parent" data-category-id="4e2c4cf2-adb5-49af-ab7f-8ed5869f1477" data-category-slug="kitchen-and-dining"><a href="/category/kitchen-and-dining" dir="rtl">למטבח ולאירוח</a></li><li class="zappy-nav-child" data-category-id="649ef23f-eafd-4f29-b780-61e914beef1f" data-category-slug="napkin-holder"><a href="/category/napkin-holder" dir="rtl">מפיונים</a></li><li class="zappy-nav-child" data-category-id="41107b6e-2bae-4577-acd8-af98a10770fa" data-category-slug="matzah-holder"><a href="/category/matzah-holder" dir="rtl">מציונים</a></li><li class="zappy-nav-child" data-category-id="25f27ca0-db5c-478d-9381-32b42cdf1f61" data-category-slug="more-kitchen-and-dining"><a href="/category/more-kitchen-and-dining" dir="rtl">עוד למטבח ולאירוח</a></li><li class="zappy-nav-child" data-category-id="c4d77b37-fc91-4e2c-9a25-5419c13bdbc3" data-category-slug="underwear"><a href="/category/underwear" dir="rtl">תחתיות</a></li><li class="zappy-nav-child" data-category-id="ce5466ef-0dfb-4e8d-81f3-84791574cf8c" data-category-slug="paper-towel-dispensers"><a href="/category/paper-towel-dispensers" dir="rtl">מתקנים לנייר סופג</a></li><li data-category-id="f646f62d-2bf6-4721-9020-141031e08ece" data-category-slug="hangers"><a href="/category/hangers" dir="rtl">מתלים</a></li><li class="zappy-nav-parent" data-category-id="26991991-9f6e-41b6-a250-70c2ba5feb1a" data-category-slug="animals"><a href="/category/animals" dir="rtl">בעלי חיים</a></li><li class="zappy-nav-child" data-category-id="026ad046-4886-46e2-a6c6-7271c3c897fc" data-category-slug="animal-sculptures-wanetik-art"><a href="/category/animal-sculptures-wanetik-art" dir="rtl">ונטיק ארט - פסלי חיות</a></li><li class="zappy-nav-child" data-category-id="2420ab78-5daa-4119-8e1d-b986d78ab658" data-category-slug="cats"><a href="/category/cats" dir="rtl">חתולים</a></li><li class="zappy-nav-child" data-category-id="61e54c0d-e01d-40d1-bf37-89dca2a7aec9" data-category-slug="pigeons"><a href="/category/pigeons" dir="rtl">יונים</a></li><li class="zappy-nav-child" data-category-id="a0e43d6f-c35f-49b0-b58a-33a27b49b938" data-category-slug="monkeys"><a href="/category/monkeys" dir="rtl">קופים</a></li><li data-category-id="7ea887fd-3cf5-4fa4-a8fd-a0c32560749b" data-category-slug="wall-clocks"><a href="/category/wall-clocks" dir="rtl">שעוני קיר</a></li><li data-category-id="5167f656-7338-4e30-a905-0cfb9223463c" data-category-slug="puzzles"><a href="/category/puzzles" dir="rtl">פאזלים</a></li><li data-category-id="fd8c7c93-54e7-47fe-8d92-606f2ae8b519" data-category-slug="new"><a href="/category/new" dir="rtl">חדש!</a></li></ul>
     </li>
   
-    <li><a href="/collections">קולקציות</a></li>
+    <li><a href="/collections" data-i18n="cart_li_24">קולקציות</a></li>
 
     <li><a href="/our-story" data-i18n="home_nav_48">הסיפור שלנו</a></li><li><a href="/contact" data-i18n="home_nav_49">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" />
@@ -318,12 +154,27 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
     </main>
     <footer class="site-footer" style="color: #ffffff; background-color: #111111"> <div class="footer-container"> <div class="footer-top"> <div class="footer-column footer-about"> <a data-zappy-click-action="link" style="text-decoration: none; color: inherit; display: contents;" href="/" target="_blank" rel="noopener noreferrer"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772726001431-yfotpk3c6" data-element-type="image" data-zappy-zoom-wrapper-width="148px" data-zappy-zoom-wrapper-height="37px" data-zappy-zoom-wrapper-width-mode="px" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 148px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 37px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="link" class="zappy-resizable-hover"><img class="logo" data-placeholder="logo" data-context="business logo" width="150" height="40" src="/assets/business-general-service-upload-1773732402995.webp" alt="ארטאורי דיזיין" style="object-position: 50% 50%; display: block !important; object-fit: fill !important; margin: 0px !important; left: 0% !important; top: -31.5267% !important; width: 100% !important; height: 163.053% !important; max-width: none !important; max-height: none !important; filter: none !important;" data-element-id="img-1772726001431-yfotpk3c6" data-element-type="image" data-zappy-zoom="0.8" data-zappy-click-action="link" data-zappy-base64-stripped="true" data-zappy-original-width="160" data-zappy-original-height="40" data-i18n-alt="home_alt_64" decoding="async" /></div></a> <p class="footer-description" data-i18n="home_p_20">פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים</p> </div> <div class="footer-column footer-links"> <h3 class="footer-title" data-i18n="home_h3_14">קישורים מהירים</h3> <ul class="footer-menu"> 
     
-   <li data-i18n="home_li_38"><a href="/our-story" data-i18n="home_link_28">הסיפור שלנו</a></li> <li data-i18n="home_li_39"><a href="/contact" data-i18n="home_link_29">צור קשר</a></li> </ul> </div> <div class="footer-column footer-contact"> <h3 class="footer-title" data-i18n="home_h3_15">יצירת קשר</h3> <ul class="contact-list"> <li data-i18n="home_li_40"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1772725825900-zex5gwyxu" data-icon-type="fontawesome" style="cursor: pointer;"></i> <a href="mailto:info@artoridesign.com" data-i18n="home_link_30">info@artoridesign.com</a></li> <li><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1772725825900-xkiap5ndg" data-icon-type="fontawesome"></i> <a href="tel:0546242000">054-6242000</a></li> <li data-i18n="home_li_41"><a href="/" data-i18n="home_link_31"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i> <span>הרדוף 19, הוד השרון, 4502117, ישראל</span></a></li> </ul> </div> <div class="footer-column footer-social"> <h3 class="footer-title" data-i18n="home_h3_16">עקבו אחרינו</h3> <div class="social-links"> <a href="https://facebook.com/artoridesignisrael" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="https://instagram.com/artori_design" aria-label="Instagram"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1772725825900-f47h23ocb" data-icon-type="fontawesome"></i></a> <a href="https://wa.me/972546242000" aria-label="WhatsApp"><i class="fab fa-whatsapp" data-element-type="icon" data-element-id="icon-1772725825901-fgi7v2oia" data-icon-type="fontawesome"></i></a> <a href="https://youtube.com/@artoridesign7504" aria-label="YouTube" data-element-id="element-ai-1774346845267-yt9k2m" data-element-type="social-link"><i class="fab fa-youtube" data-element-type="icon" data-element-id="icon-1774369410098-rthcbposj" data-icon-type="fontawesome"></i></a> <a href="https://tiktok.com/@artori_design" aria-label="TikTok" data-element-id="element-ai-1774346845267-tk3p8x" data-element-type="social-link"><i class="fab fa-tiktok" data-element-type="icon" data-element-id="icon-1774369410098-2e4mgogdz" data-icon-type="fontawesome"></i></a> <a href="https://pinterest.com/artoridesign" aria-label="Pinterest" data-element-id="element-ai-1774346845267-pn5r1q" data-element-type="social-link"><i class="fab fa-pinterest-p" data-element-type="icon" data-element-id="icon-1774369410098-m7zg2pgl1" data-icon-type="fontawesome"></i></a> </div> </div> </div> <div class="footer-bottom"> <div class="footer-bottom-content"> <div class="copyright"> <p data-i18n="home_p_21">© 2026 ארטאורי דיזיין. כל הזכויות שמורות.</p> </div> <div class="footer-legal"> <a href="/privacy" data-i18n="home_link_32">מדיניות פרטיות</a> <span class="separator">|</span> <a href="/terms" data-i18n="home_link_33">תנאי שימוש</a><span class="separator">|</span> <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="home_link_34"> מדיניות החזרות </a> <span class="separator">|</span> <a href="/accessibility" data-i18n="home_link_35">נגישות</a> <span class="separator">|</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="home_link_36">נוצר באמצעות Zappy</a> </div> </div> </div> </div> </footer>
+   <li data-i18n="home_li_38"><a href="/our-story" data-i18n="home_link_28">הסיפור שלנו</a></li> <li data-i18n="home_li_39"><a href="/contact" data-i18n="home_link_29">צור קשר</a></li> </ul> </div> <div class="footer-column footer-contact"> <h3 class="footer-title" data-i18n="home_h3_15">יצירת קשר</h3> <ul class="contact-list"> <li data-i18n="home_li_40"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1772725825900-zex5gwyxu" data-icon-type="fontawesome" style="cursor: pointer;"></i> <a href="mailto:info@artoridesign.com" data-i18n="home_link_30">info@artoridesign.com</a></li> <li><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1772725825900-xkiap5ndg" data-icon-type="fontawesome"></i> <a href="tel:0546242000">054-6242000</a></li> <li data-i18n="home_li_41"><a href="https://www.google.com/maps/search/?api=1&amp;query=%D7%94%D7%A8%D7%93%D7%95%D7%A3%2019%2C%20%D7%94%D7%95%D7%93%20%D7%94%D7%A9%D7%A8%D7%95%D7%9F%2C%204502117%2C%20%D7%99%D7%A9%D7%A8%D7%90%D7%9C" data-i18n="home_link_31" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i> <span>הרדוף 19, הוד השרון, 4502117, ישראל</span></a></li> </ul> </div> <div class="footer-column footer-social"> <h3 class="footer-title" data-i18n="home_h3_16">עקבו אחרינו</h3> <div class="social-links"> <a href="https://facebook.com/artoridesignisrael" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="https://instagram.com/artori_design" aria-label="Instagram"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1772725825900-f47h23ocb" data-icon-type="fontawesome"></i></a> <a href="https://wa.me/972546242000" aria-label="WhatsApp"><i class="fab fa-whatsapp" data-element-type="icon" data-element-id="icon-1772725825901-fgi7v2oia" data-icon-type="fontawesome"></i></a> <a href="https://youtube.com/@artoridesign7504" aria-label="YouTube" data-element-id="element-ai-1774346845267-yt9k2m" data-element-type="social-link"><i class="fab fa-youtube" data-element-type="icon" data-element-id="icon-1774369410098-rthcbposj" data-icon-type="fontawesome"></i></a> <a href="https://tiktok.com/@artori_design" aria-label="TikTok" data-element-id="element-ai-1774346845267-tk3p8x" data-element-type="social-link"><i class="fab fa-tiktok" data-element-type="icon" data-element-id="icon-1774369410098-2e4mgogdz" data-icon-type="fontawesome"></i></a> <a href="https://pinterest.com/artoridesign" aria-label="Pinterest" data-element-id="element-ai-1774346845267-pn5r1q" data-element-type="social-link"><i class="fab fa-pinterest-p" data-element-type="icon" data-element-id="icon-1774369410098-m7zg2pgl1" data-icon-type="fontawesome"></i></a> </div> </div> </div> <div class="footer-bottom"> <div class="footer-bottom-content"> <div class="copyright"> <p data-i18n="home_p_21">© 2026 ארטאורי דיזיין. כל הזכויות שמורות.</p> </div> <div class="footer-legal"> <a href="/privacy" data-i18n="home_link_32">מדיניות פרטיות</a> <span class="separator">|</span> <a href="/terms" data-i18n="home_link_33">תנאי שימוש</a><span class="separator">|</span> <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="home_link_34"> מדיניות החזרות </a> <span class="separator">|</span> <a href="/accessibility" data-i18n="home_link_35">נגישות</a> <span class="separator">|</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="home_link_36">נוצר באמצעות Zappy</a> </div> </div> </div> </div> </footer>
     <div data-integration="accessibility:toolbar"></div>
 
 
 
 
+
+
+
+    
+
+
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
+
+<a href="https://wa.me/972546242000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <!-- i18next Multi-Language Support -->
 <script>
@@ -642,6 +493,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_p_7": "הזן את הקוד שנשלח לאימייל שלך",
       "login_p_8": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
       "login_p_9": "© 2026 ארטאורי דיזיין. כל הזכויות שמורות.",
+      "new_p_208": "<strong>עדכון אחרון:</strong> 2.7.2026",
       "cart_h1_65": "עגלת הקניות שלך",
       "cart_h2_66": "עגלת הקניות שלך",
       "cart_li_24": "קולקציות",
@@ -670,6 +522,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_p_67": "הזן את כתובת האימייל שלך ונשלח לך קוד התחברות",
       "login_p_68": "הזן את הקוד שנשלח לאימייל שלך",
       "new_h3_152": "כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה ומשלוח חינם בכל הזמנה מ- 270 שקלים ומעלה",
+      "new_li_171": "<span class=\"hours-day\">יום א’</span> <span class=\"hours-time\">סגור</span>",
+      "new_li_173": "<span class=\"hours-day\">ימים ב’–ו’</span> <span class=\"hours-time\">09:00–17:00</span>",
+      "new_li_176": "<span class=\"hours-day\">שבת</span> <span class=\"hours-time\">סגור</span>",
       "terms_h1_1": "ארטאורי דיזיין",
       "terms_h2_2": "1. הגדרות",
       "terms_h2_3": "2. תיאור השירותים",
@@ -696,9 +551,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "cart_alt_79": "ארטאורי דיזיין",
       "cart_alt_80": "ארטאורי דיזיין",
       "cart_div_29": "העגלה ריקה",
-      "cart_div_30": "סה\"כ: ₪0",
+      "cart_div_30": "סה\"כ: <span id=\"cart-total\">₪0</span>",
       "cart_div_31": "העגלה ריקה",
-      "cart_div_32": "סה\"כ:\n      ₪0",
+      "cart_div_32": "<span>סה\"כ:</span>\n      <span id=\"cart-drawer-total\">₪0</span>",
       "cart_div_73": "העגלה ריקה",
       "cart_div_74": "סה\"כ: ₪0",
       "cart_div_75": "העגלה ריקה",
@@ -752,6 +607,11 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_li_30": "הרדוף 19, הוד השרון, 4502117, ישראל",
       "new_div_155": "<span class=\"zappy-announcement-message active\">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>\n      <span class=\"zappy-announcement-message\">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה ומשלוח חינם בהזמנה מ- 270 שקלים ומעלה</span><span class=\"zappy-announcement-message\">\n</span>",
       "new_div_158": "<span class=\"zappy-announcement-message active\">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>\n      <span class=\"zappy-announcement-message\">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה ומשלוח חינם בהזמנה מ- 270 שקלים ומעלה</span><span class=\"zappy-announcement-message\">&nbsp;ןהכככ</span>",
+      "new_div_183": "<span data-ecom-label=\"subtotal\">סכום ביניים:</span><span id=\"subtotal\">₪0</span>",
+      "new_div_186": "<span data-ecom-label=\"vatIncluded\">כולל מע\"מ:</span><span id=\"vat-amount\">₪0</span>",
+      "new_div_189": "<span data-ecom-label=\"shipping\">משלוח:</span><span id=\"shipping-cost\">₪0</span>",
+      "new_div_192": "<span data-ecom-label=\"discount\">הנחה:</span><span id=\"checkout-discount-amount\" class=\"discount-value\">₪0.00</span>",
+      "new_div_195": "<span data-ecom-label=\"totalToPay\">סה\"כ לתשלום:</span><span id=\"order-total\">₪0</span>",
       "terms_h2_10": "9. שינוי תנאי השימוש",
       "terms_h2_11": "10. סיום השירות",
       "terms_h2_12": "11. דין חל ויישוב סכסוכים",
@@ -761,9 +621,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "terms_h3_16": "יצירת קשר",
       "terms_h3_17": "עקבו אחרינו",
       "terms_h3_86": "כיף שבאת! קבל/י 10% על ההזמנה הראשונה",
-      "terms_li_44": "\"החברה\" - ארטאורי דיזיין",
-      "terms_li_45": "\"המשתמש\" - כל מי שגולש או משתמש באתר",
-      "terms_li_46": "\"השירותים\" - עיצוב ומוצרי בית הניתנים דרך האתר",
+      "terms_li_44": "<strong>\"החברה\"</strong> - ארטאורי דיזיין",
+      "terms_li_45": "<strong>\"המשתמש\"</strong> - כל מי שגולש או משתמש באתר",
+      "terms_li_46": "<strong>\"השירותים\"</strong> - עיצוב ומוצרי בית הניתנים דרך האתר",
       "terms_li_47": "השימוש באתר למטרות חוקיות בלבד",
       "terms_li_48": "אי-הפרעה לפעילות האתר או משתמשים אחרים",
       "terms_li_49": "אי-העלאת תוכן פוגעני, לא חוקי או מזיק",
@@ -780,9 +640,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "terms_li_60": "אם חלק מהתנאים יוכרז כבלתי תקף, יישארו שאר התנאים בתוקף",
       "terms_li_61": "אי-אכיפה של זכות לא תחשב כוויתור עליה",
       "terms_li_62": "תנאי השימוש מהווים את מלוא ההסכם בין הצדדים",
-      "terms_li_63": "חברה: ארטאורי דיזיין",
-      "terms_li_65": "טלפון: 054-6242000",
-      "terms_li_66": "כתובת: הרדוף 19, הוד השרון, 4502117, ישראל",
+      "terms_li_63": "<strong>חברה:</strong> ארטאורי דיזיין",
+      "terms_li_65": "<strong>טלפון:</strong> <a href=\"tel:054-6242000\">054-6242000</a>",
+      "terms_li_66": "<strong>כתובת:</strong> הרדוף 19, הוד השרון, 4502117, ישראל",
       "terms_li_67": "קולקציות",
       "terms_li_68": "הסיפור שלנו",
       "terms_li_69": "צור קשר",
@@ -798,7 +658,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "account_h3_8": "קישורים מהירים",
       "account_h3_9": "יצירת קשר",
       "account_p_11": "יש להתחבר כדי לצפות בחשבון",
-      "account_p_12": "ברוך הבא,",
+      "account_p_12": "<span>ברוך הבא</span>, <span id=\"account-email\"></span>",
       "account_p_13": "אין עדיין מוצרים מועדפים",
       "account_p_14": "טוען פרטי הזמנה...",
       "account_p_15": "אין עדיין הזמנות",
@@ -902,7 +762,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "privacy_p_19": "אנו נוקטים באמצעי אבטחה סבירים להגנה על המידע שלכם, כולל הצפנה, חומות אש ובקרת גישה מוגבלת. \n            עם זאת, אף שיטת העברה או אחסון אינה בטוחה ב-100%.",
       "privacy_p_20": "אנו עשויים לעדכן מדיניות פרטיות זו מעת לעת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת של 30 יום.",
       "privacy_p_21": "לשאלות או בקשות בנוגע למדיניות פרטיות זו, ניתן לפנות אלינו:",
-      "privacy_p_22": "רשם מאגרי המידע: לתלונות ניתן לפנות לרשם מאגרי המידע במשרד המשפטים",
+      "privacy_p_22": "<strong>רשם מאגרי המידע:</strong> לתלונות ניתן לפנות לרשם מאגרי המידע במשרד המשפטים",
       "privacy_p_23": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
       "privacy_p_24": "© 2026 ארטאורי דיזיין. כל הזכויות שמורות.",
       "products_p_6": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
@@ -912,8 +772,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "terms_alt_94": "ארטאורי דיזיין",
       "terms_alt_95": "ארטאורי דיזיין",
       "terms_btn_91": "&times;",
-      "terms_div_72": "Use code פסח20 for a discount!Use code פסח20 for a discount!",
-      "terms_div_73": "עדכון אחרון: 2.3.2026",
+      "terms_div_72": "<span class=\"zappy-announcement-message active\">Use code פסח20 for a discount!</span><span class=\"zappy-announcement-message\">Use code פסח20 for a discount!</span>",
+      "terms_div_73": "<strong>עדכון אחרון:</strong> 2.3.2026",
       "terms_div_74": "השימוש באתר זה מהווה הסכמה לתנאי השימוש המפורטים להלן. אנא קראו בעיון לפני השימוש.",
       "terms_nav_75": "מוצרים",
       "terms_nav_76": "כל המוצרים",
@@ -997,9 +857,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "privacy_h3_11": "יצירת קשר",
       "privacy_h3_12": "עקבו אחרינו",
       "privacy_h3_77": "כיף שבאת! קבל/י 10% על ההזמנה הראשונה",
-      "privacy_li_39": "מידע אישי: שם, כתובת אימייל, מספר טלפון וכתובת",
-      "privacy_li_40": "מידע טכני: כתובת IP, סוג דפדפן, מערכת הפעלה ונתוני שימוש באתר",
-      "privacy_li_41": "עוגיות: מידע הנשמר במחשבכם לשיפור חוויית השימוש",
+      "privacy_li_39": "<strong>מידע אישי:</strong> שם, כתובת אימייל, מספר טלפון וכתובת",
+      "privacy_li_40": "<strong>מידע טכני:</strong> כתובת IP, סוג דפדפן, מערכת הפעלה ונתוני שימוש באתר",
+      "privacy_li_41": "<strong>עוגיות:</strong> מידע הנשמר במחשבכם לשיפור חוויית השימוש",
       "privacy_li_42": "מתן השירותים המבוקשים",
       "privacy_li_43": "שיפור השירות וחוויית המשתמש",
       "privacy_li_44": "יצירת קשר עמכם בנוגע לשירותינו",
@@ -1013,9 +873,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "privacy_li_52": "זכות למחיקת מידע אישי בנסיבות מסוימות",
       "privacy_li_53": "זכות להתנגד לעיבוד מידע למטרות שיווק",
       "privacy_li_54": "זכות להגשת תלונה לרשם מאגרי המידע",
-      "privacy_li_55": "חברה: ארטאורי דיזיין",
+      "privacy_li_55": "<strong>חברה:</strong> ארטאורי דיזיין",
       "privacy_li_57": "טלפון: +972-54-6242000",
-      "privacy_li_58": "כתובת: הרדוף 19, הוד השרון, 4502117, ישראל",
+      "privacy_li_58": "<strong>כתובת:</strong> הרדוף 19, הוד השרון, 4502117, ישראל",
       "privacy_li_59": "קולקציות",
       "privacy_li_60": "הסיפור שלנו",
       "privacy_li_61": "צור קשר",
@@ -1054,8 +914,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "account_btn_94": "&times;",
       "account_btn_95": "שמור שינויים",
       "account_btn_96": "ביטול",
-      "account_div_57": "שם:\n                    -",
-      "account_div_58": "טלפון:\n                    -",
+      "account_div_57": "<span class=\"profile-label\"><span>שם</span>:</span>\n                    <span class=\"profile-value\" id=\"profile-name\">-</span>",
+      "account_div_58": "<span class=\"profile-label\"><span>טלפון</span>:</span>\n                    <span class=\"profile-value\" id=\"profile-phone\">-</span>",
       "account_div_59": "הרדוף 19, הוד השרון, 4502117, ישראל",
       "account_div_60": "העגלה ריקה",
       "account_div_61": "סה\"כ:\n      ₪0",
@@ -1127,8 +987,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "privacy_alt_85": "ארטאורי דיזיין",
       "privacy_alt_86": "ארטאורי דיזיין",
       "privacy_btn_82": "&times;",
-      "privacy_div_64": "Use code פסח20 for a discount!Use code פסח20 for a discount!",
-      "privacy_div_65": "עדכון אחרון: 2.3.2026",
+      "privacy_div_64": "<span class=\"zappy-announcement-message active\">Use code פסח20 for a discount!</span><span class=\"zappy-announcement-message\">Use code פסח20 for a discount!</span>",
+      "privacy_div_65": "<strong>עדכון אחרון:</strong> 2.3.2026",
       "privacy_nav_66": "מוצרים",
       "privacy_nav_67": "כל המוצרים",
       "privacy_nav_68": "קולקציות",
@@ -1320,13 +1180,13 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "checkout_span_10": "כבר יש לך חשבון?",
       "checkout_span_12": "שיטת משלוח",
       "checkout_span_13": "תשלום",
-      "checkout_span_14": "פריטים",
+      "checkout_span_14": "פריטים <span class=\"checkout-items-count\" id=\"checkout-items-count\"></span>",
       "checkout_span_68": "פרטי התקשרות",
       "checkout_span_69": "כבר יש לך חשבון?",
       "checkout_span_71": "שיטת משלוח",
       "checkout_span_72": "תשלום",
       "checkout_span_73": "פריטים",
-      "collections_h2_1": "הלבשת כל החדרים בבית / במשרד",
+      "collections_h2_1": "<b>הלבשת כל החדרים בבית / במשרד</b>",
       "collections_h2_2": "מתנות מקוריות",
       "collections_h3_3": "מתנות לאישה",
       "collections_h3_4": "מתנות לגבר",
@@ -1351,7 +1211,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_p_34": "מוזמנים לחנוכת בית? כאן תמצאו פריטים מעוצבים שמכניסים אופי, כיף וחמימות לכל חלל חדש. מתנות מקוריות לבית עם נוכחות. מתנה שתזכיר אתכם למי שמקבל אותה בכל פעם שיתבונן בה במרחב שלו.",
       "collections_p_35": "חפצים למשרד שישדרגו כל שולחן עבודה. שעונים או קישוטים לתליה על הקיר. קישוטי מדף מתוחכמים, פרקטיים ומעוררי השראה. מוצרים מושלמים לשדרוג סביבת העבודה שלכם או כמתנה לחברים, לעובדים או ללקוחות.",
       "collections_p_36": "מתנות מעוצבות לרופאים ולצוות הרפואי בסיום טיפול מוצלח או לרגל כל אירוע אחר. פריטים שימושיים עם נוכחות שמשדרגים כל משרד או קליניקה ומעלים חיוך.",
-      "collections_p_37": "מתנות ייחודיות לפסיכולוגים ואנשי טיפול - עיצוב עם קריצה אינטלקטואלית והומור עדין. מתנות תודה מושלמות למטפל/ת שלכם בסיום טיפול מוצלח. לקליניקה שמעריכה עומק וסטייל.",
+      "collections_p_37": "מתנות ייחודיות לפסיכולוגים ואנשי טיפול - עיצוב עם קריצה אינטלקטואלית והומור עדין. מתנות תודה מושלמות למטפל/ת שלכם בסיום טיפול מוצלח. לקליניקה שמעריכה עומק וסטייל.&nbsp;",
       "collections_p_38": "מי לא נתקע בלי רעיון למתנה למורים ולצוות ההוראה? סגרנו לכם את הפינה עם מחשבה ועיצוב נקי. מתנה מושלמת לסוף שנה, לחגים או לכל הזדמנות לומר תודה. מתנה מיוחדת שתיזכר.",
       "collections_p_39": "מתנות חמודות ומקוריות לילדים - פריטים מעוצבים שמעוררים דמיון וסקרנות. שילוב של כיף, יצירתיות ועיצוב מיוחד שמתאים גם להורים 🙂",
       "collections_p_40": "חולקים איתנו את שריטת החתולים? מחפשים מתנה לאוהבי כלבים? פריטים מעוצבים עם טאץ' הומוריסטי וחם. מושלם לחובבי ההולכים על 4 שרוצים לשלב את אהבתם עם עיצוב ביתם.",
@@ -1458,7 +1318,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_h3_11": "מתנות למורה",
       "collections_h3_12": "מתנות לילד/ה",
       "collections_h3_13": "מתנות לאוהבי חתולים / כלבים",
-      "collections_h3_14": "מתנות לחובבי גיבורי על / קומיקס",
+      "collections_h3_14": "מתנות לחוב<span style=\"letter-spacing: -0.02em;\">בי גיבורי על / קומיקס</span>",
       "collections_h3_15": "מתנות לבוס/ית",
       "collections_h3_16": "מתנות עד 60 שקלים",
       "collections_h3_17": "מתנות לחייל/ת",
@@ -1548,8 +1408,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "accessibility_p_15": "האתר נבדק באמצעות:",
       "accessibility_p_16": "אנו עובדים באופן מתמשך לשיפור נגישות האתר ומעדכנים אותו בהתאם להתפתחויות טכנולוגיות ולמשוב מהמשתמשים.",
       "accessibility_p_17": "אם נתקלתם בבעיית נגישות באתר או זקוקים לסיוע, אנא פנו אלינו:",
-      "accessibility_p_18": "זמני מענה: נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.",
-      "accessibility_p_19": "תלונות: ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות",
+      "accessibility_p_18": "<strong>זמני מענה:</strong> נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.",
+      "accessibility_p_19": "<strong>תלונות:</strong> ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות",
       "accessibility_p_20": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
       "accessibility_p_21": "© 2026 ארטאורי דיזיין. כל הזכויות שמורות.",
       "account_page_title": "החשבון שלי - ארטאורי דיזיין",
@@ -1596,7 +1456,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_alt_97": "Image placeholder",
       "collections_alt_98": "Image placeholder",
       "collections_alt_99": "ארטאורי דיזיין",
-      "collections_div_66": "Use code פסח20 for a discount!Use code פסח20 for a discount!",
+      "collections_div_66": "<span class=\"zappy-announcement-message active\">Use code פסח20 for a discount!</span><span class=\"zappy-announcement-message\">Use code פסח20 for a discount!</span>",
       "collections_h3_101": "כיף שבאת! קבל/י 10% על ההזמנה הראשונה",
       "collections_nav_67": "מוצרים",
       "collections_nav_68": "כל המוצרים",
@@ -1637,7 +1497,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "legal_terms_div_51": "השימוש באתר זה מהווה הסכמה לתנאי השימוש המפורטים להלן. אנא קראו בעיון לפני השימוש.",
       "login_seo_keywords": "תומכי ספרים מעוצבים לבית, מוצרים לעיצוב הבית, מתנות מיוחדות, עיצוב בית בעבודת יד, אקסוסריז דקורטיביים",
       "login_seo_og_title": "ארטאורי דיזיין - החיים הם מתנה",
-      "order_success_h1_1": "תודה על ההזמנה טוען פרטי הזמנה...",
+      "order_success_h1_1": "תודה על ההזמנה <span class=\"order-number-inline\" id=\"order-number-value\">טוען פרטי הזמנה...</span>",
       "order_success_h2_2": "פרטי ההזמנה",
       "order_success_h2_3": "עגלת הקניות שלך",
       "order_success_h3_4": "קישורים מהירים",
@@ -1672,7 +1532,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "return_policy_h3_9": "עקבו אחרינו",
       "return_policy_p_10": "עדכון אחרון: 9.4.2026",
       "return_policy_p_11": "ארטאורי דיזיין מחויבת לשביעות רצון לקוחותיה. מדיניות זו מפרטת את זכויותיכם להחזרת מוצרים בהתאם לחוק הגנת הצרכן.",
-      "return_policy_p_12": "בהתאם לחוק הגנת הצרכן, עומדת לכם הזכות לבטל עסקה בתוך 14 ימים מיום קבלת המוצר.",
+      "return_policy_p_12": "בהתאם לחוק הגנת הצרכן, עומדת לכם הזכות לבטל עסקה בתוך <strong>14 ימים</strong> מיום קבלת המוצר.",
       "return_policy_p_13": "במקרה של מוצר פגום או שונה מהמתואר, זכאים אתם להחזר מלא ללא דמי ביטול, כולל החזר דמי משלוח.",
       "return_policy_p_14": "לביצוע החזרה או לשאלות:",
       "return_policy_p_15": "אימייל: info@artoridesign.com",
@@ -1699,10 +1559,10 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "accessibility_li_41": "כותרות מובנות היררכית",
       "accessibility_li_42": "קישורים תיאוריים וברורים",
       "accessibility_li_43": "תמיכה בזום עד 200% ללא אובדן תוכן",
-      "accessibility_li_44": "נתפס (Perceivable): המידע מוצג בדרכים שמשתמשים יכולים לתפוס",
-      "accessibility_li_45": "פעיל (Operable): רכיבי הממשק ניתנים להפעלה",
-      "accessibility_li_46": "מובן (Understandable): המידע וממשק המשתמש מובנים",
-      "accessibility_li_47": "חזק (Robust): התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות",
+      "accessibility_li_44": "<strong>נתפס (Perceivable):</strong> המידע מוצג בדרכים שמשתמשים יכולים לתפוס",
+      "accessibility_li_45": "<strong>פעיל (Operable):</strong> רכיבי הממשק ניתנים להפעלה",
+      "accessibility_li_46": "<strong>מובן (Understandable):</strong> המידע וממשק המשתמש מובנים",
+      "accessibility_li_47": "<strong>חזק (Robust):</strong> התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות",
       "accessibility_li_48": "NVDA (Windows)",
       "accessibility_li_49": "JAWS (Windows)",
       "accessibility_li_50": "VoiceOver (Mac/iOS)",
@@ -1714,7 +1574,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "accessibility_li_56": "ניווט באמצעות מקלדת בלבד",
       "accessibility_li_57": "בדיקת ניגודיות צבעים",
       "accessibility_li_58": "בדיקה עם משתמשים עם מוגבלויות",
-      "accessibility_li_59": "חברה: ארטאורי דיזיין",
+      "accessibility_li_59": "<strong>חברה:</strong> ארטאורי דיזיין",
       "accessibility_li_61": "טלפון: +972-54-6242000",
       "accessibility_li_62": "קולקציות",
       "accessibility_li_63": "הסיפור שלנו",
@@ -1848,8 +1708,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "accessibility_alt_89": "ארטאורי דיזיין",
       "accessibility_alt_90": "ארטאורי דיזיין",
       "accessibility_btn_86": "&times;",
-      "accessibility_div_67": "Use code פסח20 for a discount!Use code פסח20 for a discount!",
-      "accessibility_div_68": "עדכון אחרון: 2.3.2026",
+      "accessibility_div_67": "<span class=\"zappy-announcement-message active\">Use code פסח20 for a discount!</span><span class=\"zappy-announcement-message\">Use code פסח20 for a discount!</span>",
+      "accessibility_div_68": "<strong>עדכון אחרון:</strong> 2.3.2026",
       "accessibility_div_69": "רמת נגישות: AA (תקן ישראלי ת\"י 5568)",
       "accessibility_nav_70": "מוצרים",
       "accessibility_nav_71": "כל המוצרים",
@@ -2386,9 +2246,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_seo_twitter_description": "חקרו את הקולקציות המיוחדות שלנו: גיבורי על, חתולים ומוצרים פונקציונליים מעוצבים. מצאו את הפריט המושלם שמשלב עיצוב עם התשוקות שלכם.",
       "contact_text_72_0": "קראתי ואני מסכים/ה ל",
       "contact_text_72_1": " ול",
+      "terms_text_64_0": "<strong>אימייל:</strong> <a href=\"mailto:",
       "privacy_text_56_0": "אימייל: ",
       "accessibility_text_60_0": "אימייל: ",
-      "terms_text_64_0": "אימייל: ",
       "legal_text_47_0": "אימייל: ",
       "legal_text_39_0": "אימייל: ",
       "legal_text_43_0": "אימייל: "
@@ -2704,6 +2564,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_p_7": "Enter the code sent to your email",
       "login_p_8": "Home design items and gifts with character that bring warmth, interest and humor to any living space",
       "login_p_9": "© 2026 Artori Design. All rights reserved.",
+      "new_p_208": "<strong>Last Updated:</strong> 2.7.2026",
       "cart_h1_65": "Your Shopping Cart",
       "cart_h2_66": "Your Shopping Cart",
       "cart_li_24": "Collections",
@@ -2732,6 +2593,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_p_67": "Enter your email address and we'll send you a login code",
       "login_p_68": "Enter the code sent to your email",
       "new_h3_152": "Glad you're here! Get 10% off your first purchase and free shipping on all orders from 270 NIS and above",
+      "new_li_171": "<span class=\"hours-day\">Sunday</span> <span class=\"hours-time\">Closed</span>",
+      "new_li_173": "<span class=\"hours-day\">Monday–Friday</span> <span class=\"hours-time\">09:00–17:00</span>",
+      "new_li_176": "<span class=\"hours-day\">Saturday</span> <span class=\"hours-time\">Closed</span>",
       "terms_h1_1": "Artauri Design",
       "terms_h2_2": "1. Definitions",
       "terms_h2_3": "2. Service Description",
@@ -2814,6 +2678,11 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "login_li_30": "Haraduv 19, Hod Hasharon, 4502117, Israel",
       "new_div_155": "<span class=\"zappy-announcement-message active\">Glad you're here! Get 10% off your first purchase</span>\n      <span class=\"zappy-announcement-message\">Glad you're here! Get 10% off your first purchase and free shipping on orders from 270 NIS and above</span><span class=\"zappy-announcement-message\">\n</span>",
       "new_div_158": "<span class=\"zappy-announcement-message active\">Glad you're here! Get 10% off your first purchase</span>\n      <span class=\"zappy-announcement-message\">Glad you're here! Get 10% off your first purchase and free shipping on orders from 270 NIS and above</span><span class=\"zappy-announcement-message\">&nbsp;ןהכככ</span>",
+      "new_div_183": "<span data-ecom-label=\"subtotal\">Subtotal:</span><span id=\"subtotal\">₪0</span>",
+      "new_div_186": "<span data-ecom-label=\"vatIncluded\">VAT Included:</span><span id=\"vat-amount\">₪0</span>",
+      "new_div_189": "<span data-ecom-label=\"shipping\">Shipping:</span><span id=\"shipping-cost\">₪0</span>",
+      "new_div_192": "<span data-ecom-label=\"discount\">Discount:</span><span id=\"checkout-discount-amount\" class=\"discount-value\">₪0.00</span>",
+      "new_div_195": "<span data-ecom-label=\"totalToPay\">Total to Pay:</span><span id=\"order-total\">₪0</span>",
       "terms_h2_10": "9. Changes to Terms of Use",
       "terms_h2_11": "10. Service Termination",
       "terms_h2_12": "11. Applicable Law and Dispute Resolution",
@@ -2843,7 +2712,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "terms_li_61": "Non-enforcement of a right will not be considered a waiver of it",
       "terms_li_62": "The terms of use constitute the entire agreement between the parties",
       "terms_li_63": "Company: Artori Design",
-      "terms_li_65": "Phone: 054-6242000",
+      "terms_li_65": "<strong>Phone:</strong> <a href=\"tel:054-6242000\">054-6242000</a>",
       "terms_li_66": "Address: 19 Haraduf St., Hod Hasharon, 4502117, Israel",
       "terms_li_67": "Collections",
       "terms_li_68": "Our Story",
@@ -3413,7 +3282,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_p_34": "Invited to a housewarming? Here you'll find designed items that bring character, fun and warmth to any new space. Original home gifts with presence. A gift that will remind them of you every time they look at it in their space.",
       "collections_p_35": "Office items that will upgrade any desk. Clocks or decorations for hanging on the wall. Sophisticated, practical and inspiring shelf decorations. Perfect products for upgrading your work environment or as gifts for friends, employees or clients.",
       "collections_p_36": "Designed gifts for doctors and medical staff at the end of successful treatment or for any other occasion. Functional items with presence that upgrade any office or clinic and bring a smile.",
-      "collections_p_37": "Unique gifts for psychologists and therapists - design with an intellectual wink and subtle humor. Perfect thank you gifts for your therapist at the end of successful treatment. For a clinic that appreciates depth and style.",
+      "collections_p_37": "Unique gifts for psychologists and therapists – designed with intellectual flair and subtle humor. Perfect thank-you gifts for your therapist at the end of a successful treatment. For a clinic that appreciates depth and style.&nbsp;",
       "collections_p_38": "Who hasn't been stuck without a gift idea for teachers and teaching staff? We've got you covered with thoughtful and clean design. Perfect gift for end of year, holidays or any opportunity to say thank you. A special gift that will be remembered.",
       "collections_p_39": "Cute and original gifts for children - designed items that spark imagination and curiosity. A combination of fun, creativity and special design that suits parents too 🙂",
       "collections_p_40": "Do you share our cat scratches? Looking for a gift for dog lovers? Designed items with a humorous and warm touch. Perfect for four-legged enthusiasts who want to combine their love with their home design.",
@@ -4448,9 +4317,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       "collections_seo_twitter_description": "Explore our special collections: superheroes, cats, and designer functional products. Find the perfect item that combines design with your passions.",
       "contact_text_72_0": "I have read and agree to the ",
       "contact_text_72_1": " and ",
+      "terms_text_64_0": "Email: ",
       "privacy_text_56_0": "Email: ",
       "accessibility_text_60_0": "Email: ",
-      "terms_text_64_0": "Email: ",
       "legal_text_47_0": "Email: ",
       "legal_text_39_0": "Email: ",
       "legal_text_43_0": "Email: "
@@ -5650,112 +5519,6 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
   }
 })();
 </script>
-
-    
-
-
-<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
-<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
-  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
-  <div class="zappy-qv-content" id="zappy-qv-content"></div>
-</div>
-
-    <div class="zppb-overlay" id="zppb-overlay">
-      <div class="zppb-banner">
-        <button type="button" class="zppb-close" id="zppb-close" aria-label="Close"><svg style="display:none !important" class="zppb-close-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        
-        <div class="zppb-content">
-          <h3 class="zppb-h">כיף שבאת! קבל/י 10% על ההזמנה הראשונה</h3>
-          <p class="zppb-sub"></p>
-          
-          
-          <a href="/" class="zppb-cta">קנה עכשיו</a>
-        </div>
-      </div>
-    </div>
-<script>
-    (function(){
-      var FREQ = 'once';
-      var DELAY = 2000;
-      var KEY = 'zppb_db20fdde-9dbb-4380-8fd6-1fe7321d7d26';
-      // Only run on the first URL opened in this tab. Avoids showing the modal again
-      // on every internal navigation when the user leaves before the delay fired on the landing page.
-      if (FREQ !== 'every_visit') {
-        try {
-          var entKey = KEY + '_sess_entry';
-          var curPath = window.location.pathname + window.location.search;
-          var entryPath = sessionStorage.getItem(entKey);
-          if (!entryPath) {
-            sessionStorage.setItem(entKey, curPath);
-            entryPath = curPath;
-          }
-          if (curPath !== entryPath) {
-            return;
-          }
-        } catch (e) {}
-      }
-
-      function shouldShow() {
-        if (document.body && document.body.classList.contains('zappy-edit-mode')) return false;
-        if (FREQ === 'every_visit') return true;
-        if (FREQ === 'once') return !localStorage.getItem(KEY);
-        if (FREQ === 'once_per_session') return !sessionStorage.getItem(KEY);
-        if (FREQ === 'once_per_day') {
-          var last = localStorage.getItem(KEY);
-          if (!last) return true;
-          return (Date.now() - parseInt(last, 10)) > 86400000;
-        }
-        return false;
-      }
-
-      function markShown() {
-        try {
-          if (FREQ === 'once') localStorage.setItem(KEY, '1');
-          else if (FREQ === 'once_per_session') sessionStorage.setItem(KEY, '1');
-          else if (FREQ === 'once_per_day') localStorage.setItem(KEY, String(Date.now()));
-        } catch(e){}
-      }
-
-      function closeBanner() {
-        var ov = document.getElementById('zppb-overlay');
-        if (ov) { ov.classList.remove('zppb-visible'); }
-      }
-
-      function showBanner() {
-        if (!shouldShow()) return;
-        var ov = document.getElementById('zppb-overlay');
-        if (ov) { ov.classList.add('zppb-visible'); markShown(); }
-      }
-
-      
-
-      
-
-      var closeBtn = document.getElementById('zppb-close');
-      if (closeBtn) closeBtn.addEventListener('click', closeBanner);
-      var overlay = document.getElementById('zppb-overlay');
-      if (overlay) overlay.addEventListener('click', function(e) { if (e.target === overlay) closeBanner(); });
-
-      setTimeout(function() {
-        showBanner();
-        
-      }, DELAY);
-    })();</script>
-<script>
-(function() {
-  var messages = document.querySelectorAll('.zappy-announcement-message');
-  if (messages.length <= 1) return;
-  var current = 0;
-  setInterval(function() {
-    messages[current].classList.remove('active');
-    current = (current + 1) % messages.length;
-    messages[current].classList.add('active');
-  }, 4000);
-})();</script>
-  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-
     <script src="/script.js"></script>
 
     <script id="zappy-facebook-pixel-lazy-loader">
@@ -5957,4 +5720,4 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
       else setTimeout(init,50);
     })();
     </script>
-</body></html>
+</head></html>
