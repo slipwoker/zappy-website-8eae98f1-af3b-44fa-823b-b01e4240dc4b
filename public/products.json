@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-21T07:58:48.392Z",
+  "generated_at": "2026-07-21T08:07:45.914Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -248,7 +248,7 @@
     },
     {
       "id": "fedc56af-82d0-4ec6-88d1-9afa7f703c2b",
-      "slug": "bdykh-h9rzw9",
+      "slug": "bdykh-t4xgia",
       "name": "בדיקה",
       "name_translations": {
         "en": "Test",
@@ -265,9 +265,11 @@
       "images": [],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/bdykh-h9rzw9",
-      "categories": [],
-      "updated_at": "2026-07-21T07:57:54.660Z"
+      "url": "https://artori.co.il/product/bdykh-t4xgia",
+      "categories": [
+        "חדש!"
+      ],
+      "updated_at": "2026-07-21T08:07:12.594Z"
     },
     {
       "id": "e3bc3979-3728-4193-b633-161b3d35a5d9",

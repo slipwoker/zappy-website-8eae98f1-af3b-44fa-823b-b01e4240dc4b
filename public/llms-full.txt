@@ -954,7 +954,7 @@ English
 
 
 
-קראתי ואני מסכים/ה ל  תנאי השימוש   ול  מדיניות הפרטיות
+קראתי ואני מסכים/ה ל תנאי השימוש  ול מדיניות הפרטיות
 
 
 
@@ -4199,7 +4199,7 @@ SKU: AD330
 ---
 
 ### בדיקה
-URL: https://artori.co.il/product/bdykh-h9rzw9
+URL: https://artori.co.il/product/bdykh-t4xgia
 Price: 0.50 ILS
 Availability: In stock
 SKU: ADTEST
