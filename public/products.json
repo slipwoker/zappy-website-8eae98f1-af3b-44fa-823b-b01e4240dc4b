@@ -1,9 +1,9 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-21T05:46:26.956Z",
+  "generated_at": "2026-07-21T07:58:06.223Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
-  "count": 119,
+  "count": 120,
   "products": [
     {
       "id": "12dd1b5d-9aa6-49ac-8c17-f2a318ce746e",
@@ -245,6 +245,29 @@
         "סטנדים לטלפון נייד"
       ],
       "updated_at": "2026-04-30T09:01:28.717Z"
+    },
+    {
+      "id": "fedc56af-82d0-4ec6-88d1-9afa7f703c2b",
+      "slug": "bdykh-h9rzw9",
+      "name": "בדיקה",
+      "name_translations": {
+        "en": "Test",
+        "he": "בדיקה"
+      },
+      "description": "",
+      "short_description": "לא לבחור",
+      "sku": "ADTEST",
+      "brand": null,
+      "price": 0.5,
+      "base_price": 0.5,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://artori.co.il/product/bdykh-h9rzw9",
+      "categories": [],
+      "updated_at": "2026-07-21T07:57:54.660Z"
     },
     {
       "id": "e3bc3979-3728-4193-b633-161b3d35a5d9",

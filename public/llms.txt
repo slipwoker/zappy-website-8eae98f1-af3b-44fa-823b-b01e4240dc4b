@@ -72,7 +72,7 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 119**
+**Total active products: 120**
 
 ### תומך ספרים רוכב אופניים - The Apex Lean
 https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-lb0ivy
@@ -136,6 +136,13 @@ https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf
 - SKU: AD330
 - Description: מתנה מושלמת לחיילת
 - Image: https://artori.co.il/assets/product-1777396213443-x7dwam.webp
+
+### בדיקה
+https://artori.co.il/product/bdykh-h9rzw9
+- Price: 0.50 ILS
+- Availability: In stock
+- SKU: ADTEST
+- Description: לא לבחור
 
 ### וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים
 https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh
