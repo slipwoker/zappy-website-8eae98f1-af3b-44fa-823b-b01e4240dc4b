@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-23T08:47:03.482Z",
+  "generated_at": "2026-08-23T18:38:21.693Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -2690,13 +2690,13 @@
     },
     {
       "id": "6f701f81-1325-4039-ae9f-849af83c5162",
-      "slug": "avlh-mtlh-mgbt-t2bb26",
-      "name": "אולה - מתלה מגבת",
+      "slug": "avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-mzrnn6",
+      "name": "אולה - מתלה מעוצב למגבת מטבח או למגבת ידיים",
       "name_translations": {
-        "en": "Ola - Towel Hanger",
-        "he": "אולה - מתלה מגבת"
+        "en": "Ola - Decorative Kitchen Towel or Hand Towel Holder",
+        "he": "אולה - מתלה מעוצב למגבת מטבח או למגבת ידיים"
       },
-      "description": "<p class=\"ql-align-right\">מתלה בצורת רקדנית פלמנקו. בכל פעם שאתם מחליפים מגבת, היא מחליפה שמלה. ניתן לתלות על הקיר, על ארון המטבח או על כל משטח חלק באמצעות דבק דו צדדי איכותי של חברת 3M (כלול) או על הקיר באמצעות בורג (לא מסופק). מתנה אידיאלית ושימושית למטבח. צבע: שחור. מידות:&nbsp;גובה 24 ס\"מ, רוחב 1.5 ס\"מ אורך 12.5 ס\"מ. משקל כולל אריזה:&nbsp;135 גרם. חומר: ברזל בצביעה בתנור.</p>",
+      "description": "<p class=\"ql-align-right\">מתלה בצורת רקדנית פלמנקו. בכל פעם שאתם מחליפים מגבת, היא מחליפה שמלה. ניתן לתלות על הקיר, על ארון המטבח או על כל משטח חלק באמצעות דבק דו צדדי איכותי של חברת 3M (כלול) או על הקיר באמצעות בורג (לא מסופק). מתנה אידיאלית ושימושית למטבח. צבע: שחור. מידות: גובה 24 ס&quot;מ, רוחב 1.5 ס&quot;מ אורך 12.5 ס&quot;מ. משקל כולל אריזה: 135 גרם. חומר: ברזל בצביעה בתנור.</p>",
       "short_description": "מתלה למגבת מטבח בדמות רקדנית פלמנקו",
       "sku": "AD261",
       "brand": null,
@@ -2705,19 +2705,26 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
+        "https://artori.co.il/assets/product-1787510059627-b2s7ar.webp",
+        "https://artori.co.il/assets/product-1787510080286-sggxur.webp",
+        "https://artori.co.il/assets/product-1787510030669-g7ok05.webp",
+        "https://artori.co.il/assets/product-1787510104605-riqfwa.webp",
+        "https://artori.co.il/assets/product-1787510012455-pz2ikm.webp",
         "https://artori.co.il/assets/product-1773749708157-wbfoqq.webp",
         "https://artori.co.il/assets/product-1773749708830-he5alh.webp",
         "https://artori.co.il/assets/product-1773749709298-9c265q.webp",
         "https://artori.co.il/assets/product-1773749709690-24ydp.webp",
-        "https://artori.co.il/assets/product-1773749710349-wf3hxy.webp"
+        "https://artori.co.il/assets/product-1773749710349-wf3hxy.webp",
+        "https://artori.co.il/assets/product-1787510181140-2vb9f.webp",
+        "https://artori.co.il/assets/product-1787510188903-dafmvj.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/avlh-mtlh-mgbt-t2bb26",
+      "url": "https://artori.co.il/product/avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-mzrnn6",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-06-07T16:56:42.582Z"
+      "updated_at": "2026-08-23T18:37:43.501Z"
     },
     {
       "id": "f0ad00a8-6c42-4c88-9883-c05d9e2a0a24",
