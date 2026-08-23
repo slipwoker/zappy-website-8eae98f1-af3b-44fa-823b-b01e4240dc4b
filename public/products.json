@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-23T18:38:21.693Z",
+  "generated_at": "2026-08-23T18:47:22.718Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -512,13 +512,13 @@
     },
     {
       "id": "81f7b034-6b9e-4264-b23b-9ec7032ea29a",
-      "slug": "mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ogu50s",
+      "slug": "mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-v0q2ac",
       "name": "מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט",
       "name_translations": {
-        "en": "Avalanche - Ski - Designer Shelf for Toilet Paper Roll Storage",
+        "en": "Avalanche - Ski - Decorative Shelf for Toilet Paper Roll Storage",
         "he": "מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט"
       },
-      "description": "<p><strong>מפולת - סקי - מדף מעוצב לתליה בחדר השירותים / האמבטיה</strong> מדף אלכסוני לאחסון גלילי נייר טואלט מעוצב בצורת דמות שעושה סקי במורד ההר.</p><p>המדף יכול להכיל 6-10 גלילי נייר טואלט, תלוי בקוטרם, במגוון העמדות.</p><p>מתנה מיוחדת ומעוצבת לחדר השירותים והאמבטיה.</p><p><br></p><p>הוראות:</p><p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;חברו את הדמות למדף באמצעות הבורג והאום המצורפים.</p><p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;בחרו מקום על קיר בעל פני שטח חלקים (כגון קיר עץ, גבס או אריחים).</p><p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;מקמו את המדף לקיר בזוית של 7 עד 30 מעלות, לשימוש נכון והמראה הרצוי.</p><p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;השתמשו בברגים המצורפים לערכה לתלייה מאובטחת ויציבה</p>",
+      "description": "<p><strong>מפולת - סקי - מדף מעוצב לתליה בחדר השירותים / האמבטיה</strong> מדף אלכסוני לאחסון גלילי נייר טואלט מעוצב בצורת דמות שעושה סקי במורד ההר.</p><p>המדף יכול להכיל 6-10 גלילי נייר טואלט, תלוי בקוטרם, במגוון העמדות.</p><p>מתנה מיוחדת ומעוצבת לחדר השירותים והאמבטיה.</p><p></p><p>הוראות:</p><p>-         חברו את הדמות למדף באמצעות הבורג והאום המצורפים.</p><p>-         בחרו מקום על קיר בעל פני שטח חלקים (כגון קיר עץ, גבס או אריחים).</p><p>-     מקמו את המדף לקיר בזוית של 7 עד 30 מעלות, לשימוש נכון והמראה הרצוי.</p><p>-         השתמשו בברגים המצורפים לערכה לתלייה מאובטחת ויציבה</p>",
       "short_description": "מדף אלכסוני מיוחד לעיצוב חדר השירותים או האמבטיה",
       "sku": "AD406",
       "brand": null,
@@ -527,11 +527,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
+        "https://artori.co.il/assets/product-1773749842757-qptppm.webp",
         "https://artori.co.il/assets/product-1773749840364-6or2h.webp",
+        "https://artori.co.il/assets/product-1787510758364-k1lgdx.webp",
+        "https://artori.co.il/assets/product-1787510766605-wj25vj.webp",
+        "https://artori.co.il/assets/product-1787510774713-224ccq.webp",
         "https://artori.co.il/assets/product-1773749840794-axzm1m.webp",
         "https://artori.co.il/assets/product-1773749841347-grgt1c.webp",
         "https://artori.co.il/assets/product-1773749842042-5ckqv.webp",
-        "https://artori.co.il/assets/product-1773749842757-qptppm.webp",
         "https://artori.co.il/assets/product-1773749843444-uh6vrh.webp",
         "https://artori.co.il/assets/product-1773749844397-r0zebv.webp",
         "https://artori.co.il/assets/product-1773749845276-a9ntp.webp",
@@ -544,11 +547,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ogu50s",
+      "url": "https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-v0q2ac",
       "categories": [
         "מדפים לגלילי נייר טואלט"
       ],
-      "updated_at": "2026-06-07T16:49:05.020Z"
+      "updated_at": "2026-08-23T18:46:47.444Z"
     },
     {
       "id": "b261a2fc-973b-416e-949c-9be89469dfaa",
