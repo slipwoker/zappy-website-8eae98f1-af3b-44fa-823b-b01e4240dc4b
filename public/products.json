@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-23T08:45:44.888Z",
+  "generated_at": "2026-08-23T08:47:03.482Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -594,7 +594,7 @@
     },
     {
       "id": "46d8a797-e16c-4475-8979-38355a4837e9",
-      "slug": "dly-tsba-mamd-mavtsb-lnyyr-svpg-m9l6iw",
+      "slug": "dly-tsba-mamd-mavtsb-lnyyr-svpg-8skf31",
       "name": "דלי צבע - מעמד מעוצב לנייר סופג",
       "name_translations": {
         "en": "Paint Bucket - Designer Paper Towel Holder",
@@ -621,11 +621,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-m9l6iw",
+      "url": "https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-8skf31",
       "categories": [
         "מתקנים לנייר סופג"
       ],
-      "updated_at": "2026-08-23T08:45:07.877Z"
+      "updated_at": "2026-08-23T08:46:26.205Z"
     },
     {
       "id": "3cdc5778-7284-4875-a479-5c352f16ac7b",
