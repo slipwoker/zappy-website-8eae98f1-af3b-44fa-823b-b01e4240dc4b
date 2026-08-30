@@ -391,10 +391,14 @@
     return 'zappy_purchase_fired_' + String(orderId || '');
   }
 
+  function purchaseMetaDedupKey(orderId) {
+    return 'zappy_purchase_meta_fired_' + String(orderId || '');
+  }
+
   function alreadyFiredPurchase(orderId) {
     if (!orderId) return false;
     try {
-      return sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
+      return window.sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
     } catch (e) {
       return false;
     }
@@ -402,8 +406,77 @@
 
   function markPurchaseFired(orderId) {
     if (!orderId) return;
-    try { sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
+    try { window.sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
   }
+
+  function alreadyFiredPurchaseMeta(orderId) {
+    if (!orderId) return false;
+    try {
+      return window.sessionStorage.getItem(purchaseMetaDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseMetaFired(orderId) {
+    if (!orderId) return;
+    try { window.sessionStorage.setItem(purchaseMetaDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  function getPendingMetaEvents() {
+    try {
+      if (!Array.isArray(window.__zappyPendingMetaEvents)) {
+        window.__zappyPendingMetaEvents = [];
+      }
+      return window.__zappyPendingMetaEvents;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function enqueueMetaEvent(eventName, params, orderId) {
+    var q = getPendingMetaEvents();
+    if (orderId) {
+      for (var i = 0; i < q.length; i++) {
+        if (q[i] && q[i].orderId === orderId && q[i].eventName === eventName) return;
+      }
+    }
+    q.push({ eventName: eventName, params: params || {}, orderId: orderId || null });
+  }
+
+  /**
+   * Live sites replace the eager Meta snippet with a consent-gated lazy
+   * loader. Payment providers bounce the shopper back to /order-success
+   * before CookieConsent hydrates, so confirm-order used to fire Purchase
+   * while window.fbq was still undefined — then sessionStorage blocked a
+   * retry. Queue until fbq exists, then flush.
+   */
+  function flushPendingMetaEvents() {
+    if (typeof window.fbq !== 'function') return;
+    var q = getPendingMetaEvents().slice();
+    try { window.__zappyPendingMetaEvents = []; } catch (e) {}
+    for (var i = 0; i < q.length; i++) {
+      var item = q[i];
+      if (!item || !item.eventName) continue;
+      if (item.orderId && alreadyFiredPurchaseMeta(item.orderId)) continue;
+      try {
+        window.fbq('track', item.eventName, item.params || {});
+        if (item.orderId) markPurchaseMetaFired(item.orderId);
+      } catch (e2) {}
+    }
+  }
+  window.zappyFlushPendingMetaEvents = flushPendingMetaEvents;
+
+  var metaFlushAttempts = 0;
+  var metaFlushTimer = setInterval(function() {
+    metaFlushAttempts++;
+    flushPendingMetaEvents();
+    var pendingLen = 0;
+    try { pendingLen = (window.__zappyPendingMetaEvents || []).length; } catch (e) {}
+    if ((pendingLen === 0 && typeof window.fbq === 'function') || metaFlushAttempts > 60) {
+      clearInterval(metaFlushTimer);
+    }
+  }, 500);
 
   /**
    * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
@@ -423,15 +496,19 @@
         metadata.pagePath = pagePath();
       }
 
+      var oid = '';
+      var purchaseAlreadySent = false;
+      var purchaseMetaAlreadySent = false;
       if (eventId === 'checkout_complete') {
-        var oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
-        if (oid && alreadyFiredPurchase(oid)) return;
-        if (oid) markPurchaseFired(oid);
+        oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
+        purchaseAlreadySent = !!(oid && alreadyFiredPurchase(oid));
+        purchaseMetaAlreadySent = !!(oid && alreadyFiredPurchaseMeta(oid));
+        if (purchaseAlreadySent && purchaseMetaAlreadySent) return;
       }
 
       // First-party (skip when already tracked via zappyTrackEcomAnalytics path
       // that opts out, or when caller already recorded under a different name)
-      if (!opts.skipFirstParty) {
+      if (!opts.skipFirstParty && !purchaseAlreadySent) {
         try {
           if (window.zappyAnalytics && typeof window.zappyAnalytics.track === 'function') {
             window.zappyAnalytics.track(eventId, metadata);
@@ -440,40 +517,53 @@
       }
 
       // GTM / dataLayer — platform-standard ecommerce event names
-      try {
-        window.dataLayer = window.dataLayer || [];
-        if (plat.ecom) {
-          var ga4ForGtm = buildGa4Params(eventId, metadata);
-          var ecommerce = {};
-          if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
-          if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
-          if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
-          if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
-          window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
-          // Secondary Zappy-specific trigger for merchants who want it
-          if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
-            window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+      if (!purchaseAlreadySent) {
+        try {
+          window.dataLayer = window.dataLayer || [];
+          if (plat.ecom) {
+            var ga4ForGtm = buildGa4Params(eventId, metadata);
+            var ecommerce = {};
+            if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
+            if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
+            if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
+            if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+            window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
+            // Secondary Zappy-specific trigger for merchants who want it
+            if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+              window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+            }
+          } else {
+            var dl = { event: plat.gtm };
+            for (var k in metadata) {
+              if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+            }
+            window.dataLayer.push(dl);
           }
+        } catch (e2) {}
+
+        // GA4 gtag
+        try {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
+          }
+        } catch (e3) {}
+
+        if (oid) markPurchaseFired(oid);
+      }
+
+      // Meta Pixel — live sites lazy-load fbq after marketing consent. If the
+      // stub is not defined yet, queue and flush when the pixel arrives.
+      try {
+        if (purchaseMetaAlreadySent) {
+          // already delivered to Meta
         } else {
-          var dl = { event: plat.gtm };
-          for (var k in metadata) {
-            if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+          var metaParams = buildMetaParams(eventId, metadata);
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', plat.meta, metaParams);
+            if (oid) markPurchaseMetaFired(oid);
+          } else {
+            enqueueMetaEvent(plat.meta, metaParams, eventId === 'checkout_complete' ? oid : null);
           }
-          window.dataLayer.push(dl);
-        }
-      } catch (e2) {}
-
-      // GA4 gtag
-      try {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
-        }
-      } catch (e3) {}
-
-      // Meta Pixel (only when fbq is loaded — consent-gated lazy loader)
-      try {
-        if (typeof window.fbq === 'function') {
-          window.fbq('track', plat.meta, buildMetaParams(eventId, metadata));
         }
       } catch (e4) {}
     } catch (err) {}
@@ -589,7 +679,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="מוצרים" />
     <meta name="twitter:description" content="המוצרים שלנו - ארטאורי דיזיין" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://artori.co.il#organization","name":"ארטאורי דיזיין","url":"https://artori.co.il","description":"A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.","address":{"@type":"PostalAddress","streetAddress":"הרדוף 19, הוד השרון, 4502117, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@artoridesign.com","telephone":"054-6242000","availableLanguage":["he","en"]}]},{"@type":"WebSite","@id":"https://artori.co.il#website","url":"https://artori.co.il","name":"ארטאורי דיזיין","publisher":{"@id":"https://artori.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://artori.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://artori.co.il/products"}]},{"@type":"ItemList","@id":"https://artori.co.il/products#itemlist","numberOfItems":60,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-lb0ivy","name":"תומך ספרים רוכב אופניים - The Apex Lean"},{"@type":"ListItem","position":2,"url":"https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-pz6mae","name":"הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט"},{"@type":"ListItem","position":3,"url":"https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-myuhh2","name":"בננה ביץ׳ - מתלה לבננות"},{"@type":"ListItem","position":4,"url":"https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp","name":"ביזי חיילים - בן - מעמד לטלפון נייד"},{"@type":"ListItem","position":5,"url":"https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n","name":"ביזי חיילים - טום - מעמד לטלפון נייד"},{"@type":"ListItem","position":6,"url":"https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99","name":"ביזי חיילים - מאיה - מעמד לטלפון נייד"},{"@type":"ListItem","position":7,"url":"https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf","name":"ביזי חיילים - דנה - מעמד לטלפון נייד"},{"@type":"ListItem","position":8,"url":"https://artori.co.il/product/bdykh-t4xgia","name":"בדיקה"},{"@type":"ListItem","position":9,"url":"https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh","name":"וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":10,"url":"https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-xbsaut","name":"וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":11,"url":"https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90","name":"וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":12,"url":"https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re","name":"וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":13,"url":"https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb","name":"וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":14,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw","name":"ביזי יוגה - סטנד לסמארטפון - זואי"},{"@type":"ListItem","position":15,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue","name":"ביזי יוגה - סטנד לסמארטפון - סנגיטה"},{"@type":"ListItem","position":16,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr","name":"ביזי יוגה - סטנד לסמארטפון - לונה"},{"@type":"ListItem","position":17,"url":"https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ogu50s","name":"מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":18,"url":"https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx","name":"אופליין - מדף מפתחות לכניסה לבית"},{"@type":"ListItem","position":19,"url":"https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-hkivi8","name":"דלי צבע - מעמד מעוצב לנייר סופג"},{"@type":"ListItem","position":20,"url":"https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg","name":"אוסקר, צ׳רצ׳יל, שרלוק - שלישיית פסלוני חתולים למדף"},{"@type":"ListItem","position":21,"url":"https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-aqtzr9","name":"סט מדפי ספרים גיבורי על - סופרשלף ווונדרשלף"},{"@type":"ListItem","position":22,"url":"https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o","name":"סט תומכי ספרים גיבורי על - סופרגל ובוק אנד הירו"},{"@type":"ListItem","position":23,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu","name":"ביזי יוגה - סטנד לסמארטפון - גאיה"},{"@type":"ListItem","position":24,"url":"https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm","name":"עוף גוזל - מתלה בצורת חתול"},{"@type":"ListItem","position":25,"url":"https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-80ve8s","name":"בקיצור פיל - מדף אלכסוני לאחסון גלילי נייר טואלט - שחור"},{"@type":"ListItem","position":26,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r","name":"ביזי - סטנד לסמארטפון - דוקטורית"},{"@type":"ListItem","position":27,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40","name":"ביזי - סטנד לסמארטפון - דוקטור"},{"@type":"ListItem","position":28,"url":"https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5","name":"זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"},{"@type":"ListItem","position":29,"url":"https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg","name":"פאזל 1000 חלקים - טיימס סקוור ניו יורק"},{"@type":"ListItem","position":30,"url":"https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-501wbv","name":"תומך ספרים קליף הנגר (Cliffhanger)"},{"@type":"ListItem","position":31,"url":"https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2","name":"פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי"},{"@type":"ListItem","position":32,"url":"https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q","name":"ארטאורי בעיר - פאזל 1000 חלקים"},{"@type":"ListItem","position":33,"url":"https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx","name":"תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות"},{"@type":"ListItem","position":34,"url":"https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-1f7u9j","name":"תומך ספרים בורחים - Runaway Bookend"},{"@type":"ListItem","position":35,"url":"https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-qfgcex","name":"פסל של טווס - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":36,"url":"https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-vh0vm1","name":"Greetings - מדף מפתחות אינטראקטיבי לכניסה לבית, עשוי מתכת"},{"@type":"ListItem","position":37,"url":"https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-bnhxs7","name":"פסל של אווז - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":38,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u","name":"ביזי - סטנד לסמארטפון - צ'אטי פאטי"},{"@type":"ListItem","position":39,"url":"https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ljpus0","name":"מפולת - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":40,"url":"https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-0bdsrm","name":"מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":41,"url":"https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe","name":"הירושלף - מדף למפתחות וחפצים קטנים"},{"@type":"ListItem","position":42,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01","name":"ביזי - סטנד לסמארטפון - סלפי סטפי"},{"@type":"ListItem","position":43,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל"},{"@type":"ListItem","position":44,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וצלמת - שחור"},{"@type":"ListItem","position":45,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold","name":"ביזי - סטנד לסמארטפון - טוויט פיט"},{"@type":"ListItem","position":46,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7","name":"ביזי - סטנד לסמארטפון - לייק מייק"},{"@type":"ListItem","position":47,"url":"https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61","name":"מטוסי נייר - סט מתלים מעוצבים לקיר"},{"@type":"ListItem","position":48,"url":"https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu","name":"ונטיק ארט - ברווז- פסל מדף - ונטיק"},{"@type":"ListItem","position":49,"url":"https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6woir5","name":"פסל של לביאה - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":50,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-ieq1z9","name":"ונטיק ארט - תרנגול - פסל מדף - ונטיק"},{"@type":"ListItem","position":51,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-sjgybm","name":"ונטיק ארט - תרנגול - פסל מדף"},{"@type":"ListItem","position":52,"url":"https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-fnpngf","name":"פסל של עגור מכותר - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":53,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo","name":"בלקוני - מדף מפתחות דקורטיבי - דגם A His"},{"@type":"ListItem","position":54,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B His"},{"@type":"ListItem","position":55,"url":"https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-xbrtyf","name":"ונטיק ארט - עגור חן - פסל מדף - ונטיק"},{"@type":"ListItem","position":56,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B Hers"},{"@type":"ListItem","position":57,"url":"https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-yd9g2p","name":"תרנגול - פסל לקישוט מדף או קיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":58,"url":"https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-sh80p3","name":"ונטיק ארט - חסידה- פסל מדף - ונטיק"},{"@type":"ListItem","position":59,"url":"https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-mu6i4s","name":"ונטיק ארט - ג'ירף - פסל מדף - ונטיק"},{"@type":"ListItem","position":60,"url":"https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc","name":"ונטיק ארט - קוף גונון - פסל מדף - ונטיק"}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://artori.co.il#organization","name":"ארטאורי דיזיין","url":"https://artori.co.il","description":"A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.","address":{"@type":"PostalAddress","streetAddress":"הרדוף 19, הוד השרון, 4502117, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@artoridesign.com","telephone":"054-6242000","availableLanguage":["he","en"]}]},{"@type":"WebSite","@id":"https://artori.co.il#website","url":"https://artori.co.il","name":"ארטאורי דיזיין","publisher":{"@id":"https://artori.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://artori.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://artori.co.il/products"}]},{"@type":"ItemList","@id":"https://artori.co.il/products#itemlist","numberOfItems":60,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-lb0ivy","name":"תומך ספרים רוכב אופניים - The Apex Lean"},{"@type":"ListItem","position":2,"url":"https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-pz6mae","name":"הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט"},{"@type":"ListItem","position":3,"url":"https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-myuhh2","name":"בננה ביץ׳ - מתלה לבננות"},{"@type":"ListItem","position":4,"url":"https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp","name":"ביזי חיילים - בן - מעמד לטלפון נייד"},{"@type":"ListItem","position":5,"url":"https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n","name":"ביזי חיילים - טום - מעמד לטלפון נייד"},{"@type":"ListItem","position":6,"url":"https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99","name":"ביזי חיילים - מאיה - מעמד לטלפון נייד"},{"@type":"ListItem","position":7,"url":"https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf","name":"ביזי חיילים - דנה - מעמד לטלפון נייד"},{"@type":"ListItem","position":8,"url":"https://artori.co.il/product/bdykh-t4xgia","name":"בדיקה"},{"@type":"ListItem","position":9,"url":"https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh","name":"וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":10,"url":"https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-xbsaut","name":"וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":11,"url":"https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90","name":"וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":12,"url":"https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re","name":"וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":13,"url":"https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb","name":"וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":14,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw","name":"ביזי יוגה - סטנד לסמארטפון - זואי"},{"@type":"ListItem","position":15,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue","name":"ביזי יוגה - סטנד לסמארטפון - סנגיטה"},{"@type":"ListItem","position":16,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr","name":"ביזי יוגה - סטנד לסמארטפון - לונה"},{"@type":"ListItem","position":17,"url":"https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-v0q2ac","name":"מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":18,"url":"https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx","name":"אופליין - מדף מפתחות לכניסה לבית"},{"@type":"ListItem","position":19,"url":"https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-8skf31","name":"דלי צבע - מעמד מעוצב לנייר סופג"},{"@type":"ListItem","position":20,"url":"https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg","name":"אוסקר, צ׳רצ׳יל, שרלוק - שלישיית פסלוני חתולים למדף"},{"@type":"ListItem","position":21,"url":"https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-aqtzr9","name":"סט מדפי ספרים גיבורי על - סופרשלף ווונדרשלף"},{"@type":"ListItem","position":22,"url":"https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o","name":"סט תומכי ספרים גיבורי על - סופרגל ובוק אנד הירו"},{"@type":"ListItem","position":23,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu","name":"ביזי יוגה - סטנד לסמארטפון - גאיה"},{"@type":"ListItem","position":24,"url":"https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm","name":"עוף גוזל - מתלה בצורת חתול"},{"@type":"ListItem","position":25,"url":"https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-80ve8s","name":"בקיצור פיל - מדף אלכסוני לאחסון גלילי נייר טואלט - שחור"},{"@type":"ListItem","position":26,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r","name":"ביזי - סטנד לסמארטפון - דוקטורית"},{"@type":"ListItem","position":27,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40","name":"ביזי - סטנד לסמארטפון - דוקטור"},{"@type":"ListItem","position":28,"url":"https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5","name":"זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"},{"@type":"ListItem","position":29,"url":"https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg","name":"פאזל 1000 חלקים - טיימס סקוור ניו יורק"},{"@type":"ListItem","position":30,"url":"https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-501wbv","name":"תומך ספרים קליף הנגר (Cliffhanger)"},{"@type":"ListItem","position":31,"url":"https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2","name":"פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי"},{"@type":"ListItem","position":32,"url":"https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q","name":"ארטאורי בעיר - פאזל 1000 חלקים"},{"@type":"ListItem","position":33,"url":"https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx","name":"תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות"},{"@type":"ListItem","position":34,"url":"https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-1f7u9j","name":"תומך ספרים בורחים - Runaway Bookend"},{"@type":"ListItem","position":35,"url":"https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-qfgcex","name":"פסל של טווס - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":36,"url":"https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-vh0vm1","name":"Greetings - מדף מפתחות אינטראקטיבי לכניסה לבית, עשוי מתכת"},{"@type":"ListItem","position":37,"url":"https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-bnhxs7","name":"פסל של אווז - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":38,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u","name":"ביזי - סטנד לסמארטפון - צ'אטי פאטי"},{"@type":"ListItem","position":39,"url":"https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ljpus0","name":"מפולת - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":40,"url":"https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-0bdsrm","name":"מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":41,"url":"https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe","name":"הירושלף - מדף למפתחות וחפצים קטנים"},{"@type":"ListItem","position":42,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01","name":"ביזי - סטנד לסמארטפון - סלפי סטפי"},{"@type":"ListItem","position":43,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל"},{"@type":"ListItem","position":44,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וצלמת - שחור"},{"@type":"ListItem","position":45,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold","name":"ביזי - סטנד לסמארטפון - טוויט פיט"},{"@type":"ListItem","position":46,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7","name":"ביזי - סטנד לסמארטפון - לייק מייק"},{"@type":"ListItem","position":47,"url":"https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61","name":"מטוסי נייר - סט מתלים מעוצבים לקיר"},{"@type":"ListItem","position":48,"url":"https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu","name":"ונטיק ארט - ברווז- פסל מדף - ונטיק"},{"@type":"ListItem","position":49,"url":"https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6woir5","name":"פסל של לביאה - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":50,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-ieq1z9","name":"ונטיק ארט - תרנגול - פסל מדף - ונטיק"},{"@type":"ListItem","position":51,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-sjgybm","name":"ונטיק ארט - תרנגול - פסל מדף"},{"@type":"ListItem","position":52,"url":"https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-fnpngf","name":"פסל של עגור מכותר - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":53,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo","name":"בלקוני - מדף מפתחות דקורטיבי - דגם A His"},{"@type":"ListItem","position":54,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B His"},{"@type":"ListItem","position":55,"url":"https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-xbrtyf","name":"ונטיק ארט - עגור חן - פסל מדף - ונטיק"},{"@type":"ListItem","position":56,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B Hers"},{"@type":"ListItem","position":57,"url":"https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-yd9g2p","name":"תרנגול - פסל לקישוט מדף או קיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":58,"url":"https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-sh80p3","name":"ונטיק ארט - חסידה- פסל מדף - ונטיק"},{"@type":"ListItem","position":59,"url":"https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-mu6i4s","name":"ונטיק ארט - ג'ירף - פסל מדף - ונטיק"},{"@type":"ListItem","position":60,"url":"https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc","name":"ונטיק ארט - קוף גונון - פסל מדף - ונטיק"}]}]}</script>
     <!-- ZAPPY_INTEGRATION_START analytics:add_google_analytics -->
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYQ85T66D2"></script>
@@ -762,7 +852,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
         .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
         .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; padding: 0 !important; line-height: inherit !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; display: flex !important; align-items: center !important; padding: 12px 16px !important; min-height: 44px !important; line-height: 1.4 !important; font-weight: 600 !important; box-sizing: border-box !important; }
         .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
         .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
         .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-dark) !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; padding: 0 !important; margin: 0 !important; }
@@ -817,7 +907,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </head>
 <body>
 
-<div class="zappy-announcement-bar">
+<div class="zappy-announcement-bar" data-interval="4000">
       <span class="zappy-announcement-message active">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
       <span class="zappy-announcement-message">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
     </div>
@@ -922,142 +1012,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           <div class="products-layout" id="products-layout">
             <aside class="product-sidebar" id="product-sidebar" style="display:none;"></aside>
             <div class="products-main">
-              <div class="product-grid product-grid-loading" id="zappy-product-grid">
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="product-card product-card-skeleton" aria-hidden="true">
-                    <div class="product-card-inner">
-                      <div class="product-card-media"><div class="skeleton-media"></div></div>
-                      <div class="product-card-body">
-                        <div class="skeleton-line skeleton-title"></div>
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-line skeleton-short"></div>
-                      </div>
-                    </div>
-                  </div>
-                
-                <span class="sr-only loading-products">טוען מוצרים...</span>
-              </div>
+              <div class="product-grid product-grid-loading" id="zappy-product-grid"><div class="loading-products"></div></div>
             </div>
           </div>
         </section>
@@ -1293,12 +1248,23 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         
       }, DELAY);
     })();</script>
-<script>
+<script id="zappy-announcement-bar-rotation">
 (function() {
+  var bar = document.querySelector('.zappy-announcement-bar');
+  if (typeof window.zappyStartAnnouncementRotation === 'function') {
+    window.zappyStartAnnouncementRotation(bar, 4000);
+    return;
+  }
   var messages = document.querySelectorAll('.zappy-announcement-message');
   if (messages.length <= 1) return;
+  if (window.__zappyAnnouncementRotateTimer) {
+    clearInterval(window.__zappyAnnouncementRotateTimer);
+    window.__zappyAnnouncementRotateTimer = null;
+  }
   var current = 0;
-  setInterval(function() {
+  // Must register on the shared timer so script.js can clear this when the
+  // eager ZAPPY_ANNOUNCEMENT_BAR_ROTATION runtime boots (inline often runs first).
+  window.__zappyAnnouncementRotateTimer = setInterval(function() {
     messages[current].classList.remove('active');
     current = (current + 1) % messages.length;
     messages[current].classList.add('active');
@@ -1314,6 +1280,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   const resources = {
   "he": {
     "translation": {
+      "ecom_enterQuantities": "הזינו כמויות",
       "ecom_loading": "טוען…",
       "ecom_accountWelcome": "ברוך הבא",
       "ecom_addAddress": "הוסף כתובת",
@@ -1598,6 +1565,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       "ecom_courseAccessMethod": "גישה דיגיטלית מקוונת",
       "ecom_processing": "מעבד...",
       "ecom_checkoutFailed": "שגיאה בתהליך התשלום. נסו שוב.",
+      "ecom_formFileUploading": "מעלה…",
+      "ecom_formFileTooLarge": "הקובץ גדול מדי (עד {size} MB)",
+      "ecom_formFileUnsupported": "סוג הקובץ אינו נתמך",
+      "ecom_formFileFailed": "ההעלאה נכשלה. נסו שוב.",
+      "ecom_formFileRemove": "הסרת הקובץ",
       "cart_p_6": "פריטי עיצוב הבית ומתנות עם אופי שמכניסים חום, ענין והומור לכל חלל מגורים",
       "cart_p_7": "© 2026 ארטאורי דיזיין. כל הזכויות שמורות.",
       "cart_h1_1": "עגלת הקניות שלך",
@@ -3524,6 +3496,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       "ecom_enterCode": "Enter the code sent to your email",
       "ecom_enterCouponCode": "Enter coupon code",
       "ecom_enterEmail": "Enter your email and we'll send you a login code",
+      "ecom_enterQuantities": "Enter quantities",
       "ecom_errorLoading": "Error loading options",
       "ecom_featured": "Featured",
       "ecom_featuredCategories": "Shop by Category",
@@ -3674,6 +3647,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       "ecom_courseAccessMethod": "Online course access",
       "ecom_processing": "Processing...",
       "ecom_checkoutFailed": "Checkout failed. Please try again.",
+      "ecom_formFileUploading": "Uploading…",
+      "ecom_formFileTooLarge": "File is too large (max {size} MB)",
+      "ecom_formFileUnsupported": "This file type is not supported",
+      "ecom_formFileFailed": "Upload failed. Please try again.",
+      "ecom_formFileRemove": "Remove file",
       "cart_p_6": "Home design items and gifts with character that bring warmth, interest and humor to any living space",
       "cart_p_7": "© 2026 Artori Design. All rights reserved.",
       "cart_h1_1": "Your Shopping Cart",
@@ -5480,8 +5458,11 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   // and stored preference must NOT win over it (or visiting /en/... while
   // localStorage holds 'he' from a previous Hebrew session keeps the cart
   // drawer / product detail / checkout strings rendering in Hebrew).
-  // Stored preference is only consulted when no URL signal exists, falling
-  // back to the site default last.
+  // When the URL has no language signal (typical preview default page), the
+  // server-rendered html[lang] MUST beat localStorage — a prior English
+  // session leaves zappy_lang='en', which made detectLanguage() report 'en'
+  // on a Hebrew page and caused navigateToLanguage('en') to no-op (English
+  // option "not clickable" on home).
   function detectLanguage() {
     try {
       var pathLang = (window.location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i) || [])[1];
@@ -5497,9 +5478,45 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         return resolvedQueryLang;
       }
     } catch (e) {}
+    try {
+      var htmlLang = (document.documentElement.getAttribute('lang') || '').split('-')[0].toLowerCase();
+      if (htmlLang && availableLanguages.includes(htmlLang)) {
+        try { localStorage.setItem('zappy_lang', htmlLang); } catch (e2) {}
+        return htmlLang;
+      }
+    } catch (e3) {}
     var stored = localStorage.getItem('zappy_lang');
     if (stored && availableLanguages.includes(stored)) return stored;
     return 'he';
+  }
+
+  // True when the current URL already represents targetLang (query/path),
+  // independent of the in-memory zappyI18n.language which can drift via
+  // stale localStorage. Must mirror detectLanguage's URL signals — including
+  // ?lang= on published courses/dynamic routes — or navigateToLanguage(default)
+  // no-ops while a non-default ?lang= remains.
+  function isLanguageActiveInUrl(targetLang) {
+    try {
+      var path = window.location.pathname || '/';
+      if (path.indexOf('/api/website/preview') === 0) {
+        var q = new URLSearchParams(window.location.search).get('lang');
+        var effective = (q && availableLanguages.includes(String(q).toLowerCase()))
+          ? String(q).toLowerCase()
+          : 'he';
+        return effective === targetLang;
+      }
+      var pathLang = (path.match(/^\/([a-z]{2})(?=\/|$)/i) || [])[1];
+      if (pathLang && availableLanguages.includes(pathLang.toLowerCase())) {
+        return pathLang.toLowerCase() === targetLang;
+      }
+      var queryLang = new URLSearchParams(window.location.search).get('lang');
+      if (queryLang && availableLanguages.includes(String(queryLang).toLowerCase())) {
+        return String(queryLang).toLowerCase() === targetLang;
+      }
+      return targetLang === 'he';
+    } catch (e) {
+      return false;
+    }
   }
 
   // Build the URL for a target language and navigate. The URL pattern mirrors
@@ -5516,7 +5533,13 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   // page reloads in the same language the user just picked.
   function navigateToLanguage(targetLang) {
     if (!targetLang || !availableLanguages.includes(targetLang)) return;
-    if (targetLang === zappyI18n.language) return;
+    // Gate on the URL, NOT zappyI18n.language — stale localStorage can make
+    // language==='en' while the page is still Hebrew (no ?lang=), which used
+    // to early-return and leave the English option appearing unclickable.
+    if (isLanguageActiveInUrl(targetLang)) {
+      zappyI18n.language = targetLang;
+      return;
+    }
     try { localStorage.setItem('zappy_lang', targetLang); } catch (e) {}
 
     var path = window.location.pathname || '/';
@@ -6047,18 +6070,19 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       el.style.removeProperty('margin-right');
     });
     
-    // CRITICAL FIX FOR E-COMMERCE SITES: Move lang-switcher inside nav-icons-left
-    // E-commerce sites have a nav-icons-left container with search box.
-    // For RTL: lang-switcher should appear to the RIGHT of search box
-    // For LTR: lang-switcher should appear to the LEFT of search box
+      // CRITICAL FIX FOR E-COMMERCE SITES: Move lang-switcher inside nav-icons-left
+    // immediately AFTER the search box. Flex order CSS (search=1, lang=2,
+    // login=3, cart=4) keeps the globe to the right of search in LTR and
+    // mirrored correctly in RTL — inserting BEFORE search + order:0 left the
+    // globe as the outermost icon. Also reorder when already inside but before search.
     document.querySelectorAll('.lang-switcher').forEach(function(el) {
-      var navIconsLeft = document.querySelector('.nav-icons-left');
+      var navIconsLeft = document.querySelector('.nav-icons-left') || document.querySelector('.nav-ecommerce-icons');
       var searchBox = document.querySelector('.nav-search-box');
-      
-      // Only move if not already inside nav-icons-left and the elements exist
-      if (navIconsLeft && searchBox && !el.closest('.nav-icons-left')) {
-        // Insert before search box - in RTL this visually appears to the RIGHT
-        navIconsLeft.insertBefore(el, searchBox);
+      if (!navIconsLeft || !searchBox || searchBox.parentNode !== navIconsLeft) return;
+      var inside = el.closest('.nav-icons-left') || el.closest('.nav-ecommerce-icons');
+      var beforeSearch = !!(searchBox.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_PRECEDING);
+      if (!inside || beforeSearch) {
+        navIconsLeft.insertBefore(el, searchBox.nextSibling);
       }
     });
     
@@ -6123,6 +6147,22 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           var hrefAttr = this.getAttribute('href');
           if (this.tagName === 'A' && hrefAttr && hrefAttr !== '#') {
             e.stopPropagation();
+            // Preview iframe cannot follow /en/... hrefs (404s on the API
+            // host). Convert to ?lang= via navigateToLanguage instead.
+            var previewPath = window.location.pathname || '/';
+            if (previewPath.indexOf('/api/website/preview') === 0) {
+              e.preventDefault();
+              var hrefLang = langAttr;
+              if (!hrefLang) {
+                var hm = (hrefAttr.match(/^\/([a-z]{2})(?:\/|$)/i) || [])[1];
+                if (hm) hrefLang = hm.toLowerCase();
+              }
+              if (hrefLang) navigateToLanguage(hrefLang);
+              dropdown.style.opacity = '0';
+              dropdown.style.visibility = 'hidden';
+              dropdown.style.transform = 'translateY(-8px)';
+              return;
+            }
             try { if (langAttr) localStorage.setItem('zappy_lang', langAttr); } catch (_) {}
             dropdown.style.opacity = '0';
             dropdown.style.visibility = 'hidden';
@@ -6212,6 +6252,22 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
           var hrefAttr = this.getAttribute('href');
           if (this.tagName === 'A' && hrefAttr && hrefAttr !== '#') {
             e.stopPropagation();
+            // Preview iframe cannot follow /en/... hrefs (404s on the API
+            // host). Convert to ?lang= via navigateToLanguage instead.
+            var previewPath = window.location.pathname || '/';
+            if (previewPath.indexOf('/api/website/preview') === 0) {
+              e.preventDefault();
+              var hrefLang = langAttr;
+              if (!hrefLang) {
+                var hm = (hrefAttr.match(/^\/([a-z]{2})(?:\/|$)/i) || [])[1];
+                if (hm) hrefLang = hm.toLowerCase();
+              }
+              if (hrefLang) navigateToLanguage(hrefLang);
+              dropdown.style.opacity = '0';
+              dropdown.style.visibility = 'hidden';
+              dropdown.style.transform = 'translateY(-8px)';
+              return;
+            }
             try { if (langAttr) localStorage.setItem('zappy_lang', langAttr); } catch (_) {}
             dropdown.style.opacity = '0';
             dropdown.style.visibility = 'hidden';
@@ -6253,15 +6309,18 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       '.nav-icons-left .lang-switcher, .nav-ecommerce-icons .lang-switcher { display: none !important; }' +
       '.zappy-lang-switcher-container { display: none !important; }' +
       '.mobile-lang-menu { list-style: none !important; width: 100%; border-top: 1px solid rgba(128,128,128,0.2); margin-top: 8px; padding-top: 8px; }' +
-      '.mobile-lang-toggle { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; color: inherit; font-size: 15px; font-family: inherit; }' +
-      '.mobile-lang-toggle span { flex: 1; }' +
+      /* color:inherit was invisible on dark mobile menus — nav <a> links get an
+         explicit color via navbarCssHelper but these <button> rows did not. */
+      '.mobile-lang-toggle { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; color: var(--nav-text, var(--text-color, inherit)); font-size: 15px; font-family: inherit; }' +
+      '.mobile-lang-toggle span { flex: 1; color: inherit; }' +
+      '.mobile-lang-toggle svg { color: inherit; fill: currentColor; }' +
       'html[dir="rtl"] .mobile-lang-toggle span, html[lang="he"] .mobile-lang-toggle span, html[lang="ar"] .mobile-lang-toggle span { text-align: right; }' +
       'html:not([dir="rtl"]) .mobile-lang-toggle span { text-align: left; }' +
-      '.mobile-lang-chevron { transition: transform 0.3s ease; flex-shrink: 0; }' +
+      '.mobile-lang-chevron { transition: transform 0.3s ease; flex-shrink: 0; stroke: currentColor; }' +
       '.mobile-lang-options { display: none; flex-direction: column; padding: 0 16px 8px 46px; }' +
       'html[dir="rtl"] .mobile-lang-options, html[lang="he"] .mobile-lang-options, html[lang="ar"] .mobile-lang-options { padding: 0 46px 8px 16px; }' +
       '.mobile-lang-options.open { display: flex; }' +
-      '.mobile-lang-option { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: none; border: none; cursor: pointer; color: inherit; font-size: 14px; font-family: inherit; border-radius: 6px; transition: background-color 0.2s; width: 100%; }' +
+      '.mobile-lang-option { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: none; border: none; cursor: pointer; color: var(--nav-text, var(--text-color, inherit)); font-size: 14px; font-family: inherit; border-radius: 6px; transition: background-color 0.2s; width: 100%; }' +
       'html[dir="rtl"] .mobile-lang-option, html[lang="he"] .mobile-lang-option, html[lang="ar"] .mobile-lang-option { text-align: right; }' +
       'html:not([dir="rtl"]) .mobile-lang-option { text-align: left; }' +
       '.mobile-lang-option:hover { background: rgba(128,128,128,0.1); }' +
@@ -6280,8 +6339,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu');
     if (!navMenu) return;
     
-    var currentLang = zappyI18n.language;
-    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang, flagImg: '' };
+    var currentLang = (zappyI18n.language || '').split('-')[0].toLowerCase();
+    var currentInfo = languageInfo[currentLang] || languageInfo[zappyI18n.language] || { nativeName: currentLang || 'Language', flagImg: '' };
     
     var optionsHtml = availableLanguages
       .filter(function(lang) { return lang !== currentLang; })
@@ -6356,8 +6415,8 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       return;
     }
     
-    var currentLang = zappyI18n.language;
-    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang };
+    var currentLang = (zappyI18n.language || '').split('-')[0].toLowerCase();
+    var currentInfo = languageInfo[currentLang] || languageInfo[zappyI18n.language] || { nativeName: currentLang || 'Language' };
     
     var toggleSpan = menuItem.querySelector('.mobile-lang-toggle span');
     if (toggleSpan) toggleSpan.textContent = currentInfo.nativeName;
@@ -6437,8 +6496,17 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   // LANGUAGE SWITCHER ICON COLOR DETECTION
   // (shared source — see getFixLanguageSwitcherColorSource)
   // ============================================
+  // Keep Search → Globe → Login → Cart even when site CSS predates the order fix.
+  (function ensureLangSwitcherOrderCss() {
+    if (document.getElementById('zappy-lang-switcher-order-css')) return;
+    var s = document.createElement('style');
+    s.id = 'zappy-lang-switcher-order-css';
+    s.textContent = '@media (min-width:769px){.nav-ecommerce-icons .nav-search-box{order:1!important}.nav-ecommerce-icons .lang-switcher{order:2!important}.nav-ecommerce-icons .login-link.nav-login{order:3!important}.nav-ecommerce-icons .cart-link.nav-cart{order:4!important}}';
+    (document.head || document.documentElement).appendChild(s);
+  })();
+
   function fixLanguageSwitcherColor() {
-    /* ZAPPY_LANG_SWITCHER_COLOR_FIX_V3 */
+    /* ZAPPY_LANG_SWITCHER_COLOR_FIX_V4 */
     var switcher = document.querySelector('.lang-switcher-current');
     var svg = switcher ? switcher.querySelector('svg') : null;
     if (!switcher || !svg) return;
@@ -6503,8 +6571,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     try { frostedText = (navbar.style.getPropertyValue('--frosted-text') || window.getComputedStyle(navbar).getPropertyValue('--frosted-text') || '').trim(); } catch (e3) {}
 
     // 0) Frosted / scrolled transparent navbar — light glass needs a DARK globe.
-    //    Must win over --nav-text (which stays light for the at-top hero overlay).
-    if (isScrolled || frostedText) {
+    //    Only when .scrolled is actually set (not merely because --frosted-text
+    //    happens to be defined as a CSS custom property elsewhere).
+    if (isScrolled) {
       if (frostedText) {
         applyColor(frostedText);
         return;
@@ -6662,7 +6731,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     <script src="/script.js"></script>
 
     <script id="zappy-facebook-pixel-lazy-loader">
-(function(){var pixelIds=["705356625137954"];if(!pixelIds.length||window.__zappyFacebookPixelLazyLoader)return;window.__zappyFacebookPixelLazyLoader=true;var loaded=false;function hasMarketingConsent(){try{var cc=window.CookieConsent;if(!cc||typeof cc.acceptedCategory!=='function')return false;return !!cc.acceptedCategory('marketing');}catch(e){return false;}}function load(){if(loaded||!hasMarketingConsent())return;loaded=true;!function(f,b,e,v,n,t,s){if(f.fbq&&f.fbq.loaded)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');pixelIds.forEach(function(id){try{fbq('init',id);}catch(e){}});try{fbq('track','PageView');}catch(e){}}function tryLoad(){load();}['cc:onConsent','cc:onChange','cc:onFirstConsent'].forEach(function(evt){window.addEventListener(evt,tryLoad);});var attempts=0;var timer=setInterval(function(){attempts++;tryLoad();if(loaded||attempts>60)clearInterval(timer);},500);if('requestIdleCallback'in window){requestIdleCallback(tryLoad,{timeout:8000});}else{setTimeout(tryLoad,6000);}})();
+(function(){var pixelIds=["705356625137954"];if(!pixelIds.length||window.__zappyFacebookPixelLazyLoader)return;window.__zappyFacebookPixelLazyLoader=true;var loaded=false;function hasMarketingConsent(){try{var cc=window.CookieConsent;if(!cc||typeof cc.acceptedCategory!=='function')return false;return !!cc.acceptedCategory('marketing');}catch(e){return false;}}function load(){if(loaded||!hasMarketingConsent())return;loaded=true;!function(f,b,e,v,n,t,s){if(f.fbq&&f.fbq.loaded)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');pixelIds.forEach(function(id){try{fbq('init',id);}catch(e){}});try{fbq('track','PageView');}catch(e){}try{if(typeof window.zappyFlushPendingMetaEvents==='function'){window.zappyFlushPendingMetaEvents();}else if(window.__zappyPendingMetaEvents&&window.__zappyPendingMetaEvents.length){var q=window.__zappyPendingMetaEvents;window.__zappyPendingMetaEvents=[];for(var i=0;i<q.length;i++){try{fbq('track',q[i].eventName,q[i].params||{});}catch(e2){}}}}catch(e3){}}function tryLoad(){load();}['cc:onConsent','cc:onChange','cc:onFirstConsent'].forEach(function(evt){window.addEventListener(evt,tryLoad);});var attempts=0;var timer=setInterval(function(){attempts++;tryLoad();if(loaded||attempts>60)clearInterval(timer);},500);if('requestIdleCallback'in window){requestIdleCallback(tryLoad,{timeout:8000});}else{setTimeout(tryLoad,6000);}})();
 </script>
     <script id="zappy-font-awesome-loader">
 (function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
