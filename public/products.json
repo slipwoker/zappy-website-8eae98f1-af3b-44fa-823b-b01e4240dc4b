@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-23T18:47:22.718Z",
+  "generated_at": "2026-08-30T13:57:22.648Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -3422,13 +3422,13 @@
     },
     {
       "id": "49e21dd7-917f-49ac-9858-1d023ddf37c4",
-      "slug": "svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7",
+      "slug": "svp-hayprvn-kvs-ltsyvd-mshrdy-0383cb",
       "name": "סוף העיפרון - כוס לציוד משרדי",
       "name_translations": {
-        "en": "Pencil End - Cup for Office Supplies",
+        "en": "Pencil End Cup - Desk Organizer for Office Supplies",
         "he": "סוף העיפרון - כוס לציוד משרדי"
       },
-      "description": "<p class=\"ql-align-right\">Pencil End Cup – סוף העיפרון</p><p class=\"ql-align-right\">מעמד שולחני יפה ומעוצב לאחסון ציוד משרדי.</p><p class=\"ql-align-right\">מעוצב כקצה של עיפרון עם מחק בצבע ורוד.</p><p class=\"ql-align-right\">יחידה הכוללת שני כלי אחסון - החלק העליון לעטים, עפרונות, טושים, מספריים, והחלק התחתון לסיכות, גומיות, מחקים, מהדקים.</p><p class=\"ql-align-right\">מידות – גובה: 14 ס\"מ, קוטר : 7 ס\"מ.</p><p class=\"ql-align-right\">משקל: 80 גר'</p><p class=\"ql-align-right\">עשוי מתכת ופלסטיק</p><p>מסופק כרגע ללא אריזת מתנה</p>",
+      "description": "<p class=\"ql-align-right\">Pencil End Cup – סוף העיפרון</p><p class=\"ql-align-right\">מעמד שולחני יפה ומעוצב לאחסון ציוד משרדי.</p><p class=\"ql-align-right\">מעוצב כקצה של עיפרון עם מחק בצבע ורוד.</p><p class=\"ql-align-right\">יחידה הכוללת שני כלי אחסון - החלק העליון לעטים, עפרונות, טושים, מספריים, והחלק התחתון לסיכות, גומיות, מחקים, מהדקים.</p><p class=\"ql-align-right\">מידות – גובה: 14 ס&quot;מ, קוטר : 7 ס&quot;מ.</p><p class=\"ql-align-right\">משקל: 80 גר&#39;</p><p class=\"ql-align-right\">עשוי מתכת ופלסטיק</p><p>מסופק כרגע ללא אריזת מתנה</p>",
       "short_description": "סוף לבלגן\n\\n\n\\nלמחוק את הבלגן מהשולחן",
       "sku": "AD243",
       "brand": null,
@@ -3444,13 +3444,13 @@
         "https://artori.co.il/assets/product-1773749653155-b76ac.webp",
         "https://artori.co.il/assets/product-1773749653533-yd1412.webp"
       ],
-      "in_stock": true,
-      "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-v3ere7",
+      "in_stock": false,
+      "stock_status": "out_of_stock",
+      "url": "https://artori.co.il/product/svp-hayprvn-kvs-ltsyvd-mshrdy-0383cb",
       "categories": [
         "ציוד משרדי"
       ],
-      "updated_at": "2026-06-07T16:52:36.706Z"
+      "updated_at": "2026-08-30T13:56:46.802Z"
     },
     {
       "id": "3cd443e1-dc3f-4c65-a8a1-74979fe21d25",
