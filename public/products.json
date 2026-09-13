@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-02T09:19:40.122Z",
+  "generated_at": "2026-09-13T17:52:46.232Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -3251,18 +3251,18 @@
     },
     {
       "id": "f8242daf-8036-4ee4-84ec-7030375de981",
-      "slug": "mtlh-kvlb-sew8mj",
+      "slug": "mtlh-kvlb-lyu04j",
       "name": "מתלה קולב",
       "name_translations": {
         "en": "Hanger Hook",
         "he": "מתלה קולב"
       },
-      "description": "<p>מתלה מתכתי בצורת קולב בגדים מוקטן. מתלה מעוצב שישמש אתכם לתליית תיקים, תכשיטים, בגדים וחפצים שונים. המתלה עשוי ממתכת בצביעה איכותית בתנור. שימושי, מושך ענין ומוסיף סטייל לחדר.</p><p><strong>מידות</strong></p><p>גדול: אורך 16ס\"מ, רוחב 9.5ס\"מ, גובה 7ס\"מ</p><p>קטן: אורך 12ס\"מ, רוחב 7.5ס\"מ, גובה 7ס\"מ</p>",
+      "description": "<p>מתלה מתכתי בצורת קולב בגדים מוקטן. מתלה מעוצב שישמש אתכם לתליית תיקים, תכשיטים, בגדים וחפצים שונים. המתלה עשוי ממתכת בצביעה איכותית בתנור. שימושי, מושך ענין ומוסיף סטייל לחדר.</p><p><strong>מידות</strong></p><p>גדול: אורך 16ס&quot;מ, רוחב 9.5ס&quot;מ, גובה 7ס&quot;מ</p><p>קטן: אורך 12ס&quot;מ, רוחב 7.5ס&quot;מ, גובה 7ס&quot;מ</p>",
       "short_description": "<h1><span style=\"font-size: 85%;\"><bdi>מתלה לבגדים, חפצים, תכשיטים, תיקים וכו' בצורת קולב בגדים מוקטן</bdi></span></h1>",
       "sku": "AD350",
       "brand": null,
-      "price": 0,
-      "base_price": 0,
+      "price": 39,
+      "base_price": 39,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -3270,11 +3270,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/mtlh-kvlb-sew8mj",
+      "url": "https://artori.co.il/product/mtlh-kvlb-lyu04j",
       "categories": [
         "מתלים"
       ],
-      "updated_at": "2026-06-07T16:55:54.883Z"
+      "updated_at": "2026-09-13T17:52:00.545Z"
     },
     {
       "id": "b236507d-832b-46e6-b036-707869f01ef2",
