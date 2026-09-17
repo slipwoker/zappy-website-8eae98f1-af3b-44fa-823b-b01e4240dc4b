@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-17T14:17:47.663Z",
+  "generated_at": "2026-09-17T14:26:32.837Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -3982,13 +3982,13 @@
     },
     {
       "id": "4af93c52-625b-4d72-a430-a35d2471c8ea",
-      "slug": "svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-zrqbzi",
+      "slug": "svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-zunto9",
       "name": "סופרשלף - מדף ספרים צף בעיצוב גיבור על - מדף דקורטיבי לחלל המגורים, חלל העבודה או חדר הילדים",
       "name_translations": {
-        "en": "Supershelf - Floating Bookshelf with Superhero Design - Decorative Shelf for Living Space, Workspace or Children's Room",
+        "en": "Supershelf - Floating Bookshelf in a Superhero Design - Decorative Shelf for the Living Space, Workspace, or Children's Room",
         "he": "סופרשלף - מדף ספרים צף בעיצוב גיבור על - מדף דקורטיבי לחלל המגורים, חלל העבודה או חדר הילדים"
       },
-      "description": "<p class=\"ql-align-right\">Supershelf מדף ספרים שמדמה גיבור על שמחזיק ספרים שכאילו צפים באויר. עוד מוצר המשך של תומך הספרים הנופלים. מתנה מיוחדת ופרקטית לעיצוב הבית.</p><p>הוראות: - בחרו מקום והתקינו את המדף לקיר באמצעות שני ברגים . - הכניסו את בסיס המדף בין כריכת הספר (כריכה רכה) לעמוד הראשון (או האחרון). - הצמידו את היד המגנטית של גיבור העל עד להידוק הכריכה והצמדתה למדף. - הוסיפו ספרים עד למילוי כל גובה המדף. אריזה: נמכר באריזת מתנה צבעונית, שטוחה וחוסכת מקום. https://www.youtube.com/watch?v=0O7nH1TEv9Q&nbsp;</p>",
+      "description": "<p class=\"ql-align-right\">Supershelf מדף ספרים שמדמה גיבור על שמחזיק ספרים שכאילו צפים באויר. עוד מוצר המשך של תומך הספרים הנופלים. מתנה מיוחדת ופרקטית לעיצוב הבית.</p><p>הוראות: - בחרו מקום והתקינו את המדף לקיר באמצעות שני ברגים . - הכניסו את בסיס המדף בין כריכת הספר (כריכה רכה) לעמוד הראשון (או האחרון). - הצמידו את היד המגנטית של גיבור העל עד להידוק הכריכה והצמדתה למדף. - הוסיפו ספרים עד למילוי כל גובה המדף. אריזה: נמכר באריזת מתנה צבעונית, שטוחה וחוסכת מקום. https://www.youtube.com/watch?v=0O7nH1TEv9Q </p>",
       "short_description": "מדף ספרים צף",
       "sku": "AD102",
       "brand": null,
@@ -4017,11 +4017,18 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-zrqbzi",
+      "url": "https://artori.co.il/product/svprshlp-mdp-sprym-tsp-baytsvb-gybvr-al-mdp-dkvrtyby-lchll-hmgvrym-chll-habvdh-av-chdr-hyldym-zunto9",
       "categories": [
-        "מדפי ספרים"
+        "מדפי ספרים",
+        "לחדר הילדים",
+        "לחדר השינה",
+        "למשרד / חלל עבודה",
+        "מתנות לגבר",
+        "תומכי ספרים",
+        "מתנות לילד/ה",
+        "מתנות לחובבי קומיקס וגיבורי-על"
       ],
-      "updated_at": "2026-06-07T16:46:52.401Z"
+      "updated_at": "2026-09-17T14:25:57.893Z"
     },
     {
       "id": "de7b5f92-d99d-4578-9524-98bd87f4216c",
