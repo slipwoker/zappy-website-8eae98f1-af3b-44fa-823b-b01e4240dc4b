@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-17T14:16:31.854Z",
+  "generated_at": "2026-09-17T14:17:47.663Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -2699,7 +2699,7 @@
     },
     {
       "id": "6f701f81-1325-4039-ae9f-849af83c5162",
-      "slug": "avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-mzrnn6",
+      "slug": "avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-xwn0ms",
       "name": "אולה - מתלה מעוצב למגבת מטבח או למגבת ידיים",
       "name_translations": {
         "en": "Ola - Decorative Kitchen Towel or Hand Towel Holder",
@@ -2729,11 +2729,13 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-mzrnn6",
+      "url": "https://artori.co.il/product/avlh-mtlh-mavtsb-lmgbt-mtbch-av-lmgbt-ydyym-xwn0ms",
       "categories": [
-        "מתלים"
+        "מתלים",
+        "לאמבטיה / חדר השירותים",
+        "למטבח ולאירוח"
       ],
-      "updated_at": "2026-08-23T18:37:43.501Z"
+      "updated_at": "2026-09-17T14:17:09.441Z"
     },
     {
       "id": "f0ad00a8-6c42-4c88-9883-c05d9e2a0a24",
