@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-17T14:26:32.837Z",
+  "generated_at": "2026-09-17T14:27:52.800Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -3125,13 +3125,13 @@
     },
     {
       "id": "8a5d4707-c255-4bd4-b64b-a3f7b0f997d3",
-      "slug": "vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-poros7",
+      "slug": "vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-gsskt2",
       "name": "וונדרשלף - מדפית ספרים צפה גיבורת על",
       "name_translations": {
-        "en": "WonderShelf - Floating Superhero Bookshelf",
+        "en": "WonderShelf - Superhero Floating Bookshelf",
         "he": "וונדרשלף - מדפית ספרים צפה גיבורת על"
       },
-      "description": "<p class=\"ql-align-right\">מדף ספרים המדמה גיבורת על המחזיקה ספרים שכאילו צפים באויר. מתנה מיוחדת ופרקטית לעיצוב הבית. הוראות: - בחרו מקום והתקינו את המדף לקיר באמצעות שני ברגים . - הכניסו את בסיס המדף בין כריכת הספר (כריכה רכה) לעמוד הראשון (או האחרון). - הצמידו את היד המגנטית של גיבור העל עד להידוק הכריכה והצמדתה למדף. - הוסיפו ספרים עד למילוי כל גובה המדף.</p><p>https://www.youtube.com/watch?v=RxyQ7SiLTmE&nbsp;</p>",
+      "description": "<p class=\"ql-align-right\">מדף ספרים המדמה גיבורת על המחזיקה ספרים שכאילו צפים באויר. מתנה מיוחדת ופרקטית לעיצוב הבית. הוראות: - בחרו מקום והתקינו את המדף לקיר באמצעות שני ברגים . - הכניסו את בסיס המדף בין כריכת הספר (כריכה רכה) לעמוד הראשון (או האחרון). - הצמידו את היד המגנטית של גיבור העל עד להידוק הכריכה והצמדתה למדף. - הוסיפו ספרים עד למילוי כל גובה המדף.</p><p>https://www.youtube.com/watch?v=RxyQ7SiLTmE </p>",
       "short_description": "מדף ספרים צף",
       "sku": "AD104",
       "brand": null,
@@ -3148,16 +3148,20 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-poros7",
+      "url": "https://artori.co.il/product/vvndrshlp-mdpyt-sprym-tsph-gybvrt-al-gsskt2",
       "categories": [
         "מדפי ספרים",
         "מתנות לאישה",
         "מתנות לבוס/ית",
         "מתנות לחובבי קומיקס וגיבורי-על",
         "מתנות לילד/ה",
-        "מתנות למורה"
+        "מתנות למורה",
+        "לחדר הילדים",
+        "לחדר השינה",
+        "תומכי ספרים",
+        "מתנות לחנוכת בית"
       ],
-      "updated_at": "2026-04-30T09:01:31.158Z"
+      "updated_at": "2026-09-17T14:27:14.449Z"
     },
     {
       "id": "83dd94ea-edc7-4f07-83ec-390798288aab",
