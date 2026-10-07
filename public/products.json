@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-17T14:29:42.856Z",
+  "generated_at": "2026-10-07T14:13:53.918Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -273,18 +273,18 @@
     },
     {
       "id": "e3bc3979-3728-4193-b633-161b3d35a5d9",
-      "slug": "vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh",
+      "slug": "vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-wkxove",
       "name": "וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים",
       "name_translations": {
-        "en": "Orange Wally - Decorative Book Clip Bookmark, Designed as a Bookworm",
+        "en": "Wally Orange - Book Page Marker Clip, Designed as a Bookworm",
         "he": "וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים"
       },
       "description": "<p>וולי כתום</p><p>סימניה מדליקה לאוהבי הקריאה והספרים.</p><p>מתנה מושלמת לכל תולעת ספרים.</p><p>הסימניה מעוצבת כקליפ (אטב) בצורת תולעת ספרים שמתפתלת סביב פינת הספר, פנימה והחוצה.</p>",
       "short_description": "מתנה מושלמת לכל תולעת ספרים",
       "sku": "AD385",
       "brand": "Artori Design",
-      "price": 25,
-      "base_price": 25,
+      "price": 30,
+      "base_price": 30,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -292,11 +292,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh",
+      "url": "https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-wkxove",
       "categories": [
         "סימניות"
       ],
-      "updated_at": "2026-04-30T09:01:28.714Z"
+      "updated_at": "2026-10-07T14:13:41.062Z"
     },
     {
       "id": "cfc103ff-293f-4aa9-972b-a1c4aab5fd69",
@@ -327,18 +327,18 @@
     },
     {
       "id": "b2326ce5-0f4f-4d6d-8fa0-e168fe1b2c29",
-      "slug": "vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90",
+      "slug": "vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-pw8hyg",
       "name": "וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים",
       "name_translations": {
-        "en": "Wally Turquoise - Book Clip Bookmark, Designed as a Bookworm",
+        "en": "Wally Turquoise - Book Page Clip Bookmark, Designed as a Bookworm",
         "he": "וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים"
       },
       "description": "<p>וולי טורקיז</p><p>סימניה מדליקה לאוהבי הקריאה והספרים.</p><p>מתנה מושלמת לכל תולעת ספרים.</p><p>הסימניה מעוצבת כקליפ (אטב) בצורת תולעת ספרים שמתפתלת סביב פינת הספר, פנימה והחוצה.</p>",
       "short_description": "מתנה מושלמת לכל תולעת ספרים",
       "sku": "AD383",
       "brand": "Artori Design",
-      "price": 25,
-      "base_price": 25,
+      "price": 30,
+      "base_price": 30,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -346,11 +346,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90",
+      "url": "https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-pw8hyg",
       "categories": [
         "סימניות"
       ],
-      "updated_at": "2026-04-30T09:01:28.917Z"
+      "updated_at": "2026-10-07T14:13:15.189Z"
     },
     {
       "id": "a78fc119-ce23-420c-9b49-e1d8894536eb",
