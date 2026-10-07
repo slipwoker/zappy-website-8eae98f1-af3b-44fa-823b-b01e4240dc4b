@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-07T14:13:53.918Z",
+  "generated_at": "2026-10-07T14:14:38.224Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -354,18 +354,18 @@
     },
     {
       "id": "a78fc119-ce23-420c-9b49-e1d8894536eb",
-      "slug": "vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re",
+      "slug": "vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-c77v8p",
       "name": "וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים",
       "name_translations": {
-        "en": "Green Wally - Book Clip Bookmark, Designed as a Bookworm",
+        "en": "Wally Green - Book Page Marker Clip, Designed as a Bookworm",
         "he": "וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים"
       },
       "description": "<p>וולי ירוק</p><p>סימניה מדליקה לאוהבי הקריאה והספרים.</p><p>מתנה מושלמת לכל תולעת ספרים.</p><p>הסימניה מעוצבת כקליפ (אטב) בצורת תולעת ספרים שמתפתלת סביב פינת הספר, פנימה והחוצה.</p>",
       "short_description": "מתנה מושלמת לכל תולעת ספרים",
       "sku": "AD382",
       "brand": "Artori Design",
-      "price": 25,
-      "base_price": 25,
+      "price": 30,
+      "base_price": 30,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -373,26 +373,26 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re",
+      "url": "https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-c77v8p",
       "categories": [
         "סימניות"
       ],
-      "updated_at": "2026-04-30T09:01:28.916Z"
+      "updated_at": "2026-10-07T14:14:02.554Z"
     },
     {
       "id": "d9d58640-d943-4169-9f9c-e77e946a78ff",
-      "slug": "vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb",
+      "slug": "vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-tfsvhe",
       "name": "וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים",
       "name_translations": {
-        "en": "Red Wally - Clip Bookmark for Books, Designed as a Bookworm",
+        "en": "Wally Red - Book Page Clip Bookmark, Designed as a Bookworm",
         "he": "וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים"
       },
       "description": "<p>וולי אדום</p><p>סימניה מדליקה לאוהבי הקריאה והספרים.</p><p>מתנה מושלמת לכל תולעת ספרים.</p><p>הסימניה מעוצבת כקליפ (אטב) בצורת תולעת ספרים שמתפתלת סביב פינת הספר, פנימה והחוצה.</p>",
       "short_description": "מתנה מושלמת לכל תולעת ספרים",
       "sku": "AD381",
       "brand": "Artori Design",
-      "price": 25,
-      "base_price": 25,
+      "price": 30,
+      "base_price": 30,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -400,11 +400,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb",
+      "url": "https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-tfsvhe",
       "categories": [
         "סימניות"
       ],
-      "updated_at": "2026-04-30T09:01:28.918Z"
+      "updated_at": "2026-10-07T14:14:18.998Z"
     },
     {
       "id": "6755e89c-8130-4d82-976f-bf82e6f94cd5",
@@ -2289,18 +2289,18 @@
     },
     {
       "id": "016e001a-09f7-4c8d-8574-fe207d984624",
-      "slug": "vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-upuuln",
+      "slug": "vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-ru9cpn",
       "name": "וולי - סימנית אטב לספר, מעוצבת כתולעת ספרים",
       "name_translations": {
-        "en": "Wally - Cute Book Clip Bookmark, Designed as a Bookworm",
+        "en": "Wally - Bookworm Clip-On Bookmark, Designed as a Bookworm",
         "he": "וולי - סימנית אטב לספר, מעוצבת כתולעת ספרים"
       },
       "description": "<p>וולי</p><p>סימניה מדליקה לאוהבי הקריאה והספרים.</p><p>מתנה מושלמת לכל תולעת ספרים.</p><p>הסימניה מעוצבת כקליפ (אטב) בצורת תולעת ספרים שמתפתלת סביב פינת הספר, פנימה והחוצה.</p>",
       "short_description": "מתנה מושלמת לכל תולעת ספרים",
       "sku": "AD38..",
       "brand": null,
-      "price": 25,
-      "base_price": 25,
+      "price": 30,
+      "base_price": 30,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -2317,14 +2317,14 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-upuuln",
+      "url": "https://artori.co.il/product/vvly-symnyt-atb-lspr-mavtsbt-ktvlat-sprym-ru9cpn",
       "categories": [
         "סימניות",
         "מתנות לילד/ה",
         "מתנות למורה",
         "מתנות עד 60 שקלים"
       ],
-      "updated_at": "2026-07-13T08:25:45.068Z"
+      "updated_at": "2026-10-07T14:14:30.380Z"
     },
     {
       "id": "f8012143-bb8f-457c-8d19-338d42bae026",
