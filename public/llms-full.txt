@@ -4270,8 +4270,8 @@ SKU: ADTEST
 ---
 
 ### וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים
-URL: https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-wkxove
-Price: 30.00 ILS
+URL: https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-dk88fw
+Price: 29.00 ILS
 Availability: In stock
 SKU: AD385
 Brand: Artori Design
@@ -4281,8 +4281,8 @@ Brand: Artori Design
 ---
 
 ### וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים
-URL: https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ivouq8
-Price: 30.00 ILS
+URL: https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-io0da6
+Price: 29.00 ILS
 Availability: Out of stock
 SKU: AD384
 Brand: Artori Design
@@ -4292,8 +4292,8 @@ Brand: Artori Design
 ---
 
 ### וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים
-URL: https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-pw8hyg
-Price: 30.00 ILS
+URL: https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-qu0gmc
+Price: 29.00 ILS
 Availability: In stock
 SKU: AD383
 Brand: Artori Design
