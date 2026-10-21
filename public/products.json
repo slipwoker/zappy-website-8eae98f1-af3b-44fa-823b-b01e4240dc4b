@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-21T14:01:27.340Z",
+  "generated_at": "2026-10-21T14:02:37.145Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -4082,7 +4082,7 @@
     },
     {
       "id": "a2d0e53d-b26e-432d-99e2-28193ea1ab09",
-      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-kvlqyp",
+      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-i9vx2t",
       "name": "זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית",
       "name_translations": {
         "en": "Pair of Doves - Decorative Dove Figurines for Shelf Display - A Special and Romantic Gift for Home Décor",
@@ -4092,8 +4092,8 @@
       "short_description": "אהבה על המדף..",
       "sku": "AD140",
       "brand": null,
-      "price": 129,
-      "base_price": 129,
+      "price": 149,
+      "base_price": 149,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -4110,7 +4110,7 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-kvlqyp",
+      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-i9vx2t",
       "categories": [
         "יונים",
         "מוצרים אחרים להעמדה על שולחן / מדף",
@@ -4122,7 +4122,7 @@
         "לחדר השינה",
         "למשרד / חלל עבודה"
       ],
-      "updated_at": "2026-10-21T14:00:50.908Z"
+      "updated_at": "2026-10-21T14:02:01.694Z"
     },
     {
       "id": "7887e0c0-2f5b-4739-9bba-e7a9dcec6ad5",
