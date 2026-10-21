@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-07T14:18:02.994Z",
+  "generated_at": "2026-10-21T14:01:27.340Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -4082,10 +4082,10 @@
     },
     {
       "id": "a2d0e53d-b26e-432d-99e2-28193ea1ab09",
-      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-4z7gbw",
+      "slug": "zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-kvlqyp",
       "name": "זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית",
       "name_translations": {
-        "en": "Pair of Doves - Decorative Dove Figurines for Shelf Display - Special Romantic Gift for Home Decor",
+        "en": "Pair of Doves - Decorative Dove Figurines for Shelf Display - A Special and Romantic Gift for Home Décor",
         "he": "זוג יונים - פסלוני יונים לקישוט מדף - מתנה מיוחדת ורומנטית לעיצוב הבית"
       },
       "description": "<p>LOVEBIRDS - זוג יונים</p><p><strong>זוג פסלונים דקורטיביים מעוצבים כצלליות של ציפורים, עשויים מתכת איכותית בגימור מאט. </strong>צמד יונים היושבות על קצה מדף ומביטות זו בזו.</p><p>עיצוב נקי ואלגנטי המוסיף טאץ׳ של רומנטיקה והרמוניה לכל חלל.</p><p>✨ <strong>פריט דקורטיבי מרגש:</strong></p><p>עיצוב מלא משמעות של אהבה, חיבור ואינטימיות, מתאים לחלל המגורים או לחדר השינה.</p><p>✨ <strong>מתנה רומנטית מושלמת:</strong></p><p>מתנה אידיאלית לחנוכת בית, ימי נישואין, חג האהבה או Valentine’s Day – תשומת לב מקורית למי שיקר לכם באמת. מתנה לזוג, מתנה לבן / בת הזוג.</p><p>✨ <strong>איכות ויוקרה:</strong></p><p>מגיע באריזת מתנה מעוצבת ומרשימה, שתהפוך את החוויה למושלמת מהשנייה הראשונה.</p>",
@@ -4108,9 +4108,9 @@
         "https://artori.co.il/assets/product-1773749614877-ymy26l.webp",
         "https://artori.co.il/assets/product-1773749615684-d8mui.webp"
       ],
-      "in_stock": false,
-      "stock_status": "out_of_stock",
-      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-4z7gbw",
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://artori.co.il/product/zvg-yvnym-pslvny-yvnym-lkyshvt-mdp-mtnh-myvchdt-vrvmntyt-laytsvb-hbyt-kvlqyp",
       "categories": [
         "יונים",
         "מוצרים אחרים להעמדה על שולחן / מדף",
@@ -4122,7 +4122,7 @@
         "לחדר השינה",
         "למשרד / חלל עבודה"
       ],
-      "updated_at": "2026-06-07T16:55:15.094Z"
+      "updated_at": "2026-10-21T14:00:50.908Z"
     },
     {
       "id": "7887e0c0-2f5b-4739-9bba-e7a9dcec6ad5",
