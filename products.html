@@ -222,6 +222,9 @@
   var ECOM_MODE = "full";
   var IS_CATALOG = false;
   var IS_FULL = true;
+  var DIRECT_GA = true;
+  var DIRECT_META = true;
+  var GA_SEND_TO = "G-RYQ85T66D2";
 
   var ECOM_ALIAS = {
     begin_checkout: 'checkout_started',
@@ -467,16 +470,18 @@
   }
   window.zappyFlushPendingMetaEvents = flushPendingMetaEvents;
 
-  var metaFlushAttempts = 0;
-  var metaFlushTimer = setInterval(function() {
-    metaFlushAttempts++;
-    flushPendingMetaEvents();
-    var pendingLen = 0;
-    try { pendingLen = (window.__zappyPendingMetaEvents || []).length; } catch (e) {}
-    if ((pendingLen === 0 && typeof window.fbq === 'function') || metaFlushAttempts > 60) {
-      clearInterval(metaFlushTimer);
-    }
-  }, 500);
+  if (DIRECT_META) {
+    var metaFlushAttempts = 0;
+    var metaFlushTimer = setInterval(function() {
+      metaFlushAttempts++;
+      flushPendingMetaEvents();
+      var pendingLen = 0;
+      try { pendingLen = (window.__zappyPendingMetaEvents || []).length; } catch (e) {}
+      if ((pendingLen === 0 && typeof window.fbq === 'function') || metaFlushAttempts > 60) {
+        clearInterval(metaFlushTimer);
+      }
+    }, 500);
+  }
 
   /**
    * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
@@ -516,7 +521,9 @@
         } catch (e1) {}
       }
 
-      // GTM / dataLayer — platform-standard ecommerce event names
+      // GTM / dataLayer — platform-standard ecommerce event names.
+      // Always push. A bare gtag.js snippet ignores plain event objects;
+      // a GTM container is what turns them into GA4/Ads hits.
       if (!purchaseAlreadySent) {
         try {
           window.dataLayer = window.dataLayer || [];
@@ -527,9 +534,12 @@
             if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
             if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
             if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+            // Clear first so GTM does not merge this hit with the previous ecommerce object.
+            window.dataLayer.push({ ecommerce: null });
             window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
             // Secondary Zappy-specific trigger for merchants who want it
             if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+              window.dataLayer.push({ ecommerce: null });
               window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
             }
           } else {
@@ -541,31 +551,49 @@
           }
         } catch (e2) {}
 
-        // GA4 gtag
-        try {
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
-          }
-        } catch (e3) {}
+        // Direct Google Analytics snippet only. GTM also defines window.gtag;
+        // calling it then sends the same event again to every Google tag the
+        // container loaded. send_to keeps a direct GA install off those tags
+        // when the merchant also has GTM.
+        if (DIRECT_GA) {
+          try {
+            if (typeof window.gtag === 'function') {
+              var gaParams = buildGa4Params(eventId, metadata);
+              if (GA_SEND_TO && gaParams && typeof gaParams === 'object') {
+                var gaCopy = {};
+                for (var gk in gaParams) {
+                  if (Object.prototype.hasOwnProperty.call(gaParams, gk)) gaCopy[gk] = gaParams[gk];
+                }
+                gaCopy.send_to = GA_SEND_TO;
+                gaParams = gaCopy;
+              }
+              window.gtag('event', plat.ga4, gaParams);
+            }
+          } catch (e3) {}
+        }
 
         if (oid) markPurchaseFired(oid);
       }
 
-      // Meta Pixel — live sites lazy-load fbq after marketing consent. If the
-      // stub is not defined yet, queue and flush when the pixel arrives.
-      try {
-        if (purchaseMetaAlreadySent) {
-          // already delivered to Meta
-        } else {
-          var metaParams = buildMetaParams(eventId, metadata);
-          if (typeof window.fbq === 'function') {
-            window.fbq('track', plat.meta, metaParams);
-            if (oid) markPurchaseMetaFired(oid);
+      // Meta Pixel — only the Zappy pixel integration. A pixel pasted inside
+      // GTM already initializes fbq; calling it from here would double-count.
+      // Live sites lazy-load fbq after marketing consent. If the stub is not
+      // defined yet, queue and flush when the pixel arrives.
+      if (DIRECT_META) {
+        try {
+          if (purchaseMetaAlreadySent) {
+            // already delivered to Meta
           } else {
-            enqueueMetaEvent(plat.meta, metaParams, eventId === 'checkout_complete' ? oid : null);
+            var metaParams = buildMetaParams(eventId, metadata);
+            if (typeof window.fbq === 'function') {
+              window.fbq('track', plat.meta, metaParams);
+              if (oid) markPurchaseMetaFired(oid);
+            } else {
+              enqueueMetaEvent(plat.meta, metaParams, eventId === 'checkout_complete' ? oid : null);
+            }
           }
-        }
-      } catch (e4) {}
+        } catch (e4) {}
+      }
     } catch (err) {}
   };
 
@@ -679,7 +707,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="מוצרים" />
     <meta name="twitter:description" content="המוצרים שלנו - ארטאורי דיזיין" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://artori.co.il#organization","name":"ארטאורי דיזיין","url":"https://artori.co.il","description":"A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.","address":{"@type":"PostalAddress","streetAddress":"הרדוף 19, הוד השרון, 4502117, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@artoridesign.com","telephone":"054-6242000","availableLanguage":["he","en"]}]},{"@type":"WebSite","@id":"https://artori.co.il#website","url":"https://artori.co.il","name":"ארטאורי דיזיין","publisher":{"@id":"https://artori.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://artori.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://artori.co.il/products"}]},{"@type":"ItemList","@id":"https://artori.co.il/products#itemlist","numberOfItems":60,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-lb0ivy","name":"תומך ספרים רוכב אופניים - The Apex Lean"},{"@type":"ListItem","position":2,"url":"https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-pz6mae","name":"הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט"},{"@type":"ListItem","position":3,"url":"https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-myuhh2","name":"בננה ביץ׳ - מתלה לבננות"},{"@type":"ListItem","position":4,"url":"https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp","name":"ביזי חיילים - בן - מעמד לטלפון נייד"},{"@type":"ListItem","position":5,"url":"https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n","name":"ביזי חיילים - טום - מעמד לטלפון נייד"},{"@type":"ListItem","position":6,"url":"https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99","name":"ביזי חיילים - מאיה - מעמד לטלפון נייד"},{"@type":"ListItem","position":7,"url":"https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf","name":"ביזי חיילים - דנה - מעמד לטלפון נייד"},{"@type":"ListItem","position":8,"url":"https://artori.co.il/product/bdykh-t4xgia","name":"בדיקה"},{"@type":"ListItem","position":9,"url":"https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-35y3fh","name":"וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":10,"url":"https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-xbsaut","name":"וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":11,"url":"https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-487r90","name":"וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":12,"url":"https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-ey78re","name":"וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":13,"url":"https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-6x7xzb","name":"וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":14,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw","name":"ביזי יוגה - סטנד לסמארטפון - זואי"},{"@type":"ListItem","position":15,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue","name":"ביזי יוגה - סטנד לסמארטפון - סנגיטה"},{"@type":"ListItem","position":16,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr","name":"ביזי יוגה - סטנד לסמארטפון - לונה"},{"@type":"ListItem","position":17,"url":"https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-v0q2ac","name":"מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":18,"url":"https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx","name":"אופליין - מדף מפתחות לכניסה לבית"},{"@type":"ListItem","position":19,"url":"https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-8skf31","name":"דלי צבע - מעמד מעוצב לנייר סופג"},{"@type":"ListItem","position":20,"url":"https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg","name":"אוסקר, צ׳רצ׳יל, שרלוק - שלישיית פסלוני חתולים למדף"},{"@type":"ListItem","position":21,"url":"https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-aqtzr9","name":"סט מדפי ספרים גיבורי על - סופרשלף ווונדרשלף"},{"@type":"ListItem","position":22,"url":"https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o","name":"סט תומכי ספרים גיבורי על - סופרגל ובוק אנד הירו"},{"@type":"ListItem","position":23,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu","name":"ביזי יוגה - סטנד לסמארטפון - גאיה"},{"@type":"ListItem","position":24,"url":"https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm","name":"עוף גוזל - מתלה בצורת חתול"},{"@type":"ListItem","position":25,"url":"https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-80ve8s","name":"בקיצור פיל - מדף אלכסוני לאחסון גלילי נייר טואלט - שחור"},{"@type":"ListItem","position":26,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r","name":"ביזי - סטנד לסמארטפון - דוקטורית"},{"@type":"ListItem","position":27,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40","name":"ביזי - סטנד לסמארטפון - דוקטור"},{"@type":"ListItem","position":28,"url":"https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5","name":"זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"},{"@type":"ListItem","position":29,"url":"https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg","name":"פאזל 1000 חלקים - טיימס סקוור ניו יורק"},{"@type":"ListItem","position":30,"url":"https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-501wbv","name":"תומך ספרים קליף הנגר (Cliffhanger)"},{"@type":"ListItem","position":31,"url":"https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2","name":"פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי"},{"@type":"ListItem","position":32,"url":"https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q","name":"ארטאורי בעיר - פאזל 1000 חלקים"},{"@type":"ListItem","position":33,"url":"https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx","name":"תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות"},{"@type":"ListItem","position":34,"url":"https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-1f7u9j","name":"תומך ספרים בורחים - Runaway Bookend"},{"@type":"ListItem","position":35,"url":"https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-qfgcex","name":"פסל של טווס - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":36,"url":"https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-hk5wxc","name":"Greetings - מדף מפתחות אינטראקטיבי לכניסה לבית, עשוי מתכת"},{"@type":"ListItem","position":37,"url":"https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-bnhxs7","name":"פסל של אווז - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":38,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u","name":"ביזי - סטנד לסמארטפון - צ'אטי פאטי"},{"@type":"ListItem","position":39,"url":"https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-ljpus0","name":"מפולת - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":40,"url":"https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-0bdsrm","name":"מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":41,"url":"https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe","name":"הירושלף - מדף למפתחות וחפצים קטנים"},{"@type":"ListItem","position":42,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01","name":"ביזי - סטנד לסמארטפון - סלפי סטפי"},{"@type":"ListItem","position":43,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל"},{"@type":"ListItem","position":44,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וצלמת - שחור"},{"@type":"ListItem","position":45,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold","name":"ביזי - סטנד לסמארטפון - טוויט פיט"},{"@type":"ListItem","position":46,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7","name":"ביזי - סטנד לסמארטפון - לייק מייק"},{"@type":"ListItem","position":47,"url":"https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61","name":"מטוסי נייר - סט מתלים מעוצבים לקיר"},{"@type":"ListItem","position":48,"url":"https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu","name":"ונטיק ארט - ברווז- פסל מדף - ונטיק"},{"@type":"ListItem","position":49,"url":"https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6woir5","name":"פסל של לביאה - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":50,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-ieq1z9","name":"ונטיק ארט - תרנגול - פסל מדף - ונטיק"},{"@type":"ListItem","position":51,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-sjgybm","name":"ונטיק ארט - תרנגול - פסל מדף"},{"@type":"ListItem","position":52,"url":"https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-fnpngf","name":"פסל של עגור מכותר - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":53,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo","name":"בלקוני - מדף מפתחות דקורטיבי - דגם A His"},{"@type":"ListItem","position":54,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B His"},{"@type":"ListItem","position":55,"url":"https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-xbrtyf","name":"ונטיק ארט - עגור חן - פסל מדף - ונטיק"},{"@type":"ListItem","position":56,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-hers-26a3ru","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B Hers"},{"@type":"ListItem","position":57,"url":"https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-yd9g2p","name":"תרנגול - פסל לקישוט מדף או קיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":58,"url":"https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-sh80p3","name":"ונטיק ארט - חסידה- פסל מדף - ונטיק"},{"@type":"ListItem","position":59,"url":"https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-mu6i4s","name":"ונטיק ארט - ג'ירף - פסל מדף - ונטיק"},{"@type":"ListItem","position":60,"url":"https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc","name":"ונטיק ארט - קוף גונון - פסל מדף - ונטיק"}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://artori.co.il#organization","name":"ארטאורי דיזיין","url":"https://artori.co.il","description":"A home decor e-commerce brand specializing in handcrafted, designer products organized by both function and theme. The brand features a unique dual-categorization approach with functional items (bookends, bookshelves, bookmarks, phone stands, paper towel holders, toilet paper storage shelves, and hangers) and thematic collections centered around superheroes and cats. This creative fusion brings personality and storytelling to everyday household items, appealing to customers who want functional pieces that express their interests and passions.","address":{"@type":"PostalAddress","streetAddress":"הרדוף 19, הוד השרון, 4502117, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@artoridesign.com","telephone":"054-6242000","availableLanguage":["he","en"]}]},{"@type":"WebSite","@id":"https://artori.co.il#website","url":"https://artori.co.il","name":"ארטאורי דיזיין","publisher":{"@id":"https://artori.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://artori.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://artori.co.il/products"}]},{"@type":"ItemList","@id":"https://artori.co.il/products#itemlist","numberOfItems":60,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://artori.co.il/product/tvmk-sprym-rvkb-avpnyym-the-apex-lean-lb0ivy","name":"תומך ספרים רוכב אופניים - The Apex Lean"},{"@type":"ListItem","position":2,"url":"https://artori.co.il/product/htyyh-mlah-tvmk-sprym-mavtsb-kavpnva-spvrt-pz6mae","name":"הטייה מלאה - תומך ספרים מעוצב כאופנוע ספורט"},{"@type":"ListItem","position":3,"url":"https://artori.co.il/product/bnnh-byts-mtlh-lbnnvt-myuhh2","name":"בננה ביץ׳ - מתלה לבננות"},{"@type":"ListItem","position":4,"url":"https://artori.co.il/product/byzy-chyylym-bn-mamd-ltlpvn-nyyd-chilqp","name":"ביזי חיילים - בן - מעמד לטלפון נייד"},{"@type":"ListItem","position":5,"url":"https://artori.co.il/product/byzy-chyylym-tvm-mamd-ltlpvn-nyyd-7g753n","name":"ביזי חיילים - טום - מעמד לטלפון נייד"},{"@type":"ListItem","position":6,"url":"https://artori.co.il/product/byzy-chyylym-mayh-mamd-ltlpvn-nyyd-fhmh99","name":"ביזי חיילים - מאיה - מעמד לטלפון נייד"},{"@type":"ListItem","position":7,"url":"https://artori.co.il/product/byzy-chyylym-dnh-mamd-ltlpvn-nyyd-trdeqf","name":"ביזי חיילים - דנה - מעמד לטלפון נייד"},{"@type":"ListItem","position":8,"url":"https://artori.co.il/product/bdykh-t4xgia","name":"בדיקה"},{"@type":"ListItem","position":9,"url":"https://artori.co.il/product/vvly-ktvm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-dk88fw","name":"וולי כתום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":10,"url":"https://artori.co.il/product/vvly-sgvl-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-io0da6","name":"וולי סגול - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":11,"url":"https://artori.co.il/product/vvly-tvrkyz-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-qu0gmc","name":"וולי טורקיז - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":12,"url":"https://artori.co.il/product/vvly-yrvk-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-5axooz","name":"וולי ירוק - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":13,"url":"https://artori.co.il/product/vvly-advm-symnyyt-atb-lspr-mavtsbt-ktvlat-sprym-w6fnuk","name":"וולי אדום - סימניית אטב לספר, מעוצבת כתולעת ספרים"},{"@type":"ListItem","position":14,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-zvay-l8ihtw","name":"ביזי יוגה - סטנד לסמארטפון - זואי"},{"@type":"ListItem","position":15,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-sngyth-ne54ue","name":"ביזי יוגה - סטנד לסמארטפון - סנגיטה"},{"@type":"ListItem","position":16,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-lvnh-xwtucr","name":"ביזי יוגה - סטנד לסמארטפון - לונה"},{"@type":"ListItem","position":17,"url":"https://artori.co.il/product/mpvlt-sky-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-8wqokr","name":"מפולת - סקי - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":18,"url":"https://artori.co.il/product/avplyyn-mdp-mptchvt-lknysh-lbyt-qki4zx","name":"אופליין - מדף מפתחות לכניסה לבית"},{"@type":"ListItem","position":19,"url":"https://artori.co.il/product/dly-tsba-mamd-mavtsb-lnyyr-svpg-8skf31","name":"דלי צבע - מעמד מעוצב לנייר סופג"},{"@type":"ListItem","position":20,"url":"https://artori.co.il/product/avskr-tsrtsyl-shrlvk-shlyshyyt-pslvny-chtvlym-lmdp-zkvhbg","name":"אוסקר, צ׳רצ׳יל, שרלוק - שלישיית פסלוני חתולים למדף"},{"@type":"ListItem","position":21,"url":"https://artori.co.il/product/st-mdpy-sprym-gybvry-al-svprshlp-vvvndrshlp-wjv104","name":"סט מדפי ספרים גיבורי על - סופרשלף ווונדרשלף"},{"@type":"ListItem","position":22,"url":"https://artori.co.il/product/st-tvmky-sprym-gybvry-al-svprgl-vbvk-and-hyrv-q4xu4o","name":"סט תומכי ספרים גיבורי על - סופרגל ובוק אנד הירו"},{"@type":"ListItem","position":23,"url":"https://artori.co.il/product/byzy-yvgh-stnd-lsmartpvn-gayh-i045fu","name":"ביזי יוגה - סטנד לסמארטפון - גאיה"},{"@type":"ListItem","position":24,"url":"https://artori.co.il/product/avp-gvzl-mtlh-btsvrt-chtvl-5mdlpm","name":"עוף גוזל - מתלה בצורת חתול"},{"@type":"ListItem","position":25,"url":"https://artori.co.il/product/bkytsvr-pyl-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-shchvr-lyyfbl","name":"בקיצור פיל - מדף אלכסוני לאחסון גלילי נייר טואלט - שחור"},{"@type":"ListItem","position":26,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvryt-9b679r","name":"ביזי - סטנד לסמארטפון - דוקטורית"},{"@type":"ListItem","position":27,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-dvktvr-zxzm40","name":"ביזי - סטנד לסמארטפון - דוקטור"},{"@type":"ListItem","position":28,"url":"https://artori.co.il/product/zvg-shchkny-mtkvt-pslvn-mdp-dkvrtyby-ashvy-mtkt-valyr5","name":"זוג שחקני מטקות - פסלון מדף דקורטיבי, עשוי מתכת"},{"@type":"ListItem","position":29,"url":"https://artori.co.il/product/pazl-1000-chlkym-tyyms-skvvr-nyv-yvrk-5furdg","name":"פאזל 1000 חלקים - טיימס סקוור ניו יורק"},{"@type":"ListItem","position":30,"url":"https://artori.co.il/product/tvmk-sprym-klyp-hngr-cliffhanger-501wbv","name":"תומך ספרים קליף הנגר (Cliffhanger)"},{"@type":"ListItem","position":31,"url":"https://artori.co.il/product/pyyr-mtlh-lmgbt-mtbch-baytsvb-mltsr-yyn-tsrpty-um07c2","name":"פייר - מתלה למגבת מטבח בעיצוב מלצר יין צרפתי"},{"@type":"ListItem","position":32,"url":"https://artori.co.il/product/artavry-bayr-pazl-1000-chlkym-89y61q","name":"ארטאורי בעיר - פאזל 1000 חלקים"},{"@type":"ListItem","position":33,"url":"https://artori.co.il/product/tlvy-albrt-gvnyvr-mtlh-ltyk-vmchzyk-mptchvt-nod2bx","name":"תלוי - אלברט ג'וניור - מתלה לתיק ומחזיק מפתחות"},{"@type":"ListItem","position":34,"url":"https://artori.co.il/product/tvmk-sprym-bvrchym-runaway-bookend-1f7u9j","name":"תומך ספרים בורחים - Runaway Bookend"},{"@type":"ListItem","position":35,"url":"https://artori.co.il/product/psl-shl-tvvs-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-qfgcex","name":"פסל של טווס - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":36,"url":"https://artori.co.il/product/greetings-mdp-mptchvt-ayntraktyby-lknysh-lbyt-ashvy-mtkt-hk5wxc","name":"Greetings - מדף מפתחות אינטראקטיבי לכניסה לבית, עשוי מתכת"},{"@type":"ListItem","position":37,"url":"https://artori.co.il/product/psl-shl-avvz-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-bnhxs7","name":"פסל של אווז - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":38,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tsaty-paty-vn2b1u","name":"ביזי - סטנד לסמארטפון - צ'אטי פאטי"},{"@type":"ListItem","position":39,"url":"https://artori.co.il/product/mpvlt-mdp-mavtsb-lachsvn-glyly-nyyr-tvalt-7binus","name":"מפולת - מדף מעוצב לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":40,"url":"https://artori.co.il/product/mrlyn-hkvsm-mdp-alksvny-lachsvn-glyly-nyyr-tvalt-wsifr2","name":"מרלין הקוסם - מדף אלכסוני לאחסון גלילי נייר טואלט"},{"@type":"ListItem","position":41,"url":"https://artori.co.il/product/hyrvshlp-mdp-lmptchvt-vchptsym-ktnym-3m1eoe","name":"הירושלף - מדף למפתחות וחפצים קטנים"},{"@type":"ListItem","position":42,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-slpy-stpy-hbcw01","name":"ביזי - סטנד לסמארטפון - סלפי סטפי"},{"@type":"ListItem","position":43,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vspsl-snok0k","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וספסל"},{"@type":"ListItem","position":44,"url":"https://artori.co.il/product/ytsyrt-amnvt-msgrt-ltmvnh-zvg-vtslmt-shchvr-zmj85b","name":"\"יצירת אמנות\" - מסגרת לתמונה - זוג וצלמת - שחור"},{"@type":"ListItem","position":45,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-tvvyt-pyt-3hrold","name":"ביזי - סטנד לסמארטפון - טוויט פיט"},{"@type":"ListItem","position":46,"url":"https://artori.co.il/product/byzy-stnd-lsmartpvn-lyyk-myyk-io3yj7","name":"ביזי - סטנד לסמארטפון - לייק מייק"},{"@type":"ListItem","position":47,"url":"https://artori.co.il/product/mtvsy-nyyr-st-mtlym-mavtsbym-lkyr-rnbj61","name":"מטוסי נייר - סט מתלים מעוצבים לקיר"},{"@type":"ListItem","position":48,"url":"https://artori.co.il/product/vntyk-art-brvvz-psl-mdp-vntyk-sexmyu","name":"ונטיק ארט - ברווז- פסל מדף - ונטיק"},{"@type":"ListItem","position":49,"url":"https://artori.co.il/product/psl-shl-lbyah-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-6woir5","name":"פסל של לביאה - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":50,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-vntyk-ieq1z9","name":"ונטיק ארט - תרנגול - פסל מדף - ונטיק"},{"@type":"ListItem","position":51,"url":"https://artori.co.il/product/vntyk-art-trngvl-psl-mdp-sjgybm","name":"ונטיק ארט - תרנגול - פסל מדף"},{"@type":"ListItem","position":52,"url":"https://artori.co.il/product/psl-shl-agvr-mkvtr-kyshvt-lmdp-av-lkyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-fnpngf","name":"פסל של עגור מכותר - קישוט למדף או לקיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":53,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-a-his-wvnoeo","name":"בלקוני - מדף מפתחות דקורטיבי - דגם A His"},{"@type":"ListItem","position":54,"url":"https://artori.co.il/product/blkvny-mdp-mptchvt-dkvrtyby-dgm-b-his-bsi1yy","name":"בלקוני - מדף מפתחות דקורטיבי - דגם B His"},{"@type":"ListItem","position":55,"url":"https://artori.co.il/product/vntyk-art-agvr-chn-psl-mdp-vntyk-xbrtyf","name":"ונטיק ארט - עגור חן - פסל מדף - ונטיק"},{"@type":"ListItem","position":56,"url":"https://artori.co.il/product/argvnyt-kyr-baytsvb-mrpst-mdp-mptchvt-argvnyt-lknysh-lbyt-ltlpvn-arnk-mptchvt-dvar-vmh-shmvtsyaym-mhkysym-rk0193","name":"ארגונית קיר בעיצוב מרפסת | מדף מפתחות | ארגונית לכניסה לבית לטלפון, ארנק, מפתחות דואר ומה שמוציאים מהכיסים"},{"@type":"ListItem","position":57,"url":"https://artori.co.il/product/trngvl-psl-lkyshvt-mdp-av-kyr-aytsvb-mvdrny-lbyt-shlvshh-gdlym-yd9g2p","name":"תרנגול - פסל לקישוט מדף או קיר - עיצוב מודרני לבית - שלושה גדלים"},{"@type":"ListItem","position":58,"url":"https://artori.co.il/product/vntyk-art-chsydh-psl-mdp-vntyk-sh80p3","name":"ונטיק ארט - חסידה- פסל מדף - ונטיק"},{"@type":"ListItem","position":59,"url":"https://artori.co.il/product/vntyk-art-gyrp-psl-mdp-vntyk-mu6i4s","name":"ונטיק ארט - ג'ירף - פסל מדף - ונטיק"},{"@type":"ListItem","position":60,"url":"https://artori.co.il/product/vntyk-art-kvp-gvnvn-psl-mdp-vntyk-irknnc","name":"ונטיק ארט - קוף גונון - פסל מדף - ונטיק"}]}]}</script>
     <!-- ZAPPY_INTEGRATION_START analytics:add_google_analytics -->
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYQ85T66D2"></script>
@@ -702,33 +730,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Facebook Pixel -->
 <!-- ZAPPY_INTEGRATION_END analytics:add_facebook_pixel -->
   
-    <style id="zppb-promo-banner-styles">
-    .zppb-overlay { display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.45); align-items: center; justify-content: center; }
-    .zppb-overlay.zppb-visible { display:flex; }
-    .zppb-banner { position:relative; overflow:hidden; text-align:center; padding:48px 36px; background:#1a1a2e; color:#ffffff; border-radius:16px; max-width:500px; width:92%; min-height:500px; display:flex; flex-direction:column; box-shadow:0 20px 60px rgba(0,0,0,0.3); animation: zppbFadeIn 0.35s ease forwards; }
-    .zppb-bg-img { position:absolute; inset:0; background-size:cover; background-position:center; }
-    .zppb-content { position:relative; z-index:1; flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-    .zppb-close { position:absolute; top:14px; right:14px; z-index:2; background:rgba(0,0,0,0.3); border:none; color:#fff; width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; padding:0; }
-    .zppb-close-icon { width:18px; height:18px; display:block; pointer-events:none; }
-    .zppb-close:hover { background:rgba(0,0,0,0.5); }
-    .zppb-h { font-size:28px; font-weight:700; margin:0 0 10px; color:#ffffff !important; }
-    .zppb-sub { font-size:16px; opacity:0.85; margin:0 0 24px; max-width:380px; color:#ffffff !important; white-space:pre-line; }
-    .zppb-cta { display:inline-block; padding:14px 36px; border-radius:50px; font-size:16px; font-weight:600; text-decoration:none; cursor:pointer; border:none; background:#e94560; color:#ffffff; margin-top:8px; }
-    .zppb-cta:hover { opacity:0.9; }
-    .zppb-coupon { display:inline-block; margin-bottom:20px; padding:10px 24px; border:2px dashed #e94560; border-radius:10px; font-family:monospace; font-weight:700; font-size:18px; color:#e94560; letter-spacing:2px; }
-    .zppb-countdown { display:flex; gap:8px; justify-content:center; margin-bottom:24px; font-size:32px; font-weight:700; font-family:monospace; direction:ltr; }
-    .zppb-countdown span { background:#e94560; color:#ffffff; padding:8px 16px; border-radius:8px; }
-    .zppb-fields { display:flex; flex-direction:column; gap:10px; max-width:340px; width:100%; margin:0 auto 20px; }
-    .zppb-input { width:100%; padding:12px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.15); color:#ffffff; font-size:15px; outline:none; box-sizing:border-box; }
-    .zppb-input::placeholder { color:#ffffff; opacity:0.5; }
-    .zppb-input:focus { border-color:#e94560; background:rgba(255,255,255,0.25); }
-    @keyframes zppbFadeIn { from { opacity:0; } to { opacity:1; } }
-    @keyframes zppbSlideUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes zppbScaleIn { from { opacity:0; transform:scale(0.85); } to { opacity:1; transform:scale(1); } }
-    @media (max-width:480px) { .zppb-banner { padding:32px 20px; min-height:400px; } .zppb-h { font-size:22px; } .zppb-sub { font-size:14px; } .zppb-countdown { font-size:24px; } .zppb-countdown span { padding:6px 12px; } }
-    body.zappy-edit-mode .zppb-overlay { display:none !important; }
-    </style>
-
     <style id="zappy-announcement-bar-styles">
     /* Announcement Bar Styles */
     .zappy-announcement-bar {
@@ -909,7 +910,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 
 <div class="zappy-announcement-bar" data-interval="4000">
       <span class="zappy-announcement-message active">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
-      <span class="zappy-announcement-message">כיף שבאת! קבל/י 10% הנחה על הרכישה הראשונה</span>
+      <span class="zappy-announcement-message">שופינג איי אל 2026 - 20% הנחה על כל החנות!! אוטומטית, ללא קוד קופון</span>
     </div>
     <!-- ZAPPY_INTEGRATION_START analytics:add_google_tag_manager -->
 <!-- Google Tag Manager (noscript) -->
@@ -1166,88 +1167,6 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     
 
   <a href="https://wa.me/0546242000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-
-    <div class="zppb-overlay" id="zppb-overlay">
-      <div class="zppb-banner">
-        <button type="button" class="zppb-close" id="zppb-close" aria-label="Close"><svg class="zppb-close-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        
-        <div class="zppb-content">
-          <h3 class="zppb-h">כיף שבאת! קבל/י 10% על ההזמנה הראשונה</h3>
-          <p class="zppb-sub"></p>
-          
-          
-          <a href="/" class="zppb-cta">קנה עכשיו</a>
-        </div>
-      </div>
-    </div>
-<script>
-    (function(){
-      var FREQ = 'once';
-      var DELAY = 2000;
-      var KEY = 'zppb_db20fdde-9dbb-4380-8fd6-1fe7321d7d26';
-      // Only run on the first URL opened in this tab. Avoids showing the modal again
-      // on every internal navigation when the user leaves before the delay fired on the landing page.
-      if (FREQ !== 'every_visit') {
-        try {
-          var entKey = KEY + '_sess_entry';
-          var curPath = window.location.pathname + window.location.search;
-          var entryPath = sessionStorage.getItem(entKey);
-          if (!entryPath) {
-            sessionStorage.setItem(entKey, curPath);
-            entryPath = curPath;
-          }
-          if (curPath !== entryPath) {
-            return;
-          }
-        } catch (e) {}
-      }
-
-      function shouldShow() {
-        if (document.body && document.body.classList.contains('zappy-edit-mode')) return false;
-        if (FREQ === 'every_visit') return true;
-        if (FREQ === 'once') return !localStorage.getItem(KEY);
-        if (FREQ === 'once_per_session') return !sessionStorage.getItem(KEY);
-        if (FREQ === 'once_per_day') {
-          var last = localStorage.getItem(KEY);
-          if (!last) return true;
-          return (Date.now() - parseInt(last, 10)) > 86400000;
-        }
-        return false;
-      }
-
-      function markShown() {
-        try {
-          if (FREQ === 'once') localStorage.setItem(KEY, '1');
-          else if (FREQ === 'once_per_session') sessionStorage.setItem(KEY, '1');
-          else if (FREQ === 'once_per_day') localStorage.setItem(KEY, String(Date.now()));
-        } catch(e){}
-      }
-
-      function closeBanner() {
-        var ov = document.getElementById('zppb-overlay');
-        if (ov) { ov.classList.remove('zppb-visible'); }
-      }
-
-      function showBanner() {
-        if (!shouldShow()) return;
-        var ov = document.getElementById('zppb-overlay');
-        if (ov) { ov.classList.add('zppb-visible'); markShown(); }
-      }
-
-      
-
-      
-
-      var closeBtn = document.getElementById('zppb-close');
-      if (closeBtn) closeBtn.addEventListener('click', closeBanner);
-      var overlay = document.getElementById('zppb-overlay');
-      if (overlay) overlay.addEventListener('click', function(e) { if (e.target === overlay) closeBanner(); });
-
-      setTimeout(function() {
-        showBanner();
-        
-      }, DELAY);
-    })();</script>
 <script id="zappy-announcement-bar-rotation">
 (function() {
   var bar = document.querySelector('.zappy-announcement-bar');
@@ -1336,6 +1255,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       "ecom_couponCode": "קוד קופון",
       "ecom_couponExpired": "הקופון פג תוקף",
       "ecom_couponMinOrder": "סכום הזמנה מינימלי",
+      "ecom_couponNotApplicable": "הקופון הזה לא חל על המוצרים בעגלה",
       "ecom_coursesCatalogEmpty": "אין קורסים זמינים עדיין.",
       "ecom_coursesCatalogError": "נכשל בטעינת הקורסים.",
       "ecom_coursesCatalogSubtitle": "עיינו בספריית הקורסים המלאה שלנו.",
@@ -3417,6 +3337,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       "ecom_couponCode": "Coupon Code",
       "ecom_couponExpired": "Coupon has expired",
       "ecom_couponMinOrder": "Minimum order amount",
+      "ecom_couponNotApplicable": "This coupon does not apply to the items in your cart",
       "ecom_coursesCatalogEmpty": "No courses available yet.",
       "ecom_coursesCatalogError": "Failed to load courses.",
       "ecom_coursesCatalogSubtitle": "Browse our full course library.",
@@ -5677,6 +5598,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
       var key = el.getAttribute('data-i18n');
       var translation = zappyI18n.t(key);
       if (!translation || translation === key) return;
+      translation = String(translation)
+        .replace(/&nbsp;/gi, String.fromCharCode(160))
+        .replace(/&nbsp;/gi, String.fromCharCode(160));
 
       // Skip parent elements whose children have their own data-i18n keys
       // (e.g., <li data-i18n="key1"><a data-i18n="key2">text</a></li>)
