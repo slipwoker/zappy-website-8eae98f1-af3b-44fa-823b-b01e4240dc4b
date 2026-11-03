@@ -14990,6 +14990,14 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+
+.index-hero-section .zappy-announcement-bar {
+  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
+}
+
+body .zappy-announcement-bar {
+  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
