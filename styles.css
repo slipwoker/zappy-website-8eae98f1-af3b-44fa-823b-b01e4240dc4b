@@ -15002,6 +15002,10 @@ body .zappy-announcement-bar {
 body > div.zappy-announcement-bar {
   display: none !important;
 }
+
+body > div.zappy-announcement-bar {
+  display: flex !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
