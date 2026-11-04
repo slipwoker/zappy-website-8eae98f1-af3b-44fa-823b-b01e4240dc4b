@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-11-03T15:31:28.742Z",
+  "generated_at": "2026-11-04T08:19:33.491Z",
   "base_url": "https://artori.co.il",
   "currency": "ILS",
   "count": 120,
@@ -2132,10 +2132,10 @@
     },
     {
       "id": "ae42b73f-743c-4249-9a56-b72c9854d6ce",
-      "slug": "hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-wctmq5",
+      "slug": "hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-burfax",
       "name": "הנסיכה במגדל - מעמד מעוצב לנייר מגבת",
       "name_translations": {
-        "en": "The Princess in the Tower - Designer Paper Towel Holder",
+        "en": "The Princess in the Tower - Decorative Paper Towel Holder",
         "he": "הנסיכה במגדל - מעמד מעוצב לנייר מגבת"
       },
       "description": "<p class=\"ql-align-right\">הנסיכה במגדל הוא מתקן קסום לנייר סופג הלוכד סצינה מפורסמת מהאגדות של הנסיכה הכלואה במגדל והנסיך המגיע להציל אותה.</p><p class=\"ql-align-right\">זוהי מתנה יפיפיה מהאגדות, מתאימה לאבירים ולנסיכות. מוצר עיצובי ופונקציונלי לשדרוג המטבח.</p><p>בסיס המוצר מרופד ב- eva למניעת שריטות או נוזלים.</p>",
@@ -2153,9 +2153,9 @@
         "https://artori.co.il/assets/product-1773749761442-zg2bzx.webp",
         "https://artori.co.il/assets/product-1773749762363-i1b8jb.webp"
       ],
-      "in_stock": true,
-      "stock_status": "in_stock",
-      "url": "https://artori.co.il/product/hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-wctmq5",
+      "in_stock": false,
+      "stock_status": "out_of_stock",
+      "url": "https://artori.co.il/product/hnsykh-bmgdl-mamd-mavtsb-lnyyr-mgbt-burfax",
       "categories": [
         "מתקנים לנייר סופג",
         "מתנות לאישה",
@@ -2163,7 +2163,7 @@
         "מתנות לחג",
         "מתנות לחנוכת בית"
       ],
-      "updated_at": "2026-04-30T09:01:30.344Z"
+      "updated_at": "2026-11-04T08:18:54.669Z"
     },
     {
       "id": "3b7ecd3e-19fc-4890-b77d-b179c3e319b6",
