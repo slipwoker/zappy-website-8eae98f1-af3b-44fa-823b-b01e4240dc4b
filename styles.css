@@ -16766,7 +16766,7 @@ main,
 }
 
 .index-hero-section .index-hero-section__bg-wrapper .index-hero-section__bg-image {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   height: 100% !important;
   width: 100% !important;
@@ -16776,7 +16776,7 @@ main,
 }
 
 .index-hero-section .index-hero-section__bg-wrapper .index-hero-section__bg-image {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   height: 100% !important;
   width: 100% !important;
