@@ -15182,6 +15182,16 @@ main,
   left: 0 !important;
   max-height: none !important;
 }
+
+.index-hero-section .index-hero-section__bg-wrapper .index-hero-section__bg-image {
+  object-fit: cover !important;
+  object-position: center center !important;
+  height: 100% !important;
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  max-height: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
