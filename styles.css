@@ -2062,7 +2062,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-height:clamp(250px, 31.25vw, 600px);
+  min-height: clamp(250px, 56.25vw, 720px);
 }
 
 .index-hero-section__overlay-card {
