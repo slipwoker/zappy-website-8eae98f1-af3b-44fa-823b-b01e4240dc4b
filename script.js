@@ -390,7 +390,7 @@
              flattened submenus used to set pointer-events:auto and re-enable
              hit-testing under an invisible More panel (hover 100px+ below
              still opened עוד). */
-          '.navbar .zappy-nav-more-item>.sub-menu{display:block!important;left:auto!important;right:0!important;min-width:200px!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(6px);transition:opacity .18s ease,visibility .18s ease,transform .18s ease;}' +
+          '.navbar .zappy-nav-more-item>.sub-menu{position:absolute!important;top:100%!important;z-index:100001!important;display:block!important;left:auto!important;right:0!important;min-width:200px!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(6px);transition:opacity .18s ease,visibility .18s ease,transform .18s ease;}' +
           /* Keep right:0 in RTL too. The old left:0 flip made the panel grow
              rightward over the nav links; on RTL More sits on the left of the
              item cluster so the panel must open left under עוד. */
@@ -912,10 +912,11 @@
   } catch (e) {}
 })();
 
-/* ZAPPY_NAV_MORE_POINTER_FIX_V4 */
+/* ZAPPY_NAV_MORE_POINTER_FIX_V5 */
 (function(){
   try {
-    if (window.__zappyNavMorePointerFixV4) return;
+    if (window.__zappyNavMorePointerFixV5) return;
+    window.__zappyNavMorePointerFixV5 = true;
     window.__zappyNavMorePointerFixV4 = true;
     window.__zappyNavMorePointerFixV3 = true;
     window.__zappyNavMorePointerFixV2 = true;
@@ -939,6 +940,7 @@
            + overflow-y:auto (which promotes overflow-x:auto) → horizontal
            scrollbar on long Hebrew nested titles. */
         'html body .navbar .zappy-nav-more-item > .sub-menu{' +
+          'position:absolute!important;top:100%!important;z-index:100001!important;' +
           'width:min(420px,calc(100vw - 24px))!important;max-width:min(420px,calc(100vw - 24px))!important;' +
           'overflow-x:hidden!important;overflow-y:auto!important;box-sizing:border-box!important;' +
         '}' +
@@ -1090,6 +1092,9 @@
         attributeFilter: ['style', 'data-zappy-more-flattened']
       });
     }
+    // The overflow runtime may already have measured the in-flow panel and
+    // pinned the menu width. A resize re-runs that pass with the panel absolute.
+    try { window.dispatchEvent(new Event('resize')); } catch (e2) {}
   } catch (e) {}
 })();
 
@@ -1276,7 +1281,7 @@
       }
     }
 
-    // /* ZAPPY_NAV_MOBILE_FOLLOWS_HAMBURGER_V3 */
+    // /* ZAPPY_NAV_MOBILE_FOLLOWS_HAMBURGER_V6 */
     function isDesktopNav() {
       var shown = hamburgerShown();
       if (shown === true) return false;
@@ -1302,6 +1307,79 @@
         if (rect && rect.bottom > 0) {
           root.style.setProperty('--zappy-navbar-bottom', Math.round(rect.bottom) + 'px');
         }
+      } catch (e) {}
+    }
+
+    // A phone with no <meta name="viewport"> lays out around 980px and then
+    // scales the page down. min-width:769px is true there, so a desktop-row
+    // rule paints every nav link into one crushed bar. Real desktop windows
+    // still get that row. Phones keep the hamburger.
+    function isPhoneLayout() {
+      try {
+        var nav = window.navigator;
+        var ua = (nav && nav.userAgent) || '';
+        if (/iPhone|iPod|Android.+Mobile|webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return true;
+        if (/Mobile/.test(ua) && /CriOS|FxiOS|EdgiOS/.test(ua)) return true;
+        var vv = window.visualViewport;
+        if (vv && typeof vv.scale === 'number' && vv.scale > 0 && vv.scale < 0.85) return true;
+        var screenObj = window.screen;
+        var shortSide = screenObj ? Math.min(screenObj.width || 0, screenObj.height || 0) : 0;
+        if (nav && nav.maxTouchPoints > 0 && shortSide > 0 && shortSide <= 500) return true;
+      } catch (e) {}
+      return false;
+    }
+
+    function ensureViewportMeta() {
+      try {
+        var existing = document.querySelector ? document.querySelector('meta[name="viewport"]') : null;
+        if (existing && String(existing.tagName || '').toLowerCase() === 'meta') return;
+        if (!document.createElement) return;
+        var meta = document.createElement('meta');
+        if (meta.setAttribute) {
+          meta.setAttribute('name', 'viewport');
+          meta.setAttribute('content', 'width=device-width, initial-scale=1');
+        }
+        var head = document.head || document.documentElement;
+        if (!head) return;
+        if (head.insertBefore) head.insertBefore(meta, head.firstChild || null);
+        else if (head.appendChild) head.appendChild(meta);
+      } catch (e) {}
+    }
+
+    // A site stylesheet can keep the hamburger up past 768px (proces.co.il
+    // uses 991px). That paints a phone icon, the logo, and a hamburger with
+    // the links hidden. A desktop window above the phone breakpoint gets the
+    // desktop row, and the More menu takes whatever does not fit.
+    function ensureDesktopRowCss() {
+      try {
+        if (!document.getElementById) return;
+        var existing = document.getElementById('zappy-desktop-nav-row');
+        if (isPhoneLayout()) {
+          if (existing && existing.parentNode && existing.parentNode.removeChild) {
+            existing.parentNode.removeChild(existing);
+          }
+          return;
+        }
+        if (existing || !document.createElement) return;
+        var style = document.createElement('style');
+        style.id = 'zappy-desktop-nav-row';
+        // display:flex alone leaves a 991px drawer (fixed, column, full size)
+        // painted open after the hamburger is hidden. Reset that geometry,
+        // including .active/.open, which outranks a selector that omits them.
+        style.textContent = '@media (min-width:769px){'
+          + 'html body .navbar .nav-menu,html body .navbar .nav-menu.active,html body .navbar .nav-menu.open,html body .navbar #navMenu,html body .navbar #navMenu.active,html body .navbar #navMenu.open{'
+          + 'display:flex!important;position:static!important;inset:auto!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;'
+          + 'width:auto!important;max-width:none!important;height:auto!important;max-height:none!important;overflow:visible!important;transform:none!important;z-index:auto!important;}'
+          + 'html body .navbar .nav-menu>li,html body .navbar .nav-menu.active>li,html body .navbar .nav-menu.open>li,html body .navbar #navMenu>li,html body .navbar #navMenu.active>li,html body .navbar #navMenu.open>li{'
+          + 'width:auto!important;max-width:none!important;height:auto!important;}'
+          + 'html body .navbar .nav-menu>li>a,html body .navbar #navMenu>li>a{display:inline-flex!important;width:auto!important;white-space:nowrap!important;}'
+          + 'html body .navbar .nav-cta-container,html body .navbar .lang-switcher{display:flex!important;}'
+          + 'html body .navbar .mobile-toggle,html body .navbar .phone-header-btn,html body .navbar #mobileToggle{display:none!important;}'
+          + 'html body .navbar .nav-right-group{display:flex!important;}'
+          + '}';
+        var parent = document.head || document.documentElement;
+        if (!parent || !parent.appendChild) return;
+        parent.appendChild(style);
       } catch (e) {}
     }
 
@@ -1479,9 +1557,12 @@
     // Arm even when an older V3 already bound the hamburger. That copy
     // returns before this release exists; a second append must still undo
     // the desktop lock.
+    ensureViewportMeta();
+    ensureDesktopRowCss();
     ensureDrawerCss();
     bindMobileToggleCapture();
     armDesktopNavRelease();
+    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
 
     if (window.__zappyMobileMenuToggleInitV3) return;
     window.__zappyMobileMenuToggleInitV3 = true;

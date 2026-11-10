@@ -5867,6 +5867,26 @@ footer.site-footer small {
 
 
 
+
+
+
+
+.index-hero-section .zappy-announcement-bar {
+  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
+}
+
+body .zappy-announcement-bar {
+  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
+}
+
+body > div.zappy-announcement-bar {
+  display: none !important;
+}
+
+body > div.zappy-announcement-bar {
+  display: flex !important;
+}
+
 /* ==ZAPPY V2 E-COMMERCE THEME CSS== */
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /* V2 E-COMMERCE CSS - Clean V2 Variables Only                                  */
@@ -10652,6 +10672,39 @@ a, button {
   left: auto !important;
 }
 .product-card-media .product-tags .product-tag { pointer-events: auto; }
+/* ZAPPY_MOBILE_CARD_TAGS_V1 */
+.product-tags.product-tags-inline,
+.product-grid.view-list .product-card .product-tags.product-tags-inline {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .product-card-media > .product-tags:not(.product-tags-inline),
+  .product-grid.view-list .product-card .product-card-media .product-tags:not(.product-tags-inline) {
+    display: none !important;
+  }
+  .product-tags.product-tags-inline,
+  .product-grid.view-list .product-card .product-tags.product-tags-inline {
+    display: flex !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    max-width: none !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    margin: 0 0 6px;
+    z-index: auto;
+    pointer-events: auto;
+  }
+  .product-tags-inline .product-tag {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+    letter-spacing: 0 !important;
+    text-transform: none;
+    box-shadow: none;
+  }
+}
+
 .card-favorite-btn {
   position: absolute;
   top: 8px;
@@ -10939,6 +10992,24 @@ a, button {
 .product-tag.tag-sale { background: #ef4444; }
 .product-tag.tag-new { background: #22c55e; }
 .product-tag.tag-featured { background: #f59e0b; }
+/* ZAPPY_CARD_TAG_COLORS */
+.product-tag.tag-sale { background: #ef4444 !important; color: #fff !important; }
+.product-tag.tag-new { background: #22c55e !important; color: #fff !important; }
+.product-tag.tag-featured { background: #f59e0b !important; color: #fff !important; }
+.product-tag.tag-bestseller { background: #a855f7 !important; color: #fff !important; }
+.product-tag.tag-limited { background: #f43f5e !important; color: #fff !important; }
+.product-tag.tag-eco-friendly { background: #14b8a6 !important; color: #fff !important; }
+.product-tag.tag-color-green { background: #22c55e !important; color: #fff !important; }
+.product-tag.tag-color-red { background: #ef4444 !important; color: #fff !important; }
+.product-tag.tag-color-amber { background: #f59e0b !important; color: #fff !important; }
+.product-tag.tag-color-purple { background: #a855f7 !important; color: #fff !important; }
+.product-tag.tag-color-rose { background: #f43f5e !important; color: #fff !important; }
+.product-tag.tag-color-teal { background: #14b8a6 !important; color: #fff !important; }
+.product-tag.tag-color-sky { background: #0ea5e9 !important; color: #fff !important; }
+.product-tag.tag-color-indigo { background: #6366f1 !important; color: #fff !important; }
+.product-tag.tag-color-orange { background: #f97316 !important; color: #fff !important; }
+.product-tag.tag-color-pink { background: #ec4899 !important; color: #fff !important; }
+.product-tag.tag-color-slate { background: #64748b !important; color: #fff !important; }
 /* Always-on sold-out badge on listing cards (independent of stock-status toggle) */
 .product-tag.tag-out-of-stock {
   background: rgba(17, 24, 39, 0.88);
@@ -12237,6 +12308,7 @@ a, button {
 .product-info .product-stock { display: flex; align-items: center; gap: 8px; font-weight: 500; }
 .product-info .product-stock.in-stock { color: #10b981; }
 .product-info .product-stock.out-of-stock { color: #ef4444; }
+.product-info .product-stock.select-required { color: #d97706; }
 .product-info .product-stock.low-stock { color: #f59e0b; }
 .product-qty-stock-hint, .zappy-qv-stock-hint { display: block; width: 100%; font-size: 0.875rem; font-weight: 500; color: #b45309; line-height: 1.35; margin: 0 0 0.5rem; }
 .product-qty-stock-hint.is-over, .zappy-qv-stock-hint.is-over { color: #dc2626; }
@@ -13554,10 +13626,11 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     gap: 12px !important;
   }
   
-  /* Desktop icon order: Search first (rightmost in RTL), then Login, then Cart (leftmost in RTL) */
+  /* Desktop icon order: Search, Globe, Login, Cart (LTR; mirrored for RTL) */
   .nav-ecommerce-icons .nav-search-box { order: 1 !important; }
-  .nav-ecommerce-icons .login-link.nav-login { order: 2 !important; }
-  .nav-ecommerce-icons .cart-link.nav-cart { order: 3 !important; }
+  .nav-ecommerce-icons .lang-switcher { order: 2 !important; }
+  .nav-ecommerce-icons .login-link.nav-login { order: 3 !important; }
+  .nav-ecommerce-icons .cart-link.nav-cart { order: 4 !important; }
   
   /* Hide nav-icons-right in V2 navbar desktop (search toggle is for mobile only) */
   .nav-right-group .nav-ecommerce-icons.nav-icons-right {
@@ -14281,10 +14354,26 @@ main,
     gap: 10px !important;
   }
 
-  /* Force-hide desktop search box on mobile (some templates keep it visible) */
+  /* Force-hide desktop search box on mobile (some templates / AI batches keep
+     it visible via higher-specificity .nav-icons-left .nav-search-box rules). */
   nav.navbar .nav-search-box,
-  .navbar .nav-search-box {
+  .navbar .nav-search-box,
+  .navbar .nav-ecommerce-icons .nav-search-box,
+  .navbar .nav-ecommerce-icons.nav-icons-left .nav-search-box,
+  .navbar .nav-container .nav-ecommerce-icons.nav-icons-left .nav-search-box,
+  html body .navbar .nav-ecommerce-icons.nav-icons-left .nav-search-box {
     display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none !important;
   }
 
   .cart-link,
@@ -14306,16 +14395,28 @@ main,
     background: var(--bg-light, #fff) !important;
   }
 
-  /* Icon color: contrast against the pill surface (luminance-aware). */
+  /* Icon color: contrast against the pill surface (luminance-aware).
+     High-specificity search-toggle selectors beat AI --nav-text SVG paints
+     on .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg. */
   .cart-link.nav-cart,
   .login-link.nav-login,
-  .nav-search-toggle {
+  .nav-search-toggle,
+  .navbar .nav-search-toggle,
+  .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle,
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle {
     color: var(--text-dark, #1a1a1a) !important;
   }
   .cart-link.nav-cart svg,
   .login-link.nav-login svg,
-  .nav-search-toggle svg {
+  .nav-search-toggle svg,
+  .navbar .nav-search-toggle svg,
+  .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg,
+  .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg *,
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg,
+  html body .navbar .nav-container .nav-ecommerce-icons.nav-icons-right .nav-search-toggle svg * {
     stroke: var(--text-dark, #1a1a1a) !important;
+    color: var(--text-dark, #1a1a1a) !important;
+    fill: none !important;
   }
   
   .cart-link svg,
@@ -14990,22 +15091,6 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
-
-.index-hero-section .zappy-announcement-bar {
-  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
-}
-
-body .zappy-announcement-bar {
-  background-color: var(--primary-color, var(--primary, #8B1E2D)) !important;
-}
-
-body > div.zappy-announcement-bar {
-  display: none !important;
-}
-
-body > div.zappy-announcement-bar {
-  display: flex !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -15428,59 +15513,6 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   max-width: 48px !important;
   padding: 0 !important;
 }
-
-/* ZAPPY_CARD_TAG_COLORS */
-.product-tag.tag-sale { background: #ef4444 !important; color: #fff !important; }
-.product-tag.tag-new { background: #22c55e !important; color: #fff !important; }
-.product-tag.tag-featured { background: #f59e0b !important; color: #fff !important; }
-.product-tag.tag-bestseller { background: #a855f7 !important; color: #fff !important; }
-.product-tag.tag-limited { background: #f43f5e !important; color: #fff !important; }
-.product-tag.tag-eco-friendly { background: #14b8a6 !important; color: #fff !important; }
-.product-tag.tag-color-green { background: #22c55e !important; color: #fff !important; }
-.product-tag.tag-color-red { background: #ef4444 !important; color: #fff !important; }
-.product-tag.tag-color-amber { background: #f59e0b !important; color: #fff !important; }
-.product-tag.tag-color-purple { background: #a855f7 !important; color: #fff !important; }
-.product-tag.tag-color-rose { background: #f43f5e !important; color: #fff !important; }
-.product-tag.tag-color-teal { background: #14b8a6 !important; color: #fff !important; }
-.product-tag.tag-color-sky { background: #0ea5e9 !important; color: #fff !important; }
-.product-tag.tag-color-indigo { background: #6366f1 !important; color: #fff !important; }
-.product-tag.tag-color-orange { background: #f97316 !important; color: #fff !important; }
-.product-tag.tag-color-pink { background: #ec4899 !important; color: #fff !important; }
-.product-tag.tag-color-slate { background: #64748b !important; color: #fff !important; }
-
-/* ZAPPY_MOBILE_CARD_TAGS_V1 */
-.product-tags.product-tags-inline,
-.product-grid.view-list .product-card .product-tags.product-tags-inline {
-  display: none !important;
-}
-@media (max-width: 768px) {
-  .product-card-media > .product-tags:not(.product-tags-inline),
-  .product-grid.view-list .product-card .product-card-media .product-tags:not(.product-tags-inline) {
-    display: none !important;
-  }
-  .product-tags.product-tags-inline,
-  .product-grid.view-list .product-card .product-tags.product-tags-inline {
-    display: flex !important;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    max-width: none !important;
-    flex-wrap: wrap !important;
-    gap: 4px !important;
-    margin: 0 0 6px;
-    z-index: auto;
-    pointer-events: auto;
-  }
-  .product-tags-inline .product-tag {
-    font-size: 10px !important;
-    padding: 2px 6px !important;
-    letter-spacing: 0 !important;
-    text-transform: none;
-    box-shadow: none;
-  }
-}
-
 
 
 /* zappy-nav-child-indent */
