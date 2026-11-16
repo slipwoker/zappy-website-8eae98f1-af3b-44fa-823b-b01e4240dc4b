@@ -20683,6 +20683,24 @@ main,
   display: none !important;
 }
 }
+
+.index-hero-section .index-hero-section__bg-image.desktop-cover {
+  display: block !important;
+}
+
+.index-hero-section .index-hero-section__bg-image.mobile-cover {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+.index-hero-section .index-hero-section__bg-image.desktop-cover {
+  display: none !important;
+}
+
+.index-hero-section .index-hero-section__bg-image.mobile-cover {
+  display: block !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
